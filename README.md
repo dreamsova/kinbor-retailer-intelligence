@@ -10,6 +10,8 @@ A **small, reproducible product catalog** for an independent U.S. retailer resea
 | `import.py` | Rebuilds the CSV and optimized SKU images from the two **private** October 16, 2026 workbooks. |
 | `test_import.py` | Checks counts, uniqueness, one-carton MOQ, confirmed carton quantities and safe public fields. |
 | `images/` | 210 optimized product images (WebP), one per SKU; multiple source panels combined where appropriate. |
+| `docs/DATA_DICTIONARY.md` | English schema, field types, source-cell mapping, carton evidence, Unknown policy and public/private boundaries. |
+| `docs/COMMIT_PRIVACY.md` | Git author/committer privacy guidance and pre-existing history remediation. |
 | `README.md` | These instructions and data limitations. |
 
 ## Run
@@ -30,7 +32,7 @@ The source workbooks are required **only to regenerate the CSV**. Reviewing the 
 
 ## Data rules
 
-- **One carton per SKU** is the minimum order quantity. A 3-SKU order therefore requires at least three separate cartons. Mixed-SKU cartons and split-carton fulfillment are **not verified**.
+- **One full carton per individual SKU** is the Phase 1 project's ordering minimum rule. A 3-SKU order therefore requires at least three separate cartons, with each SKU's own case-pack units. This is a project-level ordering policy, **not independently verified acceptance of these terms by the supplier**. Mixed-SKU cartons and split-carton fulfillment are **not verified**.
 - `units_per_carton` is read from the original's **F (一箱里面个数)** or the Brunch Brother workbook's **I (Carton Qty)**; the latter matches its H (Master) column in the supplied file.
 - **`DTB6611-1` and `DTB6616-1` are 112 units/carton**, confirmed by the project owner. Their source packing description is `1/24/48`, retained in `packing_raw` for traceability but **not** used as the case quantity.
 - `source_sheet` and `source_row` identify the source record (rows are 1-based). `carton_qty_basis=user_confirmed` marks the two overrides; other quantities are from the supplier snapshot.
@@ -41,7 +43,9 @@ The source workbooks are required **only to regenerate the CSV**. Reviewing the 
 
 The public CSV uses a **relative file path**, not an image embedded in the CSV. For example, `images/DT54729.webp` works when the repository's `images/` folder is uploaded alongside the CSV. All 210 records include an image; multiple images associated with one source SKU are combined into one preview. The Brunch Brother `DTBB0105` white dog image is visually matched from a second picture anchored to the preceding row in the original drawing, rather than blindly following the anchor. A non-product price caption was cropped from the `DTBB0105` product image preview before publication.
 
-**Publication rights:** These are supplier/brand-provided product images, potentially including licensed Brunch Brother artwork. The GitHub publisher must have permission to reproduce them publicly. This repository is independent; original image copyrights and trademarks remain with the respective rights holders. Product images are not offered under an open-content license for third-party reuse.
+**Publication rights:** The project owner reports that permission for public publication of the supplier/brand-provided product images has been obtained; the repository does not contain the underlying authorization documents. Some images may include licensed Brunch Brother artwork. This repository is independent; original image copyrights and trademarks remain with the respective rights holders. Product images are not offered under an open-content license for third-party reuse.
+
+For field-level evidence, source coordinates, case-pack uncertainty, and exclusions, see [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md). For privacy controls and the remaining historical Git author-email issue, see [`docs/COMMIT_PRIVACY.md`](docs/COMMIT_PRIVACY.md).
 
 ## Next
 
