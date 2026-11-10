@@ -1,12 +1,14 @@
-"""Small, offline Kinbor SKU importer. Python 3.10+; standard library only.
+"""Small, offline Kinbor SKU importer. Python 3.10+; Pillow for image export.
 
 Reads *only* explicitly allowlisted product cells from the two quotation files.
-Never exports EXW prices, stock, supplier barcodes, orders, or source images.
+Never exports EXW prices, stock, supplier barcodes, orders, or raw workbook media.
 """
 from __future__ import annotations
 
 import argparse
 import csv
+import posixpath
+from io import BytesIO
 from collections import Counter
 from pathlib import Path
 import re
@@ -25,7 +27,7 @@ CONFIRMED_CARTONS = {"DTB6611-1": 112, "DTB6616-1": 112}
 COLUMNS = [
     "sku", "name_zh", "collection", "category", "size_hint", "packing_raw",
     "units_per_carton", "moq_cartons", "moq_units", "carton_qty_basis",
-    "source_sheet", "source_row",
+    "source_sheet", "source_row", "image_path",
 ]
 
 
@@ -170,6 +172,7 @@ def _rows_for(path: Path, kind: str) -> list[dict[str, str | int]]:
             "carton_qty_basis": "user_confirmed" if sku in CONFIRMED_CARTONS else "source",
             "source_sheet": sheet,
             "source_row": row_num,
+            "image_path": "",
         }
         output.append(record)
     return output
@@ -201,19 +204,172 @@ def write_catalog(records: list[dict[str, str | int]], output: Path) -> None:
     tmp.replace(output)
 
 
+
+def _rels_for_part(z: ZipFile, part: str) -> dict[str, str]:
+    """Map OOXML relationship IDs to paths within the workbook archive."""
+    relpart = posixpath.join(posixpath.dirname(part), "_rels", posixpath.basename(part) + ".rels")
+    if relpart not in z.namelist():
+        return {}
+    root = ET.fromstring(z.read(relpart))
+    output = {}
+    for rel in root:
+        target = rel.get("Target", "")
+        if target.startswith("/"):
+            resolved = target.lstrip("/")
+        else:
+            resolved = posixpath.normpath(posixpath.join(posixpath.dirname(part), target))
+        output[rel.get("Id", "")] = resolved
+    return output
+
+
+def _drawing_images_by_row(z: ZipFile) -> dict[int, list[str]]:
+    """Return image media parts anchored to each row of the visible product worksheet.
+
+    The source workbooks use drawing anchors; image/media filenames alone do
+    not encode SKU identity. Using row anchors avoids false sequential matches.
+    """
+    xdr = "{http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing}"
+    a = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
+    sheet_name, sheet_part = _first_visible_sheet(z)
+    sheet = ET.fromstring(z.read(sheet_part))
+    sheet_rels = _rels_for_part(z, sheet_part)
+    by_row: dict[int, list[str]] = {}
+    for drawing_ref in sheet.findall(NS + "drawing"):
+        drawing_part = sheet_rels.get(drawing_ref.get(REL + "id", ""))
+        if drawing_part not in z.namelist():
+            continue
+        image_rels = _rels_for_part(z, drawing_part)
+        for anchor in ET.fromstring(z.read(drawing_part)):
+            from_cell = anchor.find(xdr + "from")
+            if from_cell is None:
+                continue
+            row_el = from_cell.find(xdr + "row")
+            if row_el is None:
+                continue
+            row = int(row_el.text or "0") + 1  # OOXML anchors are 0-based.
+            for blip in anchor.iter(a + "blip"):
+                media = image_rels.get(blip.get(REL + "embed", ""))
+                if media and media.startswith("xl/media/") and media in z.namelist():
+                    by_row.setdefault(row, []).append(media)
+    # WPS places some images directly in cells via _xlfn.DISPIMG(...).
+    # Those do not appear in the worksheet drawing anchors and must be
+    # linked by their explicit WPS picture ID instead.
+    cellimages_part = "xl/cellimages.xml"
+    if cellimages_part in z.namelist():
+        cellimage_rels = _rels_for_part(z, cellimages_part)
+        pictures = ET.fromstring(z.read(cellimages_part))
+        image_by_name = {}
+        for picture in pictures.iter(xdr + "pic"):
+            name_node = picture.find(xdr + "nvPicPr/" + xdr + "cNvPr")
+            blip = picture.find(".//" + a + "blip")
+            if name_node is None or blip is None:
+                continue
+            media = cellimage_rels.get(blip.get(REL + "embed", ""))
+            if media and media.startswith("xl/media/") and media in z.namelist():
+                image_by_name[name_node.get("name", "")] = media
+        for cell in sheet.iter(NS + "c"):
+            f = cell.find(NS + "f")
+            if f is None or not f.text:
+                continue
+            match = re.search(r'DISPIMG\s*\(\s*"([^"]+)"', f.text, flags=re.I)
+            cell_row = re.search(r"[0-9]+", cell.get("r", ""))
+            if match and cell_row and match.group(1) in image_by_name:
+                by_row.setdefault(int(cell_row.group()), []).append(image_by_name[match.group(1)])
+    return by_row
+
+
+def _make_webp(image_bytes: list[bytes], target: Path) -> None:
+    """Create compact GitHub/browser-friendly images without saving source metadata."""
+    try:
+        from PIL import Image, ImageOps
+    except ImportError as exc:
+        raise RuntimeError("Install Pillow to rebuild images: python3 -m pip install Pillow") from exc
+    panels = []
+    for raw in image_bytes:
+        with Image.open(BytesIO(raw)) as source:
+            photo = ImageOps.exif_transpose(source)
+            photo.load()
+            if photo.mode in ("RGBA", "LA") or (photo.mode == "P" and "transparency" in photo.info):
+                rgba = photo.convert("RGBA")
+                white = Image.new("RGB", rgba.size, "white")
+                white.paste(rgba, mask=rgba.getchannel("A"))
+                photo = white
+            else:
+                photo = photo.convert("RGB")
+            # Source's DTBB0105 photo has a large price caption above the item;
+            # omit only that caption area from the public product preview.
+            if target.name == "DTBB0105.webp":
+                photo = photo.crop((0, int(photo.height * 0.12), photo.width, photo.height))
+            photo.thumbnail((1000 if len(image_bytes) == 1 else 480, 960), Image.Resampling.LANCZOS)
+            panels.append(photo)
+    if len(panels) == 1:
+        out = panels[0]
+    else:
+        padding = 18
+        height = max(i.height for i in panels) + 2 * padding
+        width = sum(i.width for i in panels) + padding * (len(panels) + 1)
+        out = Image.new("RGB", (width, height), "white")
+        x = padding
+        for panel in panels:
+            out.paste(panel, (x, (height - panel.height) // 2))
+            x += panel.width + padding
+        if out.width > 1400:
+            out.thumbnail((1400, 1100), Image.Resampling.LANCZOS)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    out.save(target, format="WEBP", quality=84, method=4)
+
+
+def export_product_images(original: Path, brunch: Path,
+                          records: list[dict[str, str | int]],
+                          images_dir: Path, csv_output: Path) -> None:
+    """Export source-anchored SKU images and add relative paths to CSV rows.
+
+    A single visually-checked correction covers a Brunch Brother source drawing
+    where the 'peper' dog image is anchored to the preceding 'nana' cat row.
+    The actual source image is used, not generated or invented.
+    """
+    images_dir.mkdir(parents=True, exist_ok=True)
+    for collection, workbook in (("Original Design", original), ("Brunch Brother", brunch)):
+        with ZipFile(workbook) as z:
+            by_row = _drawing_images_by_row(z)
+            for record in records:
+                if record["collection"] != collection:
+                    continue
+                row = int(record["source_row"])
+                media = list(by_row.get(row, []))
+                if record["sku"] == "DTBB0104":
+                    # Source places the neighboring white dog image in nana's row.
+                    media = media[:1]
+                elif record["sku"] == "DTBB0105":
+                    # Visual confirmation: second row-69 asset is the white peper dog.
+                    media = by_row.get(69, [])[1:2]
+                if not media:
+                    raise ValueError(f"No attributable image for {record['sku']} at {collection} row {row}")
+                filename = f"{record['sku']}.webp"
+                _make_webp([z.read(m) for m in media], images_dir / filename)
+                record["image_path"] = (Path(images_dir.name) / filename).as_posix()
+    missing = [r["sku"] for r in records if not r["image_path"]]
+    if missing:
+        raise ValueError(f"Missing product images for SKUs: {missing}")
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Create a safe public Kinbor product catalog from two original XLSX files")
     parser.add_argument("--original", required=True, type=Path, help="Kinbor Original Design XLSX")
     parser.add_argument("--brunch", required=True, type=Path, help="Kinbor x Brunch Brother XLSX")
     parser.add_argument("--output", type=Path, default=Path("products.csv"))
+    parser.add_argument("--images-dir", type=Path, default=Path("images"),
+                        help="Directory for optimized product images; created alongside CSV")
     args = parser.parse_args()
     try:
         rows = import_catalog(args.original, args.brunch)
+        if args.images_dir.parent.resolve() != args.output.parent.resolve():
+            raise ValueError("Keep --images-dir beside --output so relative paths are valid")
+        export_product_images(args.original, args.brunch, rows, args.images_dir, args.output)
         write_catalog(rows, args.output)
-    except (ValueError, FileNotFoundError, KeyError, IndexError, OSError) as exc:
+    except (ValueError, RuntimeError, FileNotFoundError, KeyError, IndexError, OSError) as exc:
         parser.exit(1, f"Import failed: {exc}\n")
     counts = Counter(row["collection"] for row in rows)
-    print(f"Wrote {len(rows)} real SKUs to {args.output} ({dict(counts)}). No price or stock fields exported.")
+    print(f"Wrote {len(rows)} real SKUs and product images to {args.output} ({dict(counts)}). No price or stock fields exported.")
 
 
 if __name__ == "__main__":

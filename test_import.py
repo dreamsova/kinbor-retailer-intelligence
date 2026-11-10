@@ -34,6 +34,22 @@ class PublicCatalogTests(unittest.TestCase):
         private_terms = {"price", "cost", "exw", "inventory", "stock", "barcode", "rebate", "order"}
         self.assertFalse(any(word in col.lower() for col in self.columns for word in private_terms))
 
+    def test_image_links(self):
+        """Every SKU links to a real, valid browser-readable product image."""
+        self.assertEqual(len([p for p in (BASE / "images").glob("*.webp")]), 210)
+        for row in self.records:
+            with self.subTest(sku=row["sku"]):
+                self.assertEqual(row["image_path"], f"images/{row['sku']}.webp")
+                file = BASE / row["image_path"]
+                self.assertTrue(file.is_file())
+                with file.open("rb") as f:
+                    head = f.read(12)
+                self.assertEqual(head[:4], b"RIFF")
+                self.assertEqual(head[8:12], b"WEBP")
+
+    def test_visually_matched_peper_dog_image(self):
+        self.assertEqual(self.by_sku["DTBB0105"]["image_path"], "images/DTBB0105.webp")
+
     def test_one_carton_per_sku(self):
         for r in self.records:
             with self.subTest(sku=r["sku"]):

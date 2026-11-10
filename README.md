@@ -6,25 +6,27 @@ A **small, reproducible product catalog** for an independent U.S. retailer resea
 
 | File | Purpose |
 | --- | --- |
-| `products.csv` | 210 real, safe-to-share SKU records (120 Original Design + 90 Brunch Brother). |
-| `import.py` | Rebuilds the CSV from the two **private** October 16, 2026 quotation workbooks. Standard Python only. |
+| `products.csv` | 210 real SKU records, each with a relative `image_path` to its product photo. |
+| `import.py` | Rebuilds the CSV and optimized SKU images from the two **private** October 16, 2026 workbooks. |
 | `test_import.py` | Checks counts, uniqueness, one-carton MOQ, confirmed carton quantities and safe public fields. |
+| `images/` | 210 optimized product images (WebP), one per SKU; multiple source panels combined where appropriate. |
 | `README.md` | These instructions and data limitations. |
 
 ## Run
 
-Requires Python 3.10+; no pip install needed. Keep the original XLSX files **outside** the public repository.
+Requires Python 3.10+ and Pillow to build the product images (`python3 -m pip install Pillow`). Running the committed CSV tests requires only the standard library. Keep the original XLSX files **outside** the public repository.
 
 ```bash
 python3 import.py \
   --original '/private/path/Kinbor-original.xlsx' \
   --brunch '/private/path/Kinbor-Brunch-Brother.xlsx' \
-  --output products.csv
+  --output products.csv \
+  --images-dir images
 
 python3 -m unittest -v test_import
 ```
 
-The source workbooks are required **only to regenerate the CSV**. Reviewing the CSV or running its tests does not require private source files. The exporter reads only product name, SKU, carton/packing information and worksheet coordinates; it does not export quotations, supplier cost, inventory, barcodes, order amounts, or images. Do **not** commit the original workbooks or their extracted images to a public repository.
+The source workbooks are required **only to regenerate the CSV**. Reviewing the CSV or running its tests does not require private source files. The exporter reads only product name, SKU, carton/packing information and worksheet coordinates; it does not export quotations, supplier cost, inventory, barcodes, or order amounts. The product images are regenerated as optimized, metadata-stripped WebP files in `images/`; original workbooks are not included.
 
 ## Data rules
 
@@ -34,6 +36,12 @@ The source workbooks are required **only to regenerate the CSV**. Reviewing the 
 - `source_sheet` and `source_row` identify the source record (rows are 1-based). `carton_qty_basis=user_confirmed` marks the two overrides; other quantities are from the supplier snapshot.
 - `category` is a **simple keyword inference** from the Chinese name, not a supplier classification; `Other / Review` means it needs manual checking. `size_hint` is extracted from a product name, not measured dimensions. Source product names are retained as written (including typos).
 - All product data is a snapshot from **October 16, 2026**. Current inventory, U.S. resale authorization, wholesale availability, lead times, pricing and retailer willingness to buy are **unknown**.
+
+## Product images and public use
+
+The public CSV uses a **relative file path**, not an image embedded in the CSV. For example, `images/DT54729.webp` works when the repository's `images/` folder is uploaded alongside the CSV. All 210 records include an image; multiple images associated with one source SKU are combined into one preview. The Brunch Brother `DTBB0105` white dog image is visually matched from a second picture anchored to the preceding row in the original drawing, rather than blindly following the anchor. A non-product price caption was cropped from the `DTBB0105` product image preview before publication.
+
+**Publication rights:** These are supplier/brand-provided product images, potentially including licensed Brunch Brother artwork. The GitHub publisher must have permission to reproduce them publicly. This repository is independent; original image copyrights and trademarks remain with the respective rights holders. Product images are not offered under an open-content license for third-party reuse.
 
 ## Next
 
