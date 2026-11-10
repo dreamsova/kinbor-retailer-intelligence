@@ -235,15 +235,20 @@ class TinyFishClient:
                 receipt['elapsed_seconds'] = round(max(0, self._clock() - start), 3)
         raise AssertionError('Unreachable retry state')
 
-    def fetch(self, urls, *, per_url_timeout_ms=45000):
+    def fetch(self, urls, *, per_url_timeout_ms=45000, include_images=False):
         if not isinstance(urls, (list, tuple)) or not 1 <= len(urls) <= 10:
             raise ValueError('Fetch accepts 1–10 public URLs')
         for url in urls:
             public_url(url)
         if not isinstance(per_url_timeout_ms, int) or not 1 <= per_url_timeout_ms <= 110000:
             raise ValueError('per_url_timeout_ms must be 1–110000')
-        data = self._request('fetch', 'POST', FETCH, body={'urls': list(urls), 'format': 'markdown',
-            'links': True, 'ttl': 0, 'per_url_timeout_ms': per_url_timeout_ms}, retry_safe=True)
+        if type(include_images) is not bool:
+            raise ValueError('Fetch image option must be a boolean')
+        body = {'urls': list(urls), 'format': 'markdown', 'links': True,
+                'ttl': 0, 'per_url_timeout_ms': per_url_timeout_ms}
+        if include_images:
+            body['image_links'] = True
+        data = self._request('fetch', 'POST', FETCH, body=body, retry_safe=True)
         results, errors = data.get('results'), data.get('errors')
         valid = isinstance(results, list) and isinstance(errors, list)
         if valid:

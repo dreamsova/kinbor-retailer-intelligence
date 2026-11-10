@@ -1,0 +1,233 @@
+{
+  "checked_at_utc": "2026-11-10T04:14:06Z",
+  "base_main_head": "fac15675cc82d658d57852aff05c5e6425c3f819",
+  "recent_fix_present": true,
+  "scope": "Matching plus acquisition needed for matching; no private supplier material or outreach.",
+  "phase1": {
+    "preserved_hashes": 214,
+    "unique_skus": 210,
+    "webp_images": 210,
+    "one_full_carton_per_sku": true,
+    "DTB6611-1_units_per_carton": 112,
+    "DTB6616-1_units_per_carton": 112
+  },
+  "tests": {
+    "command": "python3 -m unittest discover -v",
+    "test_count": 111,
+    "passed": 111,
+    "failed": 0,
+    "elapsed_seconds": 7.416,
+    "network": "offline; API transports mocked; no model quality validation"
+  },
+  "pilots": [
+    {
+      "retailer": "atlas",
+      "current_matching_validation": {
+        "status": "passed",
+        "catalog_skus": 210,
+        "selected_review_hypotheses": 1,
+        "multimodal": "MULTIMODAL LIVE NOT VALIDATED"
+      },
+      "frozen_original_validation": {
+        "status": "passed",
+        "catalog_count": 210,
+        "evidence_count": 51,
+        "recommendation_count": 4,
+        "validation_mode": "offline; no research or API call"
+      },
+      "official_product_observations": 7,
+      "old_baseline_skus": [
+        "DTBB0079",
+        "DT54750",
+        "DT589003",
+        "DTBB0113"
+      ],
+      "new_review_skus": [
+        "DT55566"
+      ],
+      "full_candidate_audit": 210,
+      "annotated_sku_images": 45,
+      "measured_offline_matching_seconds": 0.4564,
+      "artifact_sha256": {
+        "product_evidence.json": "f22c936e733b968af4085b8bf8d95f87ed09416e9fca169cfaaf9d82ea21cb7a",
+        "matching.json": "83e85a05a7bd8a94ac5191c3d4419859d75a7fbe1bf062d292ddc80fc762d6ae",
+        "style_brief.md": "185d5efb3cf038010bc88df5d52eff85c63dee78daf086b9d9d539ce45901c46"
+      }
+    },
+    {
+      "retailer": "shorthand",
+      "current_matching_validation": {
+        "status": "passed",
+        "catalog_skus": 210,
+        "selected_review_hypotheses": 4,
+        "multimodal": "MULTIMODAL LIVE NOT VALIDATED"
+      },
+      "frozen_original_validation": {
+        "status": "passed",
+        "catalog_count": 210,
+        "evidence_count": 56,
+        "recommendation_count": 4,
+        "validation_mode": "offline; no research or API call"
+      },
+      "official_product_observations": 6,
+      "old_baseline_skus": [
+        "DTBB0079",
+        "DTBB0113",
+        "DTBB0042",
+        "DTBB0021"
+      ],
+      "new_review_skus": [
+        "DT54744",
+        "DT54726",
+        "DT54729",
+        "DTYC0006"
+      ],
+      "full_candidate_audit": 210,
+      "annotated_sku_images": 45,
+      "measured_offline_matching_seconds": 0.1484,
+      "artifact_sha256": {
+        "product_evidence.json": "482ca0cd17b2164355bb3571630de73af97e18e35041cdc25e7ce9ceaee10ef1",
+        "matching.json": "d6f71d4c2dfdf9f78c05ed57f27bc29865ff24899e298d9b692e720357b22cfe",
+        "style_brief.md": "d77b35fc8512c7a0813da6fad5551b635de04bdf402204ab2b2d24f395bb2008"
+      }
+    },
+    {
+      "retailer": "wonder-fair",
+      "current_matching_validation": {
+        "status": "passed",
+        "catalog_skus": 210,
+        "selected_review_hypotheses": 0,
+        "multimodal": "MULTIMODAL LIVE NOT VALIDATED"
+      },
+      "frozen_original_validation": {
+        "status": "passed",
+        "catalog_count": 210,
+        "evidence_count": 12,
+        "recommendation_count": 4,
+        "validation_mode": "offline; no research or API call"
+      },
+      "official_product_observations": 6,
+      "old_baseline_skus": [
+        "DTBB0042",
+        "DTBB0021",
+        "DTBB0035",
+        "DTBB0043"
+      ],
+      "new_review_skus": [],
+      "full_candidate_audit": 210,
+      "annotated_sku_images": 45,
+      "measured_offline_matching_seconds": 0.0849,
+      "artifact_sha256": {
+        "product_evidence.json": "a270c94cb129dad5dcb641f4ac20494bfb8d6c4334abce610d48712398ebcf78",
+        "matching.json": "5e41d16d40eb63c75b1f476ee462f7816b36c90b01353ec87b267242f0e67ae0",
+        "style_brief.md": "de35ab3f295c5996d8bde52742bf789a6b6f4177e1147ed4240937b626152856"
+      }
+    }
+  ],
+  "new_public_acquisition": {
+    "provider": "connected official TinyFish Search/Fetch",
+    "search_calls": 2,
+    "fetch_calls": 9,
+    "url_requests_including_repeats": 38,
+    "successful_url_results": 37,
+    "discovery_404_count": 1,
+    "unique_product_observations": 19,
+    "billed_cost": "Unknown",
+    "image_bytes_downloaded_or_republished": false,
+    "retailer_pixels_assessed": false
+  },
+  "new_direct_rest_live_probe": {
+    "schema_version": 1,
+    "execution": "local_python_direct_api",
+    "started_at_utc": "2026-11-10T04:09:55Z",
+    "website": "https://www.atlasstationers.com/",
+    "transport": "official_rest",
+    "authenticated_response_received": false,
+    "requests": [],
+    "usage": "Unknown",
+    "billed_cost": "Unknown",
+    "run_id": null,
+    "limits": {
+      "max_pages": 6,
+      "max_requests": 4,
+      "deadline_seconds": 240
+    },
+    "fallback": "none",
+    "error_code": "missing_credential",
+    "status": "blocked",
+    "live_validation": "LIVE API TEST BLOCKED — missing credential",
+    "finished_at_utc": "2026-11-10T04:09:55Z",
+    "elapsed_seconds": 0.001
+  },
+  "visual_model": {
+    "actual_api_requests": 0,
+    "status": "MULTIMODAL LIVE NOT VALIDATED",
+    "reason": "No secure local visual-model API credentials; opt-in adapter tested offline only.",
+    "service_if_explicitly_enabled": "OpenAI Responses API",
+    "catalog_image_transfer_this_pilot": false,
+    "billed_cost": "Unknown"
+  },
+  "spot_checks": [
+    {
+      "retailer": "atlas",
+      "method": "Read-only source-evidence and local SKU image spot check, not independent buyer review",
+      "finding": "DT55566 shows purple translucent zipped storage; Hightide reference explicitly describes transparent-front A6 case. Dimensions, construction and acceptance of100 units remain unknown. DT589003 blind-box gel pen no longer selected from pen category alone."
+    },
+    {
+      "retailer": "shorthand",
+      "method": "Read-only actual captured source and local SKU image spot check, not independent buyer review",
+      "finding": "DT54744 checker/rainbow and floral covers correspond to specific Checker Black/Botanical Archway title evidence. Multicolor versus black, left-handed/gold-wire construction, ruling and exact motif differences remain explicit. Three floral picks share one reference."
+    },
+    {
+      "retailer": "wonder-fair",
+      "method": "Read-only comparison of six actual source observations against the full candidate audit",
+      "finding": "No sufficiently specific same-format style match in annotated subset. Forest title is not treated as a botanical image and animal memo pad does not substitute for character notebook. Zero output is evidence insufficiency, not rejection of all210 SKUs."
+    }
+  ],
+  "limitations": [
+    "Selection quality, accuracy, preference improvement and reviewer time are not measured; zero human labels.",
+    "45 of 210 SKU images have local analyst annotations; remaining images unassessed, never gold negatives.",
+    "Retailer product sample is purposive and limited, not proof of preference, stock or brand relationship.",
+    "Shorthand botanical candidates share one main reference; this is a narrow hypothesis, not broad store understanding.",
+    "Connector observations do not validate fresh REST product behavior; receipts are distinct.",
+    "Offline validation checks consistency and joins, not independent authenticity of provider execution.",
+    "Old category CSVs and original buyer briefs remain frozen comparators, current style briefs are the primary result."
+  ],
+  "evaluation": {
+    "rows": 36,
+    "preference_counts": {
+      "pending": 36
+    },
+    "sku_fit_counts": {
+      "pending": 36
+    },
+    "definite_fit_labels": 0,
+    "uncertain_fit_excluded": 0,
+    "per_retailer_preference_counts": {
+      "wonder-fair": {
+        "pending": 12
+      },
+      "shorthand": {
+        "pending": 12
+      },
+      "atlas": {
+        "pending": 12
+      }
+    },
+    "recorded_review_seconds": "Unknown",
+    "timed_rows": 0,
+    "accuracy": "Not computed: these subjective comparison responses are not independent gold labels.",
+    "commercial_outcome": "Unknown; reviewer preference does not establish buyer acceptance."
+  },
+  "frozen_phase2_csv_integrity": {
+    "retailers": 20,
+    "current_pilots": 3,
+    "legacy_not_revalidated": 17,
+    "sku_matches": 74,
+    "evidence_rows": 267,
+    "phase1_preserved_files": 214,
+    "purchase_probability": "Not modeled",
+    "order_feasibility": "Unknown",
+    "checks": "passed"
+  }
+}

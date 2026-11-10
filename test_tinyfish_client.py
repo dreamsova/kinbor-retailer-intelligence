@@ -59,6 +59,15 @@ def client(transport, **kwargs):
 
 
 class OfflineTransportTests(unittest.TestCase):
+    def test_product_image_option_is_explicit_and_default_protocol_is_unchanged(self):
+        transport = Transport({'results': [], 'errors': []})
+        client(transport).fetch([URL], include_images=True)
+        body = json.loads(transport.requests[0][0].data)
+        self.assertIs(body['image_links'], True)
+        self.assertNotIn('page_metadata', body)
+        with self.assertRaises(ValueError):
+            client(Transport()).fetch([URL], include_images='yes')
+
     def test_missing_credentials_before_network(self):
         transport = Transport()
         with patch.dict(os.environ, {}, clear=True):

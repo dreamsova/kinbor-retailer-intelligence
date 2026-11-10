@@ -101,6 +101,14 @@ class MockedAcquisitionFailures(unittest.TestCase):
 
 
 class OfflineEvidenceAndRecommendations(unittest.TestCase):
+    def test_new_default_abstains_on_category_only_evidence(self):
+        evidence = research.extract_evidence([fixture_page()])
+        audit, recommendations = research.recommend(research.load_catalog(), evidence)
+        self.assertEqual(len(audit), 210)
+        self.assertEqual(recommendations, [])
+        self.assertTrue(all(row['selected'] == row['eligible'] == 'false' for row in audit))
+        self.assertTrue(all('Insufficient product-specific style evidence' in row['reason'] for row in audit))
+
     def test_capture_dedup_and_browser_receipt_requirements(self):
         page = fixture_page()
         capture = research.validate_capture(fixture_capture([page, copy.deepcopy(page)]), WEBSITE)
@@ -143,7 +151,7 @@ class OfflineEvidenceAndRecommendations(unittest.TestCase):
             self.assertEqual(e["source_url"], page["final_url"])
             self.assertEqual(e["retrieved_at_utc"], TIMESTAMP)
             self.assertIn(e["quote"], page["title"] + "\n" + page["text"])
-        audit, recommendations = research.recommend(products, evidence)
+        audit, recommendations = research.recommend(products, evidence, strategy='evidence_review_v2')
         self.assertEqual(len(audit), 210)
         self.assertEqual(len({row["sku"] for row in audit}), 210)
         self.assertEqual(len(recommendations), 4)

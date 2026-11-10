@@ -79,6 +79,25 @@ def json_file(folder, name):
 
 
 class DirectResearchOfflineIntegration(unittest.TestCase):
+    def test_opt_in_product_acquisition_runs_style_matcher_without_category_fill(self):
+        target = URL + 'products/plain-notebook'
+        transport = SyntheticTransport(fetch_result(page(links=[{'url': target, 'text': 'Notebook'}])),
+            fetch_result(page('/products/plain-notebook', title='Notebook', text='A notebook')))
+        with tempfile.TemporaryDirectory() as folder:
+            code, _, stderr, _ = self.run_cli(folder, transport, '--product-evidence')
+            self.assertEqual(code, 0, stderr)
+            product = json_file(folder, 'product_evidence.json')
+            matching = json_file(folder, 'matching.json')
+            self.assertEqual(len(product['observations']), 1)
+            self.assertEqual(len(matching['candidates']), 210)
+            self.assertEqual(matching['selected_skus'], [])
+            self.assertEqual(matching['multimodal']['status'], 'MULTIMODAL LIVE NOT VALIDATED')
+            self.assertEqual(rows(folder, 'recommendations.csv'), [])
+            self.assertEqual(research.validate_output(folder)['status'], 'passed')
+            self.assertTrue((Path(folder) / 'style_brief.md').exists())
+            self.assertTrue(all(json.loads(request.data)['image_links'] for request in transport.requests))
+            self.assertTrue(all('page_metadata' not in json.loads(request.data) for request in transport.requests))
+
     def run_cli(self, folder, transport, *extra, credential=KEY):
         # Patch both the API transport and unrelated fallback/DNS entry points.
         # An implicit public HTTP request must fail this offline integration test.
@@ -123,7 +142,9 @@ class DirectResearchOfflineIntegration(unittest.TestCase):
             self.assertEqual([r['http_status'] for r in receipt['requests']], [200, 200])
             brief = (Path(folder) / 'buyer_brief.md').read_text(encoding='utf-8')
             self.assertIn('api_receipt.json', brief)
-            self.assertIn('human image review', brief)
+            self.assertIn('Category overlap alone produces no recommendation', brief)
+            self.assertEqual(rows(folder, 'recommendations.csv'), [])
+            self.assertEqual(result['matching_strategy'], 'category_evidence_only_abstain')
             self.assertIn('Unknown', brief)
             public = '\n'.join(p.read_text(encoding='utf-8') for p in Path(folder).iterdir())
             self.assertNotIn(KEY, public + stdout + stderr)

@@ -1,66 +1,72 @@
 # Kinbor Retailer Intelligence
 
-Research official retailer websites, review source evidence, and compare their observed assortment with a **210-SKU Kinbor catalog**. The Python CLI calls the TinyFish REST API directly and produces an illustrated buyer brief, evidence table, API receipt, and audit of every catalog SKU.
+Evidence-linked SKU review for a preserved **210-SKU Kinbor catalog**. Phase 2 now compares actual retailer product observations with an explicitly annotated subset of the real SKU images. It does not rotate categories or fill a recommendation quota.
 
-## What it does
+Start with the current briefs: **[Atlas](phase2/live/atlas/style_brief.md)** · **[Shorthand](phase2/live/shorthand/style_brief.md)** · **[Wonder Fair](phase2/live/wonder-fair/style_brief.md)**. Each shows why a specific SKU merits review, source product/image URLs, visible SKU features, contrary evidence, carton quantity and unresolved questions. `matching.json` retains every one of the 210 candidates, including unassessed and rejected hypotheses.
 
-- Keeps retailer observations linked to source URLs and retrieval times.
-- Joins candidate products to their actual SKU, image, source row, and carton quantity.
-- Separates product fit, evidence strength, and buyer access for human review.
+## What actually changed
 
-Start with the saved **[Atlas buyer brief](phase2/live/atlas/buyer_brief.md)** and its **[API receipt](phase2/live/atlas/api_receipt.json)**. The brief links product images and evidence; the adjacent `research.json`, `evidence.csv`, `candidate_audit.csv`, and `recommendations.csv` contain the complete review data. This is the single canonical Atlas example, retained under `phase2/live/` so the same files support validation and CSV integration.
+The old `evidence_review_v2` selected categories, rotated collections and used SKU spelling to break display ties. Its four picks per store were not evidence of aesthetic fit. That implementation and the original saved API bundles remain **frozen comparators**, explicitly invoked for evaluation; category-only evidence now produces **zero recommendations by default**.
 
-## How to run
+The new small matcher requires an individually inspected SKU image, a specific official retailer product observation, a compatible functional format, and sufficiently specific shared design features. Generic “plain cover” alone is insufficient; a refill never substitutes for a notebook without compatibility evidence. Equal evidence uses SKU order only for stable display. No store-diversity quota applies. A limited sample and simple vocabulary can miss good products: unannotated images are **unassessed**, not negative labels.
 
-Use Python 3.10+. Research and saved-output validation use the standard library; the full test suite and image importer also require Pillow.
+| Current pilot | Official product observations | Review candidates | Evidence-based change |
+|---|---:|---|---|
+| Atlas Stationers | 7 | `DT55566` | Translucent purple pouch compared with the listed Hightide transparent-front A6 case; dimensions/construction and 100-unit carton acceptance remain unverified. The blind-box gel pen is no longer auto-picked because Atlas lists pens. |
+| Shorthand | 6 | `DT54744`, `DT54726`, `DT54729`, `DTYC0006` | Checker/geometric and botanical cover hypotheses tied to actual Checker Black and Botanical Archway notebook pages; handedness, gold foil, binding and exact artwork differ or are unverified. |
+| Wonder Fair | 6 | None | Mixed artist stationery, animal memo pads and restrained notebooks do not yet support a sufficiently specific same-format match in the inspected subset. **Insufficient evidence**, rather than invented recommendations. |
+
+**MULTIMODAL LIVE NOT VALIDATED.** No visual-model API key was available, so no live model assessment was made. The 45 SKU image notes came from local Codex image inspection and are labelled analyst inference, pending human review. Retailer image URLs were observed, but their pixels were not assessed. This is a conservative rules baseline with better evidence and abstention, **not proven improvement in selection quality**.
+
+## Reproduce offline
+
+Python 3.10+; Pillow is needed for the unchanged importer/image tests.
 
 ```bash
 python3 -m pip install Pillow
 python3 -m unittest discover -v
-python3 research.py --mode validate --output-dir phase2/live/atlas
-python3 research.py --mode validate --output-dir phase2/live/shorthand
-python3 research.py --mode validate --output-dir phase2/live/wonder-fair
+python3 matching.py --pilot-dir phase2/live/atlas --validate
+python3 matching.py --pilot-dir phase2/live/shorthand --validate
+python3 matching.py --pilot-dir phase2/live/wonder-fair --validate
 python3 phase2.py
+python3 eval.py --summarize phase2/reviews.csv
 ```
 
-These checks run offline against saved results. They do not make new API calls. `phase2.py` validates the 20-store CSV joins, image/source/carton references, and all **214 Phase 1 preservation hashes**. To regenerate the tied review queue from the saved three-store results:
+To regenerate style outputs, omit `--validate`. To create a **new** worksheet without replacing responses:
 
 ```bash
-python3 phase2.py --integrate-pilots --pilot-root phase2/live
+python3 eval.py --generate --output work/reviews-round2.csv
 ```
 
-For **new live research**, securely configure `TINYFISH_API_KEY` in the process environment, then run:
+The supplied [reviews.csv](phase2/reviews.csv) has **36 blank A/B comparisons**, 12 real SKUs per shop, including old picks, new hypotheses and deliberate design/function challenges. The separate mapping key is withheld from reviewers. Follow the [evaluation protocol](docs/MATCHING_EVALUATION.md). No user gold labels, accuracy, preference rate, saved time, sales result or improvement percentage exists yet.
+
+## Acquire fresh product evidence
+
+`tinyfish_client.py` remains the direct official REST transport. Securely inject `TINYFISH_API_KEY` into the process environment; no keys in chat, files or command arguments. Missing credentials fail before transport with a blocked receipt, never an implicit fallback.
 
 ```bash
 python3 research.py --mode tinyfish --url https://www.atlasstationers.com/ \
-  --output-dir work/atlas --collect-usage
+  --product-evidence --max-pages 10 --output-dir work/atlas-new
 ```
 
-This command makes API requests and may incur provider charges. The default acquisition uses the homepage and one bounded batch of official links, with no automatic fallback. Missing credentials produce a blocked receipt and exit 2. See [API setup, modes, budgets, and errors](docs/TINYFISH_API.md) or `python3 research.py --help` before running new research.
+This opts into bounded product-first discovery, writes `product_evidence.json`, and runs the new matcher. Repeat `--product-url` for known official product pages; explicit URLs still cannot authorize an unlinked external shop. The official homepage can establish a linked shop domain. Search is optional URL discovery, never assortment proof. Account/cart/checkout actions are excluded. Missing product images, explicit prices or currencies stay `Unknown`. REST image links are requested only in product mode; the metadata-rich connector response is not claimed to be identical to REST. See [API contract and limits](docs/TINYFISH_API.md).
 
-## Saved results and limits
+For this pilot, the connected official TinyFish **Search/Fetch** tools supplied new public product evidence: 2 Search + 9 Fetch calls, 38 URL requests including repeats, 37 successful results and one discovery 404. The receipts in `product_evidence.json` distinguish these executions from the **previous** direct Python API runs in `api_receipt.json`. A TinyFish REST key was absent locally; the new REST product mode was tested with mocks, not a fresh authenticated REST call. Billed costs are **Unknown**. Product pages are observed public listings, not verified current inventory; some pages showed out-of-stock or contradictory availability text.
 
-The three saved bundles are evidence from prior direct Python API executions; validating or integrating them does **not** repeat those live calls.
+## Optional image assessment
 
-| Retailer | Observed pages | Catalog rows audited | Preview candidates |
-|---|---:|---:|---:|
-| [Atlas Stationers](phase2/live/atlas/buyer_brief.md) | 6 | 210 | 4 |
-| [Shorthand](phase2/live/shorthand/buyer_brief.md) | 6 | 210 | 4 |
-| [Wonder Fair](phase2/live/wonder-fair/buyer_brief.md) | 4 | 210 | 4 |
+`vision.py` implements genuine image input to the fixed **OpenAI Responses API**. Default is off. To enable, securely configure `OPENAI_API_KEY` and an image-capable `KINBOR_VISION_MODEL`, check that specific image transmission is permitted, and use both explicit flags:
 
-The **[review queue](phase2/review_queue.md)** contains three tied research candidates. The remaining 17 retailers retain historical records marked `legacy_not_revalidated`. These are hypotheses for review, not confirmed buyers or a ranked top five. Categories and shared product attributes support matching inferences; aesthetic fit, current inventory, resale authority, buyer interest, commercial terms, and order feasibility remain unconfirmed. Read each retailer's complete submission policy before any future contact. No outreach occurs in this workflow. Billed API cost is Unknown where receipts contain no monetary amount.
+```bash
+python3 matching.py --pilot-dir work/atlas-new --vision --authorize-openai-images
+```
 
-Each individual SKU requires **one separate full carton** under the project's ordering rule; supplier or retailer acceptance of that rule is unverified. `DTB6611-1` and `DTB6616-1` remain **112 units/carton**. The catalog is an October 16, 2026 snapshot. Product images and source coordinates remain unchanged; image rights stay with their owners and are not licensed here for third-party reuse.
+OpenAI then receives at most 8 already-supported, hash-checked catalog WebP images and 3 public retailer image URLs in one request, with `store: false`. No supplier workbook, quotation, inventory, arbitrary uploaded image or secret is accepted. This flag confirms permission for this service, not publication rights; public visibility alone does not grant an image license. Without permission/key/model/images, on refusal or invalid output, the result remains `MULTIMODAL LIVE NOT VALIDATED` and keeps the offline baseline. All model claims are inference, with citations/counterevidence and pending human review. Model availability, access and quality require a real enabled pilot. [Official image-input documentation](https://developers.openai.com/api/docs/guides/images-vision).
 
-## Repository guide
+## Preserved scope
 
-| Path | Purpose |
-|---|---|
-| `products.csv`, `images/`, `import.py` | Preserved Phase 1 catalog and importer. |
-| `research.py`, `tinyfish_client.py` | Acquisition, provenance, full-catalog matching, and output validation. |
-| `phase2.py`, `phase2/*.csv`, `phase2/review_queue.md` | Combined retailer dataset, joins, and human-review queue. |
-| `phase2/live/` | Three complete saved API result bundles required for reproducible validation. |
-| `test_*.py` | Offline regression tests, including the unchanged Phase 1 tests. |
-| `docs/` | [Data dictionary](docs/DATA_DICTIONARY.md), [API notes](docs/TINYFISH_API.md), [case study](docs/CASE_STUDY.md), and preservation manifest. |
+`products.csv`, all **210 WebP images**, `import.py` and Phase 1 test/source provenance retain their **214 preservation hashes**. Each individual SKU requires **one separate full carton** under the project rule. `DTB6611-1` and `DTB6616-1` remain **112 units/carton**. Supplier/buyer acceptance, materials, paper performance, Kinbor retail/landed prices, authorization, brand relationships, current stock and buying intent remain unverified. No outreach, dashboard, CRM or checkout was added.
 
-See the [validation report](phase2/validation_report.json) for this cleanup's recorded checks and scope. Older connector captures, duplicate pilot outputs, obsolete briefs, and debug logs remain recoverable in Git history. Private supplier workbooks, quotations, inventory, and credentials are excluded from the public repository.
+Retailer images are URL references only, not downloaded or republished in GitHub. Catalog-image rights remain with their owners. Private supplier workbooks, quotations and credentials remain excluded. No user-uploaded private material was sent to a new model service.
+
+`phase2/sku_matches.csv`, `retailers.csv`, `evidence.csv`, original `research.json` and older `buyer_brief.md` retain the pre-change comparator and 17 stores marked `legacy_not_revalidated`; they are not the active style shortlist. The [current queue](phase2/review_queue.md) points to the new briefs. [Validation and spot checks](phase2/style_validation_report.json) record measured checks and remaining limitations. No deleted historical files were restored.

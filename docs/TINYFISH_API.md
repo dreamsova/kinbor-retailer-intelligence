@@ -1,6 +1,12 @@
 # TinyFish direct API implementation
 
-Implementation reference date: November 9, 2026 (Chicago). This cleanup preserves the existing API contract; it does not claim a fresh provider-documentation review. `tinyfish_client.py` is a small Python standard-library REST client; no Work connector or manually imported capture is required for `research.py --mode tinyfish`.
+Implementation reference date: November 9, 2026 (Chicago). `tinyfish_client.py` remains a small Python standard-library REST client; no Work connector or manually imported capture is required for `research.py --mode tinyfish`.
+
+Current matching update: `--product-evidence` prioritizes actual product pages, optionally follows one observed shop/collection discovery hop within the budget, and adds the documented `image_links: true` request option. It writes `product_evidence.json` and automatically runs `matching.py` for a current `style_brief.md` plus the full 210-SKU `matching.json` audit. Repeat `--product-url` for known official product URLs; an explicit URL does not authorize an unrelated commerce domain. Category-only acquisition now abstains by default.
+
+The [official Fetch reference](https://docs.tinyfish.ai/fetch-api/reference) was checked for this extension. REST product mode requests `image_links`, not the connector-only `page_metadata` option. It retains documented response description/image links when available; missing or ambiguous image, price and currency values stay `Unknown`. The public HTTP parser can read actual HTML JSON-LD/Open Graph product metadata. None of these paths fetches image bytes.
+
+The new 19-product pilot used the connected official TinyFish Search/Fetch tools, not a new Python REST execution: 2 Search, 9 Fetch, 38 requested URLs including repeats, 37 successful URL results and one discovery 404. Acquisition receipts in each `product_evidence.json` identify this scope (the Atlas/Shorthand receipt is shared and must not be counted twice). No local REST or visual-model credential was available. The older `api_receipt.json` files and the direct-run statements below describe the **prior frozen comparator runs**; they do not authenticate the new product acquisition. New matching results explicitly retain `MULTIMODAL LIVE NOT VALIDATED`; billed costs are Unknown.
 
 ## Official endpoints and choice
 

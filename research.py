@@ -147,9 +147,20 @@ class PageParser(HTMLParser):
         self.ignore = 0
         self.in_title = False
         self.anchor = None
+        self.images, self.product_data = [], []
+        self.metadata = {}
+        self.json_ld = None
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == 'meta':
+            key = attrs.get('property') or attrs.get('name', '')
+            if key in ('og:type', 'og:title', 'og:description', 'og:image', 'product:price:amount', 'product:price:currency', 'product:brand'):
+                self.metadata[key] = attrs.get('content', '')
+        if tag == 'script' and attrs.get('type', '').lower() == 'application/ld+json':
+            self.json_ld = []
+        if tag == 'img' and not self.ignore:
+            self.images.append({'url': attrs.get('src', ''), 'alt': plain(attrs.get('alt', ''))})
         if tag in ('script', 'style', 'noscript', 'svg', 'template'):
             self.ignore += 1
         if tag == 'title':
@@ -160,6 +171,23 @@ class PageParser(HTMLParser):
             self.anchor = [attrs.get('href', ''), []]
 
     def handle_endtag(self, tag):
+        if tag == 'script' and self.json_ld is not None:
+            try:
+                value = json.loads(''.join(self.json_ld))
+                def visit(node):
+                    if isinstance(node, list):
+                        for item in node:
+                            visit(item)
+                    elif isinstance(node, dict):
+                        types = node.get('@type', [])
+                        if 'Product' in ([types] if isinstance(types, str) else types):
+                            self.product_data.append(node)
+                        if '@graph' in node:
+                            visit(node['@graph'])
+                visit(value)
+            except (ValueError, TypeError):
+                pass
+            self.json_ld = None
         if tag in ('script', 'style', 'noscript', 'svg', 'template') and self.ignore:
             self.ignore -= 1
         if tag == 'title':
@@ -171,6 +199,8 @@ class PageParser(HTMLParser):
             self.parts.append('\n')
 
     def handle_data(self, data):
+        if self.json_ld is not None:
+            self.json_ld.append(data)
         if self.ignore:
             return
         if self.in_title:
@@ -200,10 +230,64 @@ def normalize_page(page):
             continue
         if target not in {x['url'] for x in links}:
             links.append({'url': target, 'text': plain(link.get('text', ''))[:200]})
-    return {'url': url, 'final_url': final, 'title': plain(page.get('title', ''))[:300],
+    result = {'url': url, 'final_url': final, 'title': plain(page.get('title', ''))[:300],
             'text': safe_text(page.get('text', ''))[:MAX_BYTES], 'links': links,
             'retrieved_at_utc': check_timestamp(page['retrieved_at_utc']),
             'status': page.get('status', 'ok'), 'error': plain(page.get('error', ''))[:200]}
+    # These optional fields preserve public product evidence without changing
+    # historical captures. Images remain references; no bytes are downloaded.
+    if 'images' in page:
+        images = []
+        for item in page.get('images') or []:
+            item = {'url': item} if isinstance(item, str) else item
+            if not isinstance(item, dict):
+                continue
+            raw_url = item.get('url') or item.get('src', '')
+            if not isinstance(raw_url, str) or not raw_url.strip():
+                continue
+            try:
+                target = normalize_url(urljoin(final, raw_url))
+            except (TypeError, ValueError):
+                continue
+            if target not in {x['url'] for x in images}:
+                images.append({'url': target, 'alt': plain(item.get('alt', ''))[:300]})
+        result['images'] = images[:30]
+    if 'description' in page:
+        result['description'] = plain(page.get('description') or '')[:1200]
+    if 'product_data' in page:
+        # Store only the fields actually needed to audit product observations.
+        result['product_data'] = []
+        for item in (page.get('product_data') or [])[:10]:
+            if not isinstance(item, dict):
+                continue
+            product = {key: plain(item[key])[:1200] for key in ('name', 'description') if isinstance(item.get(key), str)}
+            brand = item.get('brand')
+            if isinstance(brand, dict):
+                brand = brand.get('name')
+            if isinstance(brand, str):
+                product['brand'] = plain(brand)[:200]
+            raw_images = item.get('image') or []
+            if not isinstance(raw_images, list):
+                raw_images = [raw_images]
+            product['image'] = []
+            for image in raw_images[:10]:
+                if isinstance(image, dict):
+                    image = image.get('url', '')
+                if not isinstance(image, str) or not image.strip():
+                    continue
+                try:
+                    product['image'].append(normalize_url(urljoin(final, image)))
+                except (TypeError, ValueError):
+                    continue
+            offers = item.get('offers') or []
+            if not isinstance(offers, list):
+                offers = [offers]
+            product['offers'] = []
+            for offer in offers[:20]:
+                if isinstance(offer, dict):
+                    product['offers'].append({key: plain(offer[key])[:50] for key in ('price', 'priceCurrency') if key in offer})
+            result['product_data'].append(product)
+    return result
 
 
 def validate_capture(bundle, website):
@@ -282,7 +366,16 @@ def fetch_page(url, *, timeout=15, website=None):
             if 'html' in content_type:
                 parser = PageParser()
                 parser.feed(body)
-                page.update(text=''.join(parser.parts), title=''.join(parser.title_parts), links=parser.links)
+                meta = parser.metadata
+                if (not parser.product_data and is_product_url(page['final_url'])
+                        and (meta.get('og:type') in ('product', 'og:product') or 'product:price:amount' in meta)):
+                    parser.product_data.append({'name': meta.get('og:title') or ''.join(parser.title_parts),
+                        'description': meta.get('og:description', ''), 'image': meta.get('og:image', []),
+                        'brand': meta.get('product:brand', ''), 'offers': {
+                            'price': meta.get('product:price:amount', ''),
+                            'priceCurrency': meta.get('product:price:currency', '')}})
+                page.update(text=''.join(parser.parts), title=''.join(parser.title_parts), links=parser.links,
+                            images=parser.images, product_data=parser.product_data)
             else:
                 page['text'] = body
             if re.search(r'access denied|just a moment|verify (?:that )?you are human|captcha', page['title'], re.I):
@@ -295,7 +388,7 @@ def fetch_page(url, *, timeout=15, website=None):
     return normalize_page(page)
 
 
-def public_capture(website, *, max_pages=8, timeout=15, deadline=120):
+def public_capture(website, *, max_pages=8, timeout=15, deadline=120, product_focus=False):
     website = normalize_url(website, resolve=True)
     started = time.monotonic()
     robots_url = urljoin(website, '/robots.txt')
@@ -316,7 +409,7 @@ def public_capture(website, *, max_pages=8, timeout=15, deadline=120):
     relevant = re.compile(r'contact|about|faq|submit|vendor|supplier|notebook|journal|planner|case|pouch|brand|stationery', re.I)
     # Prefer contact/policy discovery before product pages. No external search,
     # login, form, cart, checkout or arbitrary user-provided instructions.
-    forbidden = re.compile(r'/account|/login|/cart|/checkout|/search|/customer_|/orders|/products/', re.I)
+    forbidden = re.compile(r'/account|/login|/cart|/checkout|/search|/customer_|/orders' + ('' if product_focus else r'|/products/'), re.I)
     while queue and len(pages) < max_pages:
         if time.monotonic() - started >= deadline:
             errors.append('Total research deadline reached')
@@ -334,8 +427,9 @@ def public_capture(website, *, max_pages=8, timeout=15, deadline=120):
             errors.append(page['error'] + ': ' + url)
             continue
         links = [x['url'] for x in page['links'] if x['url'].startswith('https://')
-                 and same_site(x['url'], website) and relevant.search(x['url']) and not forbidden.search(x['url'])]
-        links.sort(key=lambda u: (0 if re.search(r'contact|submit|vendor|supplier|faq', u, re.I) else 1, u))
+                 and same_site(x['url'], website) and (relevant.search(x['url']) or (product_focus and is_product_url(x['url']))) and not forbidden.search(x['url'])]
+        links.sort(key=lambda u: ((0 if is_product_url(u) else 1, u) if product_focus else
+                                (0 if re.search(r'contact|submit|vendor|supplier|faq', u, re.I) else 1, u)))
         queue.extend(x for x in links if x not in seen and x not in queue)
     good = sum(p['status'] == 'ok' for p in pages)
     return {'provider': 'public_http', 'website': website, 'status': 'completed' if good and not errors else 'partial' if good else 'failed',
@@ -343,8 +437,101 @@ def public_capture(website, *, max_pages=8, timeout=15, deadline=120):
             'elapsed_seconds': round(time.monotonic() - started, 3)}
 
 
+def is_product_url(url):
+    """Observed commerce-page shapes; a path is discovery, never a stock fact."""
+    path = urlsplit(url).path
+    if re.search(r'/(?:products?|shop/p)/[^/]+/?$', path, re.I):
+        return True
+    # Lightspeed-style product pages used by the official linked Wonder Fair
+    # shop. Do not broaden arbitrary .html sites or nested service pages.
+    host = urlsplit(url).hostname or ''
+    return (host.removeprefix('www.') == 'wonderfairhomeshopping.com'
+            and bool(re.fullmatch(r'/[a-z0-9][a-z0-9-]+\.html', path, re.I))
+            and not re.search(r'about|contact|privacy|policy|terms|shipping|returns|sitemap|account|checkout|cart', path, re.I))
+
+
+def product_title(title, url):
+    """Remove only known official-site title suffixes, not arbitrary delimiters."""
+    host = (urlsplit(url).hostname or '').removeprefix('www.')
+    suffixes = {'wonderfairhomeshopping.com': r'Wonder Fair(?: Home Shopping(?: Network)?)?',
+                'atlasstationers.com': r'Atlas Stationers',
+                'shopshorthand.com': r'Shorthand(?: Press)?'}
+    suffix = suffixes.get(host)
+    return re.sub(r'\s+[|–—-]\s+' + suffix + r'\s*$', '', title, flags=re.I) if suffix else title
+
+
+def product_observations(pages, acquisition='public_http'):
+    """Public product-page observations with explicit unknowns, never image claims.
+
+    The literal style terms below are text observations. They are not a visual
+    assessment, retailer preference, quality judgement, or permission to send an
+    image to a model. Navigation/collection pages alone do not create products.
+    """
+    observations, seen = [], set()
+    style_pattern = re.compile(r'\b(?:floral|botanical|illustrated|illustration|letterpress|minimalist|minimal|geometric|striped|stripes|pastel|neon|colorful|colourful|monochrome|vintage|retro|animal|cat|dog|rainbow|foil|embossed|handmade|hand[- ]drawn|screen[- ]printed|risograph|solid colou?r|dot grid|grid|lined|ruled|blank|fountain pen|gel pen|ballpoint)\b', re.I)
+    for raw in pages:
+        page = normalize_page(raw)
+        if page['status'] != 'ok':
+            continue
+        structured = page.get('product_data') or []
+        if not structured and not is_product_url(page['final_url']):
+            continue
+        for item in structured or [{}]:
+            title = item.get('name') or product_title(page['title'], page['final_url'])
+            if not title:
+                continue
+            identity = (page['final_url'], title)
+            if identity in seen:
+                continue
+            seen.add(identity)
+            description = item.get('description') or page.get('description') or ''
+            # Keep a short audit excerpt, not a republication of retailer copy.
+            excerpt = ' '.join(description.split()[:20]) or UNKNOWN
+            terms = sorted({m.group(0).lower() for m in style_pattern.finditer(title + '\n' + description)})
+            price, currency = UNKNOWN, UNKNOWN
+            offers = item.get('offers') or []
+            prices = {(o.get('price'), o.get('priceCurrency')) for o in offers
+                      if re.fullmatch(r'\d+(?:\.\d{1,4})?', str(o.get('price', '')))
+                      and re.fullmatch(r'[A-Z]{3}', str(o.get('priceCurrency', '')))}
+            if len(prices) == 1:
+                price, currency = next(iter(prices))
+            elif not offers:
+                matches = re.findall(r'\b(?:price|sale price)\s*[:\-]?\s*(USD|GBP|EUR|CAD|AUD)\s*\$?\s*(\d+(?:\.\d{1,2})?)\b', page['text'], re.I)
+                matches = [(code.upper(), amount) for code, amount in matches]
+                if len(set(matches)) == 1:
+                    currency, price = matches[0]
+            image = next(iter(item.get('image') or []), UNKNOWN)
+            if image == UNKNOWN:
+                # An image on a page may be a logo, navigation or recommendation.
+                # Only literal product-name / slug associations are accepted.
+                slug_words = set(re.findall(r'[a-z]{3,}', urlsplit(page['final_url']).path.split('/')[-1].lower()))
+                title_words = set(re.findall(r'[a-z]{3,}', title.lower()))
+                candidates = []
+                for candidate in page.get('images', []):
+                    alt_words = set(re.findall(r'[a-z]{3,}', candidate['alt'].lower()))
+                    file_words = set(re.findall(r'[a-z]{3,}', urlsplit(candidate['url']).path.lower()))
+                    if (len(title_words & alt_words) >= min(2, len(title_words)) and title_words) or len(slug_words & file_words) >= 2:
+                        candidates.append(candidate['url'])
+                if candidates:
+                    image = candidates[0]
+            key = hashlib.sha256((page['final_url'] + '\n' + title).encode()).hexdigest()[:12]
+            observations.append({'evidence_id': 'P-' + key, 'product_id': 'P-' + key,
+                'source_url': page['final_url'], 'retrieved_at_utc': page['retrieved_at_utc'],
+                'confidence': 'medium', 'title': title, 'brand_label': item.get('brand') or UNKNOWN,
+                'product_image_url': image, 'screenshot_url': UNKNOWN,
+                'public_price': str(price), 'currency': currency,
+                'price_basis': 'public page observation; variant applicability unverified' if price != UNKNOWN else UNKNOWN,
+                'description_excerpt': excerpt, 'observed_style_terms': terms,
+                'style_basis': 'literal page text; not a visual assessment',
+                'visible_style_features': UNKNOWN, 'image_reuse_permission': UNKNOWN,
+                'epistemic_status': 'fact_observation', 'current_inventory': UNKNOWN,
+                'brand_relationship': UNKNOWN, 'buyer_interest': UNKNOWN,
+                'sales_authorization': UNKNOWN, 'acquisition': acquisition})
+    return observations
+
+
 def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
-                     search=False, collect_usage=False):
+                     search=False, collect_usage=False, product_focus=False, product_urls=None):
     """Local Python -> official REST API. Never imports a connector capture.
 
     Fetch homepage, then one bounded batch of relevant official links. Search
@@ -353,6 +540,10 @@ def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
     """
     from tinyfish_client import TinyFishClient, TinyFishError
     website = normalize_url(website)
+    if product_urls and not product_focus:
+        raise ValueError('Explicit product URLs require product_focus')
+    if product_urls and len(product_urls) > 10:
+        raise ValueError('At most 10 product URLs may be supplied')
     started = time.monotonic()
     pages, errors, client = [], [], None
     receipt = {'schema_version': 1, 'execution': 'local_python_direct_api',
@@ -376,7 +567,8 @@ def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
         return url
 
     def acquire(urls):
-        response = client.fetch(urls, per_url_timeout_ms=45000)
+        response = client.fetch(urls, per_url_timeout_ms=45000,
+                                **({'include_images': True} if product_focus else {}))
         stamp = now()  # response observation, not a claimed origin publication time
         for row in response.get('results', []):
             original = acceptable(row.get('url', ''))
@@ -397,7 +589,11 @@ def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
                     links.append({'url': link.get('url') or link.get('href', ''),
                                   'text': link.get('text') or link.get('title', '')})
             page = normalize_page({'url': original, 'final_url': final, 'title': row.get('title', ''),
-                'text': row['text'], 'links': links, 'retrieved_at_utc': stamp, 'status': 'ok'})
+                'text': row['text'], 'links': links, 'retrieved_at_utc': stamp, 'status': 'ok',
+                **({'images': row.get('image_links') or row.get('images') or [
+                    {'url': image, 'alt': label} for label, image in re.findall(
+                        r'!\[([^\]\n]*)\]\((https://[^)\s]+)\)', row['text'])],
+                    'description': row.get('description') or ''} if product_focus else {})})
             if final not in seen:
                 pages.append(page)
                 seen.add(final)
@@ -428,19 +624,40 @@ def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
         for p in pages:
             for link in p['links']:
                 target = acceptable(link['url'])
-                if target and target not in seen and relevant.search(target + ' ' + link['text']):
+                if target and target not in seen and (relevant.search(target + ' ' + link['text']) or (product_focus and is_product_url(target))):
+                    targets.append(target)
+        if product_focus:
+            # Inputs are constrained to the retailer or a commerce domain
+            # explicitly linked by its fetched official homepage.
+            for value in product_urls or []:
+                target = acceptable(value)
+                if not target or not is_product_url(target):
+                    raise ValueError('Product URL must be on the official or linked shop domain')
+                if target not in seen:
                     targets.append(target)
         if search:
-            response = client.search('stationery notebooks product submissions contact',
+            response = client.search('stationery products notebooks pens' if product_focus else 'stationery notebooks product submissions contact',
                                      include_domains=sorted(allowed_hosts))
             for row in response.get('results', []):
                 target = acceptable(row.get('url', ''))
-                if target and target not in seen and relevant.search(target):
+                if target and target not in seen and (is_product_url(target) if product_focus else relevant.search(target)):
                     targets.append(target)
-        targets = sorted(set(targets), key=lambda u: (
+        targets = sorted(set(targets), key=lambda u: ((
+            0 if is_product_url(u) else 1 if not same_site(u, website) and urlsplit(u).path == '/' else
+            2 if re.search(r'collection|shop|notebook|journal|planner|pen', urlsplit(u).path, re.I) else 3, u)
+            if product_focus else (
             0 if re.search(r'faq|submit|vendor|supplier|contact', urlsplit(u).path, re.I) else
             1 if re.search(r'notebook|journal|planner|pouch|case', urlsplit(u).path, re.I) else
-            2 if not same_site(u, website) and urlsplit(u).path == '/' else 3, u))
+            2 if not same_site(u, website) and urlsplit(u).path == '/' else 3, u)))
+        # Reserve space for actual product pages if a shop/collection discovery
+        # hop is needed. No category rotation or SKU data is used in acquisition.
+        if product_focus and not any(is_product_url(u) for u in targets):
+            targets = targets[:min(2, max(0, max_pages - len(pages)))]
+            if targets:
+                acquire(targets)
+            targets = sorted({target for page in pages for link in page['links']
+                              if (target := acceptable(link['url'])) and target not in seen
+                              and is_product_url(target)})
         targets = targets[:max(0, max_pages - len(pages))]
         if targets:
             acquire(targets)
@@ -593,11 +810,19 @@ def load_catalog(path=ROOT / 'products.csv'):
     return products
 
 
-def recommend(products, evidence, limit=4, *, strategy='evidence_review_v2'):
+def recommend(products, evidence, limit=4, *, strategy='category_evidence_only_abstain'):
     if not 3 <= limit <= 5:
         raise ValueError('Recommendation limit must be 3 to 5')
-    if strategy not in ('evidence_review_v2', 'legacy_source_order_v1'):
+    if strategy not in ('category_evidence_only_abstain', 'evidence_review_v2', 'legacy_source_order_v1'):
         raise ValueError('Unknown matching strategy')
+    if strategy == 'category_evidence_only_abstain':
+        # Category overlap remains auditable, but cannot establish store-specific
+        # product styling. The two old strategies are explicit comparators only.
+        audit, _ = recommend(products, evidence, limit, strategy='evidence_review_v2')
+        for row in audit:
+            row.update(eligible='false', selected='false', tie_group='',
+                       reason='Insufficient product-specific style evidence; category-only baseline observation: ' + row['reason'])
+        return audit, []
     audit, candidates = [], []
     category_evidence = {}
     for e in evidence:
@@ -768,7 +993,7 @@ def write_results(capture, output_dir, *, mode, catalog_path=ROOT / 'products.cs
     errors = capture.get('errors', []) + [p['error'] for p in pages if p['error']]
     result = {'schema_version': 2, 'website': capture['website'], 'generated_at_utc': now(),
               'mode': mode, 'status': capture['status'], 'acquisition': acquisition,
-              'matching_strategy': 'evidence_review_v2', 'requested_limit': limit,
+              'matching_strategy': 'category_evidence_only_abstain', 'requested_limit': limit,
               'run_id': capture.get('run_id'),
               'related_browser_run_id': capture.get('related_browser_run_id'),
               'source_capture': capture.get('source_capture') if isinstance(capture.get('source_capture'), str) and re.fullmatch(r'[A-Za-z0-9_./-]+\.json', capture['source_capture']) and '..' not in Path(capture['source_capture']).parts and not capture['source_capture'].startswith('/') else None,
@@ -804,7 +1029,7 @@ def write_results(capture, output_dir, *, mode, catalog_path=ROOT / 'products.cs
     md = ['# Retailer research brief', '', f"Website: {capture['website']}",
           f"Acquisition: `{acquisition}`. Status: **{capture['status']}**. Actual run ID: {capture.get('run_id') or 'None (page fetch has no browser-run ID)' }.",
           '', 'This is a research preview. No outreach, forms or purchases occurred.',
-          f"All **{len(products)}** catalog SKUs were evaluated; **{summary['eligible_count']}** have observed category overlap. The following evidence-based representative preview needs human image review. Display order is not a buyer-intent or aesthetic ranking.", '',
+          f"All **{len(products)}** catalog SKUs were audited. Category overlap alone produces no recommendation. Use `--product-evidence` for product-first acquisition and the evidence-linked style review in `style_brief.md` / `matching.json`.", '',
           '| Dimension | Observation |', '|---|---|']
     md += [f'| {k.replace("_", " ").title()} | {summary[k]} |' for k in ('product_fit', 'evidence_strength', 'buyer_access', 'order_feasibility')]
     if 'api_receipt' in capture:
@@ -919,15 +1144,19 @@ def main(argv=None):
     parser.add_argument('--max-api-requests', type=int, default=4, help='Total API attempt cap including retries/optional search/usage, 1–8')
     parser.add_argument('--tinyfish-search', action='store_true', help='Add a domain-restricted Search API discovery call; snippets never become facts')
     parser.add_argument('--collect-usage', action='store_true', help='Query official Fetch usage endpoint; no automatic wallet changes')
+    parser.add_argument('--product-evidence', action='store_true', help='Opt in to bounded product-first acquisition and write product_evidence.json (image URL references only)')
+    parser.add_argument('--product-url', action='append', default=[], help='Explicit official/linked-shop product URL; repeat up to 10 times with --product-evidence in tinyfish mode')
     args = parser.parse_args(argv)
     try:
         if args.mode == 'validate':
-            if args.input or args.url:
+            if args.input or args.url or args.product_url or args.product_evidence:
                 parser.error('validate reads existing outputs only; do not pass --input/--url')
             print(json.dumps(validate_output(args.output_dir, args.catalog), indent=2))
             return 0
         if not args.url:
             parser.error('--url is required for research')
+        if args.product_url and (not args.product_evidence or args.mode != 'tinyfish'):
+            parser.error('--product-url requires --product-evidence and --mode tinyfish')
         website = normalize_url(args.url)
         if args.mode == 'import':
             if not args.input:
@@ -941,16 +1170,47 @@ def main(argv=None):
                 parser.error('API limits out of bounds')
             capture = tinyfish_capture(website, max_pages=args.max_pages, deadline=deadline,
                                       max_requests=args.max_api_requests, search=args.tinyfish_search,
-                                      collect_usage=args.collect_usage)
+                                      collect_usage=args.collect_usage,
+                                      **({'product_focus': True, 'product_urls': args.product_url} if args.product_evidence else {}))
         else:
             if args.input:
                 parser.error('--input is only supported in import mode')
             deadline = 120 if args.deadline is None else args.deadline
             if not 1 <= args.max_pages <= 12 or not 1 <= args.timeout <= 30 or not 10 <= deadline <= 180:
                 parser.error('Public limits out of bounds')
-            capture = public_capture(website, max_pages=args.max_pages, timeout=args.timeout, deadline=deadline)
+            capture = public_capture(website, max_pages=args.max_pages, timeout=args.timeout, deadline=deadline,
+                                     **({'product_focus': True} if args.product_evidence else {}))
         result = write_results(capture, args.output_dir, mode=args.mode, catalog_path=args.catalog, limit=args.limit)
-        print(json.dumps({k: result[k] for k in ('status', 'acquisition', 'run_id', 'summary', 'errors')}, indent=2))
+        if args.product_evidence:
+            observations = product_observations(capture['pages'], capture['acquisition'])
+            artifact = {'schema_version': 1, 'retailer_id': urlsplit(website).hostname.removeprefix('www.'),
+                        'website': website, 'generated_at_utc': now(), 'observations': observations,
+                        'limitations': ['Image URLs are references only; image reuse/model-transfer permission is Unknown.',
+                                        'Literal text style terms are not image assessment or retailer preferences.',
+                                        'Current inventory, brand relationships, buyer interest and sales authorization are unverified.']}
+            external_hosts = {urlsplit(row['source_url']).hostname.removeprefix('www.')
+                              for row in observations if not same_site(row['source_url'], website)}
+            for page in capture['pages']:
+                if not same_site(page['final_url'], website):
+                    continue
+                for link in page['links']:
+                    if (link['url'].startswith('https://')
+                            and urlsplit(link['url']).hostname.removeprefix('www.') in external_hosts):
+                        artifact['official_shop_link'] = {'source_url': page['final_url'],
+                            'target_url': link['url'], 'observed_at_utc': page['retrieved_at_utc'],
+                            'confidence': 'medium', 'source_field': 'captured official page link'}
+                        break
+            (args.output_dir / 'product_evidence.json').write_text(json.dumps(artifact, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+            # The optional style matcher is kept separate from acquisition and
+            # historical API receipts; missing evidence produces safe abstention.
+            from matching import run as match_products
+            style_result = match_products(args.output_dir, limit=args.limit)
+        display = {k: result[k] for k in ('status', 'acquisition', 'run_id', 'summary', 'errors')}
+        if args.product_evidence:
+            display['style_matching'] = {'selected_skus': style_result['selected_skus'],
+                                         'multimodal_status': style_result['multimodal']['status'],
+                                         'brief': 'style_brief.md'}
+        print(json.dumps(display, indent=2))
         return 0 if result['status'] == 'completed' else 2
     except (ValueError, OSError, KeyError, json.JSONDecodeError) as exc:
         print(json.dumps({'status': 'failed', 'error': plain(str(exc)), 'run_id': None}), file=sys.stderr)

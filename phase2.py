@@ -31,6 +31,21 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def current_style_reviews():
+    """Current matching is separate from the frozen category CSV comparator."""
+    from matching import validate_saved
+    reports=[]
+    for slug in PILOTS:
+        directory=DATA/'live'/slug
+        if (directory/'matching.json').exists():
+            checked=validate_saved(directory)
+            result=json.loads((directory/'matching.json').read_text(encoding='utf-8'))
+            reports.append({'retailer':slug,'selected_skus':result['selected_skus'],
+                            'brief':f'live/{slug}/style_brief.md',**checked})
+    require(len(reports) in (0,3),'All three style pilot bundles must be present together')
+    return reports
+
+
 def read(name):
     with (DATA / name).open(encoding='utf-8-sig', newline='') as f:
         return list(csv.DictReader(f))
@@ -306,6 +321,16 @@ def refresh(retailers, matches, evidence):
         '| Review priority | Retailer | Product fit | Evidence strength | Buyer access | All-candidate minimum |',
         '|---|---|---|---|---|---|',
     ]
+    styles=current_style_reviews()
+    if styles:
+        style_intro=['# Current style matching — human review pending','',
+                 '**MULTIMODAL LIVE NOT VALIDATED.** Review hypotheses only; no measured quality improvement or buying intent.',
+                 '', '| Retailer | Current candidates | Review |','|---|---|---|']
+        for s in styles:
+            style_intro.append(f"| {s['retailer']} | {', '.join(s['selected_skus']) or 'Insufficient evidence; no forced recommendation'} | [Evidence and reasons]({s['brief']}) |")
+        style_intro += ['', 'Use [reviews.csv](reviews.csv) with the [evaluation protocol](../docs/MATCHING_EVALUATION.md). '
+                    'The category CSV tables and older briefs below are frozen comparators; they do not represent current style recommendations.', '', '---', '']
+        text=style_intro+text
     for r in current:
         text.append(f'| 1 (tie; human review) | [{r["name"]}]({r["pilot_report"]}) | {r["product_fit"]} | {r["evidence_strength"]} | {r["buyer_access"]} | {r["minimum_cartons_all_candidates"]} cartons / {r["minimum_units_all_candidates"]} units |')
     for r in current:
@@ -353,6 +378,7 @@ def main():
     if args.refresh or args.integrate_pilots:
         refresh(retailers, matches, evidence)
     report = validate(retailers, matches, evidence)
+    report['current_style_reviews']=current_style_reviews()
     report['negative_controls_passed'] = fault_checks(retailers, matches, evidence)
     if args.brief:
         atlas = next(r for r in retailers if r['retailer_id'] == PILOTS['atlas'])

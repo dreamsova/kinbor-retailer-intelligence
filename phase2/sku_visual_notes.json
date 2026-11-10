@@ -1,0 +1,676 @@
+{
+  "schema_version": 1,
+  "scope": "Purposive visual subset; unannotated SKU is unassessed, not a negative. Source images remain unchanged. No material/quality/retailer preference inferred.",
+  "observed_at_utc": "2026-11-10T04:05:05Z",
+  "notes": [
+    {
+      "sku": "DT54726",
+      "image_path": "images/DT54726.webp",
+      "image_sha256": "cce42ed1c08a6ef1290ec968deb0e29b14aadbdea861258c7c417385eba6c84d",
+      "style_tags": [
+        "botanical",
+        "high_color"
+      ],
+      "visible_observation": "Large white/yellow flowers on red-orange cover; elastic closure visible.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54743",
+      "image_path": "images/DT54743.webp",
+      "image_sha256": "d516e3142762ba27e96feae1a9e2c55ddde895333bc172c8162cd7271f25303c",
+      "style_tags": [
+        "geometric",
+        "striped",
+        "high_color"
+      ],
+      "visible_observation": "Green striped cover with small house motif; ring binding visible.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54744",
+      "image_path": "images/DT54744.webp",
+      "image_sha256": "d78c6e79ebd244472d1811bbc541aaaa25b0b2f11cf37474b1120c1e9802596a",
+      "style_tags": [
+        "geometric",
+        "repeat_pattern",
+        "high_color",
+        "checker"
+      ],
+      "visible_observation": "Multicolor checker cover and rainbow motif; ring binding and lined-page diagram visible.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54729",
+      "image_path": "images/DT54729.webp",
+      "image_sha256": "9a449681088780ee7036cd6beea0bc8c5a244747ff4db03a2017e4dd99a34677",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "light_ground"
+      ],
+      "visible_observation": "Red tulip motifs on cream cover; lined page diagram visible.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54750",
+      "image_path": "images/DT54750.webp",
+      "image_sha256": "9541886e512497e928326573ab76337caeb6afcca81df5b8d50dfb8e4fb685da",
+      "style_tags": [
+        "animal",
+        "repeat_pattern",
+        "pastel"
+      ],
+      "visible_observation": "Repeating pink and turquoise cat-like decorative cover with center label.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54751",
+      "image_path": "images/DT54751.webp",
+      "image_sha256": "042395c32ed7280e86b5beb6148d46f8dbd07415450b006e21db59345f0222dc",
+      "style_tags": [
+        "animal",
+        "repeat_pattern",
+        "pastel"
+      ],
+      "visible_observation": "Repeating small animal motifs on lavender cover with center label.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0053",
+      "image_path": "images/DTYC0053.webp",
+      "image_sha256": "e469a85e122aa53ddf839f4c56f64f1a32b4bd3639d0b22f8666a4384fa4c2e7",
+      "style_tags": [
+        "illustrated",
+        "bird",
+        "pastel"
+      ],
+      "visible_observation": "Multicolor flying bird silhouettes on pale yellow cover; Freedom lettering.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0054",
+      "image_path": "images/DTYC0054.webp",
+      "image_sha256": "9043d06c717f8685235a9c7954c13502f3d585455aca34d26798833fb0a04a3f",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "dark_ground"
+      ],
+      "visible_observation": "Colorful flowers and small bird motifs on dark blue cover.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0055",
+      "image_path": "images/DTYC0055.webp",
+      "image_sha256": "5553505e7255bb22b1f28129d1aef9d09591d65acacedb234dc133e21edecb7a",
+      "style_tags": [
+        "line_art",
+        "pastel",
+        "light_ground"
+      ],
+      "visible_observation": "Pale blue cover with fine line-art objects; details small in source image.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0056",
+      "image_path": "images/DTYC0056.webp",
+      "image_sha256": "4ced22a83d2d282218362b90f30cf0a148d5bede8b56060a4ac0a8e02c71b8ad",
+      "style_tags": [
+        "botanical",
+        "line_art",
+        "pastel"
+      ],
+      "visible_observation": "Pink cover with fine floral and cup line art.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0032",
+      "image_path": "images/DTYC0032.webp",
+      "image_sha256": "e3ef748057489d6b2a5a28bb09d11b188f6fbba47da291b9f9effa4806138363",
+      "style_tags": [
+        "botanical",
+        "repeat_pattern",
+        "dark_ground"
+      ],
+      "visible_observation": "Dense small leafy motifs on dark green cover with strap.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0034",
+      "image_path": "images/DTYC0034.webp",
+      "image_sha256": "2327ada20cfbca2207b4177b49897632ceeb56080073e7c63a67ef8879a99d6f",
+      "style_tags": [
+        "geometric",
+        "repeat_pattern",
+        "dark_ground"
+      ],
+      "visible_observation": "Overlapping brown circular motifs on dark cover with strap.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0006",
+      "image_path": "images/DTYC0006.webp",
+      "image_sha256": "1fba5664f2b85b08c3005b169658621c817493d082877240deda9c30398d8a06",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "dark_ground"
+      ],
+      "visible_observation": "Flowers, mushrooms and book illustration around gold-colored lettering on olive cover.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0037",
+      "image_path": "images/DTYC0037.webp",
+      "image_sha256": "eec3123a1da3101f2aa61133acf8a35a4296c19aa2eb9dbe078b67eee2efee68",
+      "style_tags": [
+        "illustrated",
+        "pastel",
+        "light_ground"
+      ],
+      "visible_observation": "Pale scenic illustration on small strapped cover; fine details uncertain.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0014",
+      "image_path": "images/DTYC0014.webp",
+      "image_sha256": "45e28fd6544b74c8366693aa670cdde461bab254b0c273c1ec0d89e75b6d816e",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "dark_ground"
+      ],
+      "visible_observation": "Strawberry and leaf illustration on dark blue strapped cover.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0048",
+      "image_path": "images/DTYC0048.webp",
+      "image_sha256": "472732892731eb72d7a463761f2242c59824d59c25963965711c59ed8f6797a1",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "pastel"
+      ],
+      "visible_observation": "Small animal and floral motifs on pale blue narrow planning pad.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0045",
+      "image_path": "images/DTYC0045.webp",
+      "image_sha256": "ffa1f5b1b020cb0ac62cb145529be8523e46e2d71d9fc8eaa42202b3da87c474",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "dark_ground"
+      ],
+      "visible_observation": "Flowers and leaves on dark blue narrow planning pad.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0047",
+      "image_path": "images/DTYC0047.webp",
+      "image_sha256": "47a979fc1b107a65cdbe4c1adcfc11acbdbcc5041eb7e1b7821819030359bb2f",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Small animal and tree-like shapes on green narrow planning pad; detail uncertain.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53426",
+      "image_path": "images/DT53426.webp",
+      "image_sha256": "18c7c89dba1e3f62aead5a8bd018063224e69e83a80b1645e9434a6a1f4c18e9",
+      "style_tags": [
+        "plain_cover",
+        "pastel",
+        "typographic"
+      ],
+      "visible_observation": "Mint solid-color cover with small lettering; no large character illustration visible.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53428",
+      "image_path": "images/DT53428.webp",
+      "image_sha256": "8676ae9f8ad125123d851901a267ed02de5086ea13ffb843bfe9c9a3e64e12c2",
+      "style_tags": [
+        "plain_cover",
+        "muted",
+        "typographic"
+      ],
+      "visible_observation": "Brown solid-color cover and small lettering; planning spread shown.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53429",
+      "image_path": "images/DT53429.webp",
+      "image_sha256": "152e3acab8a74562b88bf7f331564ba540dd2cfaea76c764444c4acb2925f8b1",
+      "style_tags": [
+        "plain_cover",
+        "muted",
+        "typographic"
+      ],
+      "visible_observation": "Dark green solid-color cover with small gold-colored lettering.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53430",
+      "image_path": "images/DT53430.webp",
+      "image_sha256": "c26c0b76305955257723a01bf476cac87c90e75a1fab9a4c75bc8a83ccfeb45d",
+      "style_tags": [
+        "plain_cover",
+        "monochrome",
+        "typographic"
+      ],
+      "visible_observation": "Black solid-color cover with small lettering; planning spread shown.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53431",
+      "image_path": "images/DT53431.webp",
+      "image_sha256": "2d44d2d756297e40c87f384369311172bc57c5b85a58e152eb8a409e88662611",
+      "style_tags": [
+        "plain_cover",
+        "pastel",
+        "typographic"
+      ],
+      "visible_observation": "Pale cream and mint solid-color covers with fine lettering.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53553",
+      "image_path": "images/DT53553.webp",
+      "image_sha256": "303a1433e4a357ca09131648a8110cdd565cf53b7b6e1fb5fa1a60380469c744",
+      "style_tags": [
+        "plain_cover",
+        "high_color",
+        "typographic"
+      ],
+      "visible_observation": "Yellow solid-color cover with small lettering.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53156",
+      "image_path": "images/DT53156.webp",
+      "image_sha256": "378a130a888228385bf4b04b0ded5ec2a6759184ec777cf5be2b66fc3f0d042c",
+      "style_tags": [
+        "plain_cover",
+        "high_color",
+        "typographic"
+      ],
+      "visible_observation": "Red solid-color cover with small lettering; weekly planning pages shown.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT53549",
+      "image_path": "images/DT53549.webp",
+      "image_sha256": "30a2515a86ef79e373c7011ee5c36a77841fe208e0bc101e0b739de38551afe6",
+      "style_tags": [
+        "plain_cover",
+        "pastel",
+        "typographic"
+      ],
+      "visible_observation": "Cream solid-color cover with small lettering.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0100",
+      "image_path": "images/DTYC0100.webp",
+      "image_sha256": "30e58265f371364643d11de38481ec3b5702662f59278dcb1293b9e61a2fc8a6",
+      "style_tags": [
+        "plain_cover",
+        "monochrome",
+        "typographic"
+      ],
+      "visible_observation": "Black boxed writing set with dark notebook and pen; internal specs not verified.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTB6604-1",
+      "image_path": "images/DTB6604-1.webp",
+      "image_sha256": "f2199379266b0e8cea8484a757f56e0104dfb4e30c83fb6fdda2f8e251e265a7",
+      "style_tags": [
+        "plain_cover",
+        "light_ground"
+      ],
+      "visible_observation": "Cream refill/book block with yellow spine accent and small mark.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTB6611-1",
+      "image_path": "images/DTB6611-1.webp",
+      "image_sha256": "dc96e08b1d86d9dffba12ca01b62f8679e8a2ca0522c4ba9e29d8a782d1438a5",
+      "style_tags": [
+        "plain_cover",
+        "light_ground"
+      ],
+      "visible_observation": "Cream refill/book block with pale blue spine accent and small mark.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTB6616-1",
+      "image_path": "images/DTB6616-1.webp",
+      "image_sha256": "22e7457083351dd388f029be66b5fb0dadb2aa1d4b4cb8c9f036ccfe61f2d3ba",
+      "style_tags": [
+        "plain_cover",
+        "light_ground"
+      ],
+      "visible_observation": "Cream refill/book block with small dark mark; inner ruling not visible in cover photo.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTYC0166",
+      "image_path": "images/DTYC0166.webp",
+      "image_sha256": "53e41de02d58a01c673528c0746fa221fb01afdebbaa9094ac0cdac4ba656b35",
+      "style_tags": [
+        "plain_cover",
+        "light_ground"
+      ],
+      "visible_observation": "Pale yellow refill packaging with circular gold-colored seal.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTBB0060",
+      "image_path": "images/DTBB0060.webp",
+      "image_sha256": "e8ad17628f51088b703e8325e4627e06066f475a94561fd2efb4373d71ae8bb2",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Toast and animal character notebook; ring binding and index tabs visible.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTBB0061",
+      "image_path": "images/DTBB0061.webp",
+      "image_sha256": "28fc57e9cba0efc38f5e61aca5fca99e6abdc4506d74d39911763906b6be73b1",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Large animal character faces on ring notebook with index tabs.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTBB0021",
+      "image_path": "images/DTBB0021.webp",
+      "image_sha256": "e75bd10027c62d3a80178a3b6ccbaff1497d57608437f4032edbaee9b08ecafe",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "pastel"
+      ],
+      "visible_observation": "Large pink bunny-like character on yellow cover; inner spread shown.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTBB0035",
+      "image_path": "images/DTBB0035.webp",
+      "image_sha256": "9ef54365854fa75c3b7a6455bf339aac63a9cc555ba3791a9b41882acd52411b",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Bright food and animal character sticker sheet.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT589003",
+      "image_path": "images/DT589003.webp",
+      "image_sha256": "b0937dc3b8f62c0d97f9eef1d504ec8753d5aa65733025338d471356a910dc1c",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Colorful character pens in pink display packaging; gel/point performance not inferred.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT589005",
+      "image_path": "images/DT589005.webp",
+      "image_sha256": "e324803ba4e7eecdc193fc5907931f41abca1e8a1611d134d441b6f2de5ef43d",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Yellow character pen display and decorated pen barrels.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT52048",
+      "image_path": "images/DT52048.webp",
+      "image_sha256": "0d02b39347efdbc29d5d1f9b6ba5ed4cfec9e59db074aa7d81fe526e313523de",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Green Pochacco-branded character pen display and decorated barrels.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT55566",
+      "image_path": "images/DT55566.webp",
+      "image_sha256": "0b79438e238efae381b88604f4ee04e8b9d6722a364b71ff2a84c6d4c6ea56fb",
+      "style_tags": [
+        "transparent",
+        "plain_cover"
+      ],
+      "visible_observation": "Purple translucent rectangular zipped pen pouch; structure and dimensions need review.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTBB0058",
+      "image_path": "images/DTBB0058.webp",
+      "image_sha256": "d23c7cbcb634072d7939bd6a82b38d10ccbdd2a6c027815228d0e82c33ec66d9",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "pastel"
+      ],
+      "visible_observation": "Pouch with large raised character face and decorative colors; materials not inferred.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DTBB0113",
+      "image_path": "images/DTBB0113.webp",
+      "image_sha256": "d49125e9a2db1db3960cb471512238890fbe739628cfe508eb5b3ba76e2961af",
+      "style_tags": [
+        "animal",
+        "illustrated",
+        "pastel"
+      ],
+      "visible_observation": "Dog-face bag with long checkered loop and decorative fabric-like body; material unverified.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54757",
+      "image_path": "images/DT54757.webp",
+      "image_sha256": "576d02ffec05ce322a4d4b2de97ec49222e194ea96c67df73e91a10093449416",
+      "style_tags": [
+        "botanical",
+        "illustrated"
+      ],
+      "visible_observation": "White daisy patch motifs on dark packaging; material/performance not inferred.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54761",
+      "image_path": "images/DT54761.webp",
+      "image_sha256": "ae71cd47ec1123b2f68a4a9a11c473960da7ba55aecd49418049985b8fb92f0e",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Rainbow-and-flower patch motif; material/performance not inferred.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54731",
+      "image_path": "images/DT54731.webp",
+      "image_sha256": "9582ec73d0a70007cc7a0c9ed67ad8a268119cf3a00ac51e7c970a29c398f904",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "Small floral sticky-note/index pieces and stationery shown with tulip motif.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    },
+    {
+      "sku": "DT54732",
+      "image_path": "images/DT54732.webp",
+      "image_sha256": "75a18f7afe0e29ed12b6992c7f1b8a4f78c7987a31e4e0766e146906b4a0e2bb",
+      "style_tags": [
+        "botanical",
+        "illustrated",
+        "high_color"
+      ],
+      "visible_observation": "TO DO list grid inside wavy blue/yellow floral border.",
+      "epistemic_status": "analyst_image_inference",
+      "method": "Codex local image inspection; no external vision API",
+      "confidence": "medium",
+      "human_review_status": "pending"
+    }
+  ]
+}

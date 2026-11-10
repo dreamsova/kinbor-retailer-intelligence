@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "retailer_id": "wonder-fair",
+  "retailer_name": "Wonder Fair",
+  "website": "https://www.wonderfair.com/",
+  "official_shop_link": {
+    "source_url": "https://www.wonderfair.com/",
+    "target_url": "https://www.wonderfairhomeshopping.com/",
+    "observed_at_utc": "2026-11-10T04:00:34Z",
+    "source_field": "TinyFish fetched homepage links",
+    "confidence": "high"
+  },
+  "acquisition": {
+    "method": "tinyfish_connector_fetch_content",
+    "call_count": 5,
+    "urls_requested": 12,
+    "successful_urls": 12,
+    "billed_cost": "Unknown",
+    "elapsed_seconds": 99.867,
+    "elapsed_scope": "elapsed wall time between first fetch and evidence preparation, including inspection; not isolated API latency",
+    "fetch_latency_ms": [
+      {
+        "url": "https://www.wonderfair.com/",
+        "provider_reported_latency_ms": 946.3207710068673
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/",
+        "provider_reported_latency_ms": 3742.816729005426
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/",
+        "provider_reported_latency_ms": 1035.4208719945746
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/stationery/washi-tape/",
+        "provider_reported_latency_ms": 1734.151667013066
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/shop-local/stickers/",
+        "provider_reported_latency_ms": 1096.5191389987012
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/threadbound-nb-forest-fable.html",
+        "provider_reported_latency_ms": 2596.599676995538
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/opossum-notepad.html",
+        "provider_reported_latency_ms": 2762.889238016214
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/to-do-memo-pad-cat.html",
+        "provider_reported_latency_ms": 2336.2183140125126
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/wonder-fair-multicolor-doodles-washi-tape.html",
+        "provider_reported_latency_ms": 2506.825186952483
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/secure-attachments-holographic-glitter-stapler-sti.html",
+        "provider_reported_latency_ms": 2686.9732149643824
+      },
+      {
+        "url": "https://www.wonderfairhomeshopping.com/md-notebook-journal-a5-dot-grid.html",
+        "provider_reported_latency_ms": 2329.507351038046
+      }
+    ],
+    "limitations": [
+      "This live capture used the official TinyFish connector, not the repository's direct REST client.",
+      "No retailer image bytes were downloaded or republished; only source URLs retained.",
+      "Prices are public listing prices, not Kinbor prices or commercial terms.",
+      "This purposive six-product sample is not an exhaustive representation of the retailer."
+    ]
+  },
+  "policy_counterevidence": [
+    {
+      "source_url": "https://www.wonderfair.com/submit",
+      "observed_at_utc": "2026-11-10T04:01:34Z",
+      "confidence": "high",
+      "source_excerpt": "Fan art; AI-assisted artworks; Clothing or accessories",
+      "excerpt_is": "literal list items joined with semicolons, not a contiguous quotation",
+      "observed_policy": "Submission page places fan art, AI-assisted artworks, and clothing or accessories in its not-currently/rarely seeking list; it separately lists innovative stationery products among frequent interests.",
+      "inference": "Character-licensed or generic accessory Kinbor products may need additional review; this does not establish that any individual SKU is prohibited or accepted.",
+      "commercial_unknown": "Application of these public submission conditions to Kinbor, artwork provenance, resale authority, procurement interest and carton acceptance are unverified.",
+      "provider_reported_latency_ms": 446.11137799802236
+    }
+  ],
+  "products": [
+    {
+      "evidence_id": "WF-P01",
+      "product_name": "Threadbound NB Forest Fable",
+      "brand_as_listed": "Mossery Stationery",
+      "source_url": "https://www.wonderfairhomeshopping.com/threadbound-nb-forest-fable.html",
+      "product_image_url": "https://cdn.shoplightspeed.com/shops/635248/files/45852440/mossery-stationery-threadbound-notebook-forest-fab.jpg",
+      "screenshot_url": "Unknown",
+      "observed_at_utc": "2026-11-10T04:00:34Z",
+      "confidence": "high",
+      "epistemic_status": "observed official listing; not independently verified",
+      "public_price": {
+        "amount": "29.00",
+        "currency": "USD",
+        "source_field": "page_metadata.other product:price:amount and product:price:currency"
+      },
+      "observed_features": [
+        "Listing names Forest Fable, a Mossery threadbound notebook.",
+        "Description lists replaceable interior and ribbon bookmark.",
+        "Description explicitly says pictured personalization is not available at Wonder Fair."
+      ],
+      "source_excerpt": "Lay-flat threadbound spine (no gutter in these notebooks!)",
+      "source_metadata": {
+        "title": "Threadbound NB Forest Fable",
+        "og_image": "https://cdn.shoplightspeed.com/shops/635248/files/45852440/mossery-stationery-threadbound-notebook-forest-fab.jpg",
+        "product:brand": "Mossery Stationery",
+        "product:price:amount": "29.00",
+        "product:price:currency": "USD"
+      },
+      "style_inference": [
+        "Refillable illustrated-cover notebook is a potential design-led notebook reference; cover motif needs visual review."
+      ],
+      "uncertainties": [
+        "Kinbor notebook paper and refill compatibility are not established. Do not transfer Mossery paper claims to Kinbor.",
+        "Image URL observed in official metadata; image pixels were not assessed.",
+        "Current inventory, brand relationship, purchase intent, resale authorization and order feasibility are unverified."
+      ]
+    },
+    {
+      "evidence_id": "WF-P02",
+      "product_name": "Opossum Notepad",
+      "brand_as_listed": "Alisa Bobzien",
+      "source_url": "https://www.wonderfairhomeshopping.com/opossum-notepad.html",
+      "product_image_url": "https://cdn.shoplightspeed.com/shops/635248/files/26898109/alisa-bobzien-opossum-notepad.jpg",
+      "screenshot_url": "Unknown",
+      "observed_at_utc": "2026-11-10T04:00:34Z",
+      "confidence": "high",
+      "epistemic_status": "observed official listing; not independently verified",
+      "public_price": {
+        "amount": "9.00",
+        "currency": "USD",
+        "source_field": "page_metadata.other product:price:amount and product:price:currency"
+      },
+      "observed_features": [
+        "Listing names an opossum-themed Alisa Bobzien notepad.",
+        "Description lists 50 sheets and 4.25 by 6 inches."
+      ],
+      "source_excerpt": "4.25\" x 6\"\n50 sheets",
+      "source_metadata": {
+        "title": "Opossum Notepad",
+        "og_image": "https://cdn.shoplightspeed.com/shops/635248/files/26898109/alisa-bobzien-opossum-notepad.jpg",
+        "product:brand": "Alisa Bobzien",
+        "product:price:amount": "9.00",
+        "product:price:currency": "USD"
+      },
+      "style_inference": [
+        "Animal-themed notepad provides a specific playful memo-product reference; exact drawing style remains unassessed."
+      ],
+      "uncertainties": [
+        "Notepad listing does not establish a preference for all cute or licensed animal designs.",
+        "Image URL observed in official metadata; image pixels were not assessed.",
+        "Current inventory, brand relationship, purchase intent, resale authorization and order feasibility are unverified."
+      ]
+    },
+    {
+      "evidence_id": "WF-P03",
+      "product_name": "To Do Memo Pad Cat",
+      "brand_as_listed": "Midori",
+      "source_url": "https://www.wonderfairhomeshopping.com/to-do-memo-pad-cat.html",
+      "product_image_url": "https://cdn.shoplightspeed.com/shops/635248/files/73801596/midori-to-do-memo-pad-cat.jpg",
+      "screenshot_url": "Unknown",
+      "observed_at_utc": "2026-11-10T04:00:34Z",
+      "confidence": "high",
+      "epistemic_status": "observed official listing; not independently verified",
+      "public_price": {
+        "amount": "3.50",
+        "currency": "USD",
+        "source_field": "page_metadata.other product:price:amount and product:price:currency"
+      },
+      "observed_features": [
+        "Description explicitly calls this a cute cat memo pad.",
+        "Product name identifies a to-do memo pad."
+      ],
+      "source_excerpt": "This Puurrrr-fectly cute cat memo pad is a must for keeping track of your to-do or grocery list.",
+      "source_metadata": {
+        "title": "To Do Memo Pad Cat",
+        "og_image": "https://cdn.shoplightspeed.com/shops/635248/files/73801596/midori-to-do-memo-pad-cat.jpg",
+        "product:brand": "Midori",
+        "product:price:amount": "3.50",
+        "product:price:currency": "USD"
+      },
+      "style_inference": [
+        "Cute animal artwork on a functional list pad is a plausible comparison target for an animal-themed Kinbor memo SKU."
+      ],
+      "uncertainties": [
+        "A cat memo pad does not establish compatibility with unrelated character licensing or Chinese-language text.",
+        "Image URL observed in official metadata; image pixels were not assessed.",
+        "Current inventory, brand relationship, purchase intent, resale authorization and order feasibility are unverified."
+      ]
+    },
+    {
+      "evidence_id": "WF-P04",
+      "product_name": "Wonder Fair Multicolor Doodles Washi Tape",
+      "brand_as_listed": "Wonder Fair",
+      "source_url": "https://www.wonderfairhomeshopping.com/wonder-fair-multicolor-doodles-washi-tape.html",
+      "product_image_url": "https://cdn.shoplightspeed.com/shops/635248/files/40035045/wonder-fair-wonder-fair-multicolor-doodles-washi-t.jpg",
+      "screenshot_url": "Unknown",
+      "observed_at_utc": "2026-11-10T04:00:34Z",
+      "confidence": "high",
+      "epistemic_status": "observed official listing; not independently verified",
+      "public_price": {
+        "amount": "3.50",
+        "currency": "USD",
+        "source_field": "page_metadata.other product:price:amount and product:price:currency"
+      },
+      "observed_features": [
+        "Product title explicitly identifies multicolor doodles and washi tape.",
+        "Article code is WF-WT-06."
+      ],
+      "source_excerpt": "Wonder Fair Multicolor Doodles Washi Tape",
+      "source_metadata": {
+        "title": "Wonder Fair Multicolor Doodles Washi Tape",
+        "og_image": "https://cdn.shoplightspeed.com/shops/635248/files/40035045/wonder-fair-wonder-fair-multicolor-doodles-washi-t.jpg",
+        "product:brand": "Wonder Fair",
+        "product:price:amount": "3.50",
+        "product:price:currency": "USD"
+      },
+      "style_inference": [
+        "Colorful doodle-themed decorative tape is a specific reference for playful paper decoration; visual equivalence remains unverified."
+      ],
+      "uncertainties": [
+        "Wonder Fair branded tape may have local or own-brand value that a generic substitute cannot reproduce.",
+        "Image URL observed in official metadata; image pixels were not assessed.",
+        "Current inventory, brand relationship, purchase intent, resale authorization and order feasibility are unverified."
+      ]
+    },
+    {
+      "evidence_id": "WF-P05",
+      "product_name": "Secure Attachments Holographic B8 Glitter Stapler Sticker",
+      "brand_as_listed": "Secure Attachments",
+      "source_url": "https://www.wonderfairhomeshopping.com/secure-attachments-holographic-glitter-stapler-sti.html",
+      "product_image_url": "https://cdn.shoplightspeed.com/shops/635248/files/67468077/secure-attachments-secure-attachments-holographic.jpg",
+      "screenshot_url": "Unknown",
+      "observed_at_utc": "2026-11-10T04:00:34Z",
+      "confidence": "high",
+      "epistemic_status": "observed official listing; not independently verified",
+      "public_price": {
+        "amount": "4.00",
+        "currency": "USD",
+        "source_field": "page_metadata.other product:price:amount and product:price:currency"
+      },
+      "observed_features": [
+        "Listing names holographic B8 glitter stapler sticker.",
+        "Description identifies a mint-green-metallic Bostitch B8 depiction by Randy Regier."
+      ],
+      "source_excerpt": "This Bostitch B8 custom painted by Randy Regier in Mint Green Metallic is now a sticker.",
+      "source_metadata": {
+        "title": "Secure Attachments Holographic B8 Glitter Stapler Sticker",
+        "og_image": "https://cdn.shoplightspeed.com/shops/635248/files/67468077/secure-attachments-secure-attachments-holographic.jpg",
+        "product:brand": "Secure Attachments",
+        "product:price:amount": "4.00",
+        "product:price:currency": "USD"
+      },
+      "style_inference": [
+        "A stationery-object motif and artist attribution are a more specific comparison than the broad sticker category."
+      ],
+      "uncertainties": [
+        "No evidence Kinbor has the same local artist provenance, holographic finish or subject matter.",
+        "Image URL observed in official metadata; image pixels were not assessed.",
+        "Current inventory, brand relationship, purchase intent, resale authorization and order feasibility are unverified."
+      ]
+    },
+    {
+      "evidence_id": "WF-P06",
+      "product_name": "MD NOTEBOOK JOURNAL A5 DOT GRID",
+      "brand_as_listed": "Midori",
+      "source_url": "https://www.wonderfairhomeshopping.com/md-notebook-journal-a5-dot-grid.html",
+      "product_image_url": "https://cdn.shoplightspeed.com/shops/635248/files/19180396/midori-md-notebook-a5-dot-grid.jpg",
+      "screenshot_url": "Unknown",
+      "observed_at_utc": "2026-11-10T04:00:34Z",
+      "confidence": "high",
+      "epistemic_status": "observed official listing; not independently verified",
+      "public_price": {
+        "amount": "16.00",
+        "currency": "USD",
+        "source_field": "page_metadata.other product:price:amount and product:price:currency"
+      },
+      "observed_features": [
+        "Listing names A5 dot-grid notebook.",
+        "Description emphasizes simplicity, exposed spine and coverless design."
+      ],
+      "source_excerpt": "The MD Notebook is designed for simplicity so that what’s on your mind can be put on paper easily.",
+      "source_metadata": {
+        "title": "MD NOTEBOOK JOURNAL A5 DOT GRID",
+        "og_image": "https://cdn.shoplightspeed.com/shops/635248/files/19180396/midori-md-notebook-a5-dot-grid.jpg",
+        "product:brand": "Midori",
+        "product:price:amount": "16.00",
+        "product:price:currency": "USD"
+      },
+      "style_inference": [
+        "The assortment also includes restrained writing-focused notebooks; Wonder Fair should not be reduced to colorful illustration alone."
+      ],
+      "uncertainties": [
+        "Kinbor paper performance, binding and writing quality are not established by aesthetic similarity.",
+        "Image URL observed in official metadata; image pixels were not assessed.",
+        "Current inventory, brand relationship, purchase intent, resale authorization and order feasibility are unverified."
+      ]
+    }
+  ]
+}

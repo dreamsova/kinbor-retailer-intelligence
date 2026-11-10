@@ -1,3 +1,17 @@
+# Current style matching — human review pending
+
+**MULTIMODAL LIVE NOT VALIDATED.** Review hypotheses only; no measured quality improvement or buying intent.
+
+| Retailer | Current candidates | Review |
+|---|---|---|
+| atlas | DT55566 | [Evidence and reasons](live/atlas/style_brief.md) |
+| shorthand | DT54744, DT54726, DT54729, DTYC0006 | [Evidence and reasons](live/shorthand/style_brief.md) |
+| wonder-fair | Insufficient evidence; no forced recommendation | [Evidence and reasons](live/wonder-fair/style_brief.md) |
+
+Use [reviews.csv](reviews.csv) with the [evaluation protocol](../docs/MATCHING_EVALUATION.md). The category CSV tables and older briefs below are frozen comparators; they do not represent current style recommendations.
+
+---
+
 # Buyer review queue — 3 current pilots; remaining stores on hold
 
 This is a human-review queue, not a list of confirmed buyers. There is no weighted total score or purchasing probability. **All 3 current pilots share priority 1 (tie; human review).** Alphabetical display order has no commercial meaning. Order feasibility is **Unknown** for every retailer.
