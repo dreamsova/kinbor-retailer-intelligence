@@ -2,7 +2,7 @@
 
 Mocks below exercise failure handling and data integrity. They are never receipts
 of a real TinyFish/API execution. Run real saved-pilot validation explicitly with
-``python3 research.py --mode validate --output-dir phase2/pilots/atlas``.
+``python3 research.py --mode validate --output-dir phase2/live/atlas``.
 """
 import csv
 import copy

@@ -1,6 +1,6 @@
 # TinyFish direct API implementation
 
-Documentation checked November 9, 2026 (Chicago). `tinyfish_client.py` is a small Python standard-library REST client; no Work connector or manually imported capture is required for `research.py --mode tinyfish`.
+Implementation reference date: November 9, 2026 (Chicago). This cleanup preserves the existing API contract; it does not claim a fresh provider-documentation review. `tinyfish_client.py` is a small Python standard-library REST client; no Work connector or manually imported capture is required for `research.py --mode tinyfish`.
 
 ## Official endpoints and choice
 
@@ -14,9 +14,9 @@ Documentation checked November 9, 2026 (Chicago). `tinyfish_client.py` is a smal
 | Agent poll | `GET https://agent.tinyfish.ai/v1/runs/{id}` | Client helper with bounded polling. |
 | Agent cancel | `POST https://agent.tinyfish.ai/v1/runs/{id}/cancel` | Client helper verifies the returned terminal state. |
 
-Search and Fetch suffice for the observed public retailer pages. Browser interaction is not needed for the three final runs. No Agent request, profile or vault was used. The optional Agent helpers were tested with network mocks; no live Agent or Search result is claimed in this task.
+Search and Fetch suffice for the observed public retailer pages. Browser interaction is not needed for the three final runs. No Agent request, profile or vault was used. The optional Agent helpers are covered by network mocks. The saved three-store bundles contain no live Agent or Search execution; this cleanup uses offline checks only.
 
-The [official overview](https://docs.tinyfish.ai/) lists canonical public API surfaces. Current [Search reference](https://docs.tinyfish.ai/search-api/reference), [Fetch reference](https://docs.tinyfish.ai/fetch-api/reference), [Agent reference](https://docs.tinyfish.ai/agent/api/agent) and [run retrieval reference](https://docs.tinyfish.ai/api-reference/runs/get-run-by-id) take precedence over older examples. The [cookbook](https://github.com/tinyfish-io/tinyfish-cookbook) and [competitor scout recipe](https://github.com/tinyfish-io/tinyfish-cookbook/tree/main/competitor-scout-cli) confirm the Search/Fetch/Agent separation; recipe fallbacks are not evidence of a successful API call.
+The [official overview](https://docs.tinyfish.ai/) lists canonical public API surfaces. The implementation references the [Search reference](https://docs.tinyfish.ai/search-api/reference), [Fetch reference](https://docs.tinyfish.ai/fetch-api/reference), [Agent reference](https://docs.tinyfish.ai/agent/api/agent) and [run retrieval reference](https://docs.tinyfish.ai/api-reference/runs/get-run-by-id). Those references informed the existing implementation rather than older examples. The [cookbook](https://github.com/tinyfish-io/tinyfish-cookbook) and [competitor scout recipe](https://github.com/tinyfish-io/tinyfish-cookbook/tree/main/competitor-scout-cli) confirm the Search/Fetch/Agent separation; recipe fallbacks are not evidence of a successful API call.
 
 ## Authentication and safe configuration
 
@@ -59,7 +59,7 @@ As documented at the check date, personal limits default to Search 30 requests/m
 
 `--collect-usage` reads one time-bounded Fetch usage page and keeps only records matching this client's provider request IDs. Other account activity is excluded. Usage can lag, the page is capped at 100 records, and missing matches remain uncertain. Per-URL usage records expose counts/status/latency; no returned money amount means billed cost is **Unknown**. URL count, a free allowance or elapsed seconds do not establish the invoice amount. See [Fetch usage](https://docs.tinyfish.ai/fetch-api/reference#usage-endpoint) and [Search usage](https://docs.tinyfish.ai/api-reference/list-search-usage).
 
-The committed `phase2/live/{atlas,shorthand,wonder-fair}/` receipts represent real Python API executions. Each final run has two authenticated Fetch responses and one authenticated usage response, all HTTP 200. They cover 6/6/4 successfully fetched pages and 210 SKU audits per store. Optional Search/Agent mocks and historical `phase2/pilots/` connector outputs are not live API evidence.
+The committed `phase2/live/{atlas,shorthand,wonder-fair}/` receipts represent previously captured real Python API executions. This cleanup validates those saved files without making new live calls. Each final run has two authenticated Fetch responses and one authenticated usage response, all HTTP 200. They cover 6/6/4 successfully fetched pages and 210 SKU audits per store. Optional Search/Agent mocks are not live API evidence. Obsolete connector versions are recoverable from Git history.
 
 ## Commands and explicit non-API modes
 
@@ -75,4 +75,4 @@ python3 phase2.py --integrate-pilots --pilot-root phase2/live
 python3 phase2.py
 ```
 
-`public_http` (and its compatibility alias `public`) is direct public website acquisition, not TinyFish. `import` replays a normalized connector capture; `validate` checks saved outputs. Neither contacts the TinyFish API. No mode sends retailer email, submits a form or buys products. The [validation report](../phase2/validation_report.json) records 63 passing offline tests and six passing negative controls. The full test suite requires Pillow for unchanged catalog/image checks; research and saved-output validation remain standard-library-only. Test mocks prove boundary behavior only, not authentication or live site truth.
+`public_http` (and its compatibility alias `public`) is direct public website acquisition, not TinyFish. `import` replays a normalized connector capture; `validate` checks saved outputs. These modes do not contact the TinyFish API. No mode sends retailer email, submits a form or buys products. The [validation report](../phase2/validation_report.json) records the actual offline checks and scope for this cleanup. The full test suite requires Pillow for unchanged catalog/image checks; research and saved-output validation remain standard-library-only. Test mocks prove boundary behavior only, not authentication or live site truth.

@@ -3,6 +3,8 @@
 These are review-selection tests, never live TinyFish receipts or buyer validation.
 """
 import csv
+import hashlib
+import json
 from pathlib import Path
 import unittest
 
@@ -88,17 +90,30 @@ class EvidenceReviewMatching(unittest.TestCase):
         self.assertTrue(all(r['match_basis'] == 'category_overlap_inference' for r in selected))
         self.assertTrue(all('No product-specific preference established' in r['match_reason'] for r in selected))
 
-    def test_legacy_strategy_exactly_preserves_saved_historical_selections(self):
-        for slug in ('atlas', 'shorthand', 'wonder-fair'):
+    def test_legacy_strategy_preserves_baseline_full_catalog_results(self):
+        # Frozen before cleanup at 54c8776, using the retained real evidence.
+        # Hashes cover every audit/recommendation cell; this is offline replay.
+        expected = {
+            'atlas': '25bd821a53d32d5858d15fc479a29d727ef4fe26d7ff95415b600fa19939a7eb',
+            'shorthand': '20f5bbcbe32073602784d91b936e8cf9b2678ab9b70f4908fd62d1774f2effaf',
+            'wonder-fair': '13613d3c37a8379e0c166e1e2c9b2d31cbd6d7ac573faec72c6cc606cabb65cb',
+        }
+        for slug, digest in expected.items():
             with self.subTest(slug=slug):
-                folder = Path(research.ROOT) / 'phase2' / 'pilots' / slug
+                folder = Path(research.ROOT) / 'phase2' / 'live' / slug
                 def read(name):
                     with (folder / name).open(encoding='utf-8-sig', newline='') as f:
                         return list(csv.DictReader(f))
                 audit, selected = research.recommend(self.products, read('evidence.csv'),
                                                      strategy='legacy_source_order_v1')
-                self.assertEqual(audit, read('candidate_audit.csv'))
-                self.assertEqual(selected, read('recommendations.csv'))
+                actual = hashlib.sha256(json.dumps([audit, selected], sort_keys=True).encode()).hexdigest()
+                self.assertEqual(actual, digest)
+
+    def test_saved_direct_api_bundles_recompute_without_network(self):
+        for slug in ('atlas', 'shorthand', 'wonder-fair'):
+            with self.subTest(slug=slug):
+                folder = Path(research.ROOT) / 'phase2' / 'live' / slug
+                self.assertEqual(research.validate_output(folder)['status'], 'passed')
 
 
 if __name__ == '__main__':

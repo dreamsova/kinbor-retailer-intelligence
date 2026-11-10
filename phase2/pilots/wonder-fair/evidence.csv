@@ -1,9 +1,0 @@
-evidence_id,field,value,source_url,retrieved_at_utc,confidence,verification_status,quote,acquisition,run_id
-E001,vendor_policy,submissions@wonderfair.com,https://www.wonderfair.com/submit,2026-11-10T02:56:58Z,medium,policy_excerpt,submissions@wonderfair.com,fetch_content,
-E002,vendor_policy,Please refrain from contacting the shop with follow up inquiries,https://www.wonderfair.com/submit,2026-11-10T02:56:58Z,medium,policy_excerpt,Please refrain from contacting the shop with follow up inquiries,fetch_content,
-E003,contact,https://www.wonderfair.com/contact,https://www.wonderfair.com/contact,2026-11-10T02:56:58Z,medium,direct_text,Visit & Contact — WONDER FAIR,fetch_content,
-E004,category,Notebooks & Journals,https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/,2026-11-10T02:56:58Z,medium,direct_text,Notebooks and Journals,fetch_content,
-E005,brand,Midori,https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/,2026-11-10T02:56:58Z,medium,direct_text,Midori,fetch_content,
-E006,brand,Kokuyo,https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/,2026-11-10T02:56:58Z,medium,direct_text,KOKUYO,fetch_content,
-E007,category,Planners & Calendars,https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/,2026-11-10T02:56:58Z,medium,direct_text,Planners and Calendars,fetch_content,
-E008,brand,Field Notes,https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/,2026-11-10T02:56:58Z,medium,direct_text,Field Notes 56-week planner Spiral Undated Weekly Planner brown kraft cover,fetch_content,

@@ -86,7 +86,7 @@ def _joined(value):
 def integrate_pilots(retailers, matches, evidence, pilot_root=None):
     """Replace only the three pilot matches; retain all historical evidence rows."""
     from research import validate_outputs
-    pilot_root = Path(pilot_root or DATA / 'pilots').resolve()
+    pilot_root = Path(pilot_root or DATA / 'live').resolve()
     require(DATA.resolve() in pilot_root.parents, 'Pilot outputs must be under phase2 for portable evidence links')
     retailers, matches, evidence = migrate(copy.deepcopy(retailers), copy.deepcopy(matches), copy.deepcopy(evidence))
     by_id = {r['retailer_id']: r for r in retailers}
@@ -266,12 +266,10 @@ def validate(retailers, matches, evidence):
         require(products[sku]['units_per_carton'] == '112', 'Owner-confirmed 112-unit carton changed')
     for rows in (retailers, matches, evidence):
         require(not any(str(v).lstrip().startswith(('=', '+', '-', '@')) for row in rows for v in row.values()), 'Unsafe spreadsheet formula prefix')
-    manifest = json.loads((DATA / 'sources/phase1_manifest.json').read_text())
+    manifest = json.loads((ROOT / 'docs/phase1_manifest.json').read_text())
     require(len(manifest['phase1_files']) == 214, 'Phase 1 preservation manifest incomplete')
     for path, expected in manifest['phase1_files'].items():
         require(hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected, 'Phase 1 file changed: ' + path)
-    run = json.loads((DATA / 'sources/tinyfish_atlas_run.json').read_text())
-    require(run['response']['status'] == 'completed' and run['run_id'] == '98bb203b-8683-4485-8f7b-fc157e5c2a3b', 'Historical TinyFish receipt missing')
     return {'retailers': len(retailers), 'current_pilots': pilot_count, 'legacy_not_revalidated': 20 - pilot_count,
             'sku_matches': len(matches), 'evidence_rows': len(evidence), 'phase1_preserved_files': 214,
             'purchase_probability': 'Not modeled', 'order_feasibility': UNKNOWN, 'checks': 'passed'}
@@ -302,7 +300,7 @@ def refresh(retailers, matches, evidence):
     current = sorted((r for r in retailers if r['research_status'] == 'current_pilot'), key=lambda r: r['name'])
     text = [
         f'# Buyer review queue — {len(current)} current pilots; remaining stores on hold', '',
-        'The historical filename is retained. This is not an automatically selected top five or a list of confirmed buyers. '
+        'This is a human-review queue, not a list of confirmed buyers. '
         f'There is no weighted total score or purchasing probability. **All {len(current)} current pilots share priority 1 (tie; human review).** '
         'Alphabetical display order has no commercial meaning. Order feasibility is **Unknown** for every retailer.', '',
         '| Review priority | Retailer | Product fit | Evidence strength | Buyer access | All-candidate minimum |',
@@ -334,9 +332,8 @@ def refresh(retailers, matches, evidence):
              'No new evidence or new TinyFish execution is claimed for them. Revalidate sources and run the full-catalog workflow before promoting any into the current queue.', '',
              'A person must review the separate dimensions and permitted contact policy before choosing any five stores. '
              'The legacy scores are retained only in `legacy_*` CSV columns for audit history; they never drive this queue. '
-             'No forms, email, purchases, dashboard or CRM were added.', '',
-             'The old `atlas_buyer_brief.pdf` is a historical Phase 2 artifact with obsolete score/selection details. Use the current Atlas Markdown brief linked above.']
-    (DATA / 'top5_buyers.md').write_text('\n'.join(text) + '\n', encoding='utf-8')
+             'No forms, email, purchases, dashboard or CRM were added.']
+    (DATA / 'review_queue.md').write_text('\n'.join(text) + '\n', encoding='utf-8')
 
 
 def main():
@@ -344,7 +341,7 @@ def main():
     parser.add_argument('--refresh', action='store_true', help='Validate and regenerate the tied human-review queue; no network')
     parser.add_argument('--integrate-pilots', action='store_true', help='Import all three existing validated research.py output directories and refresh CSVs/queue')
     parser.add_argument('--pilot-root', type=Path, help='Validated pilot directory, e.g. phase2/live; requires --integrate-pilots')
-    parser.add_argument('--brief', action='store_true', help='Print the current Atlas Markdown brief path; historical PDF is not regenerated')
+    parser.add_argument('--brief', action='store_true', help='Print the saved Atlas Markdown brief path')
     args = parser.parse_args()
     if args.pilot_root and not args.integrate_pilots:
         parser.error('--pilot-root requires --integrate-pilots')
@@ -360,7 +357,6 @@ def main():
     if args.brief:
         atlas = next(r for r in retailers if r['retailer_id'] == PILOTS['atlas'])
         report['brief'] = 'phase2/' + atlas['pilot_report']
-        report['historical_pdf_status'] = 'Archived; obsolete score and SKU selection, not regenerated'
     report['checked_at_utc'] = datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
     print(json.dumps(report, indent=2))
 

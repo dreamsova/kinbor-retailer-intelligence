@@ -1,130 +1,86 @@
 {
-  "retailers": 20,
-  "current_pilots": 3,
-  "legacy_not_revalidated": 17,
-  "sku_matches": 74,
-  "evidence_rows": 267,
-  "phase1_preserved_files": 214,
-  "purchase_probability": "Not modeled",
-  "order_feasibility": "Unknown",
-  "checks": "passed",
-  "negative_controls_passed": 6,
-  "brief": "phase2/live/atlas/buyer_brief.md",
-  "historical_pdf_status": "Archived; obsolete score and SKU selection, not regenerated",
-  "checked_at_utc": "2026-11-10T03:21:56Z",
+  "scope": "Offline repository cleanup; saved API evidence replayed, no new live calls",
+  "baseline_commit": "54c87761160a97407550c071e726f65ee83a475f",
+  "checked_at_utc": "2026-11-10T03:38:17Z",
   "unittest": {
-    "tests_run": 63,
-    "passed": 63,
-    "failed": 0,
     "command": "python3 -m unittest discover -v",
-    "network_calls_during_tests": false,
-    "groups": {
-      "unchanged_phase1": 12,
-      "existing_research": 12,
-      "existing_phase2": 3,
-      "new_matching": 7,
-      "new_tinyfish_client_mocks": 19,
-      "new_direct_pipeline_mocks": 10
-    }
+    "tests_run": 64,
+    "passed": 64,
+    "failed": 0,
+    "skipped": 0,
+    "transport": "Offline synthetic mocks; not live API execution"
   },
-  "direct_api_live": {
+  "saved_output_validation": {
     "atlas": {
-      "status": "completed",
-      "authenticated_response_received": true,
-      "pages": 6,
-      "all_skus_scanned": 210,
-      "eligible": 118,
-      "recommendations": 4,
-      "http_requests": 3,
-      "http_statuses": [
-        200,
-        200,
-        200
-      ],
-      "provider_fetch_request_ids": [
-        "71a35e65-409c-4140-8cec-3731c3ec69e4",
-        "1fe1564b-4337-4922-a76c-00f52882436c"
-      ],
-      "usage_url_records": 6,
-      "matched_fetch_requests": 2,
-      "elapsed_seconds": 5.471,
-      "run_id": null,
-      "billed_cost": "Unknown",
-      "receipt": "live/atlas/api_receipt.json",
-      "brief": "live/atlas/buyer_brief.md"
+      "status": "passed",
+      "catalog_count": 210,
+      "evidence_count": 51,
+      "recommendation_count": 4,
+      "validation_mode": "offline; no research or API call"
     },
     "shorthand": {
-      "status": "completed",
-      "authenticated_response_received": true,
-      "pages": 6,
-      "all_skus_scanned": 210,
-      "eligible": 126,
-      "recommendations": 4,
-      "http_requests": 3,
-      "http_statuses": [
-        200,
-        200,
-        200
-      ],
-      "provider_fetch_request_ids": [
-        "508bf8b9-ac86-4090-807f-755483380b0d",
-        "e32905e7-1f19-46b2-aa62-8a81490850b8"
-      ],
-      "usage_url_records": 6,
-      "matched_fetch_requests": 2,
-      "elapsed_seconds": 4.596,
-      "run_id": null,
-      "billed_cost": "Unknown",
-      "receipt": "live/shorthand/api_receipt.json",
-      "brief": "live/shorthand/buyer_brief.md"
+      "status": "passed",
+      "catalog_count": 210,
+      "evidence_count": 56,
+      "recommendation_count": 4,
+      "validation_mode": "offline; no research or API call"
     },
     "wonder-fair": {
-      "status": "completed",
-      "authenticated_response_received": true,
-      "pages": 4,
-      "all_skus_scanned": 210,
-      "eligible": 87,
-      "recommendations": 4,
-      "http_requests": 3,
-      "http_statuses": [
-        200,
-        200,
-        200
-      ],
-      "provider_fetch_request_ids": [
-        "de04e5ac-8e37-456f-b0af-3ac196ff142d",
-        "ac2c682f-c4ce-4415-bb71-c50ba8995a69"
-      ],
-      "usage_url_records": 4,
-      "matched_fetch_requests": 2,
-      "elapsed_seconds": 6.995,
-      "run_id": null,
-      "billed_cost": "Unknown",
-      "receipt": "live/wonder-fair/api_receipt.json",
-      "brief": "live/wonder-fair/buyer_brief.md"
+      "status": "passed",
+      "catalog_count": 210,
+      "evidence_count": 12,
+      "recommendation_count": 4,
+      "validation_mode": "offline; no research or API call"
     }
   },
-  "direct_api_totals": {
-    "final_research_executions": 3,
-    "final_fetch_requests": 6,
-    "final_usage_requests": 3,
-    "final_successful_url_observations": 16,
-    "initial_scope_refinement_executions": 2,
-    "initial_successful_url_observations": 8,
-    "total_http_requests_including_refinements": 15,
-    "total_successful_url_observations_including_refinements": 24,
-    "billed_cost": "Unknown",
-    "agent_or_connector_calls_in_this_task": 0,
-    "search_live_test": "Not exercised; offline mocked only",
-    "agent_live_test": "Not exercised; async submit/poll/cancel offline mocked only"
+  "phase2_validation": {
+    "retailers": 20,
+    "current_pilots": 3,
+    "legacy_not_revalidated": 17,
+    "sku_matches": 74,
+    "evidence_rows": 267,
+    "phase1_preserved_files": 214,
+    "purchase_probability": "Not modeled",
+    "order_feasibility": "Unknown",
+    "checks": "passed",
+    "negative_controls_passed": 6,
+    "checked_at_utc": "2026-11-10T03:38:08Z"
   },
-  "source_verification_limits": [
-    "Actual Python CLI sent authenticated REST requests; offline tests are separate and use synthetic transport.",
-    "Receipts are local observations with provider request IDs and reconciled usage, not cryptographic provider attestations.",
-    "Observation timestamps are response receipt times, not source publication times. ttl=0 requested live fetch.",
-    "Costs, aesthetic fit, inventory, supplier acceptance, carton feasibility and buying intent remain Unknown.",
-    "17 legacy sources were not revalidated. No retailer messages, forms or purchases.",
-    "HTTP deadline is a scheduling budget; standard-library DNS and socket inactivity may overrun."
-  ],
-  "phase1_manifest_check": "214/214 identical"
+  "integration": {
+    "default_root": "phase2/live",
+    "checks": "passed",
+    "csv_bytes_unchanged": true,
+    "review_queue_regeneration": "deterministic"
+  },
+  "phase1": {
+    "manifest": "docs/phase1_manifest.json",
+    "sha256_identical": 214,
+    "bytes_identical_to_baseline": 214
+  },
+  "unchanged": {
+    "api_and_matching_modules": [
+      "research.py",
+      "tinyfish_client.py"
+    ],
+    "combined_csvs": 3,
+    "saved_api_bundle_files": 18
+  },
+  "repository_files": {
+    "before": 277,
+    "after": 250
+  },
+  "phase2_files": {
+    "before": 51,
+    "after": 23
+  },
+  "checks": {
+    "local_markdown_links": "passed",
+    "network_connections_during_cli_validation": "blocked",
+    "private_workbooks_or_env_files": "none"
+  },
+  "limits": [
+    "Saved observations are historical; no fresh retailer revalidation.",
+    "Three current pilots remain tied; 17 stores remain legacy_not_revalidated.",
+    "Buying interest, aesthetic fit, order feasibility and billed API cost remain Unknown."
+  ]
 }

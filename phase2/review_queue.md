@@ -1,6 +1,6 @@
 # Buyer review queue — 3 current pilots; remaining stores on hold
 
-The historical filename is retained. This is not an automatically selected top five or a list of confirmed buyers. There is no weighted total score or purchasing probability. **All 3 current pilots share priority 1 (tie; human review).** Alphabetical display order has no commercial meaning. Order feasibility is **Unknown** for every retailer.
+This is a human-review queue, not a list of confirmed buyers. There is no weighted total score or purchasing probability. **All 3 current pilots share priority 1 (tie; human review).** Alphabetical display order has no commercial meaning. Order feasibility is **Unknown** for every retailer.
 
 | Review priority | Retailer | Product fit | Evidence strength | Buyer access | All-candidate minimum |
 |---|---|---|---|---|---|
@@ -52,5 +52,3 @@ Baum-kuchen, Bob Slate Stationer, FLAX art & design, Goods for the Study, Greenw
 Their historical records and candidate joins remain available for review, explicitly marked `legacy_not_revalidated`. No new evidence or new TinyFish execution is claimed for them. Revalidate sources and run the full-catalog workflow before promoting any into the current queue.
 
 A person must review the separate dimensions and permitted contact policy before choosing any five stores. The legacy scores are retained only in `legacy_*` CSV columns for audit history; they never drive this queue. No forms, email, purchases, dashboard or CRM were added.
-
-The old `atlas_buyer_brief.pdf` is a historical Phase 2 artifact with obsolete score/selection details. Use the current Atlas Markdown brief linked above.
