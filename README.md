@@ -1,4 +1,4 @@
-# Kinbor Retailer Intelligence — Phase 1
+# Kinbor Retailer Intelligence — Phases 1 and 2
 
 A **small, reproducible product catalog** for an independent U.S. retailer research project. It uses real Kinbor SKU codes and original Chinese product names. This is an independent project, **not an official Kinbor/Guangbo or Brunch Brother distribution offer**.
 
@@ -11,7 +11,9 @@ A **small, reproducible product catalog** for an independent U.S. retailer resea
 | `test_import.py` | Checks counts, uniqueness, one-carton MOQ, confirmed carton quantities and safe public fields. |
 | `images/` | 210 optimized product images (WebP), one per SKU; multiple source panels combined where appropriate. |
 | `docs/DATA_DICTIONARY.md` | English schema, field types, source-cell mapping, carton evidence, Unknown policy and public/private boundaries. |
-| `docs/COMMIT_PRIVACY.md` | Git author/committer privacy guidance and pre-existing history remediation. |
+| `phase2/` | 20 U.S. retailer businesses, 74 actual SKU candidates, 148 claim-level sources, top-five queue and Atlas Buyer Brief. |
+| `phase2.py` | Validate research/catalog joins, preserve Phase 1 hashes, regenerate priorities, optionally check links and render the brief. |
+| `CASE_STUDY.md` | Field-engineering decisions, real execution evidence, validation and measurement limits. |
 | `README.md` | These instructions and data limitations. |
 
 ## Run
@@ -45,8 +47,24 @@ The public CSV uses a **relative file path**, not an image embedded in the CSV. 
 
 **Publication rights:** The project owner reports that permission for public publication of the supplier/brand-provided product images has been obtained; the repository does not contain the underlying authorization documents. Some images may include licensed Brunch Brother artwork. This repository is independent; original image copyrights and trademarks remain with the respective rights holders. Product images are not offered under an open-content license for third-party reuse.
 
-For field-level evidence, source coordinates, case-pack uncertainty, and exclusions, see [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md). For privacy controls and the remaining historical Git author-email issue, see [`docs/COMMIT_PRIVACY.md`](docs/COMMIT_PRIVACY.md).
+For field-level evidence, source coordinates, case-pack uncertainty, and exclusions, see [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md). Private workbooks and supplier-sensitive data must stay outside this public repository.
 
-## Next
+## Phase 2: evidence-led retailer pilot
 
-**Phase 2:** use TinyFish to research real U.S. retailers, cite evidence from retailer websites, and connect those facts to candidate SKUs. Phase 1 does **not** include TinyFish API calls, retailer matching, buyer outreach, or a web dashboard.
+Start with the illustrated [Atlas one-page Buyer Brief](phase2/atlas_buyer_brief.pdf) ([text and sources](phase2/atlas_buyer_brief.md)), then the [top-five review queue](phase2/top5_buyers.md). Review [retailers.csv](phase2/retailers.csv), [sku_matches.csv](phase2/sku_matches.csv), [evidence.csv](phase2/evidence.csv), and the [method/rubric/limitations](phase2/RESEARCH_NOTES.md).
+
+```bash
+python3 -m unittest -v test_import
+python3 phase2.py
+python3 phase2.py --refresh
+# Optional network checks:
+python3 phase2.py --check-links
+# Optional PDF rebuild (reportlab + Pillow):
+python3 phase2.py --brief
+```
+
+Atlas has **one completed connected TinyFish live-browser run**, with a [saved receipt](phase2/sources/tinyfish_atlas_run.json) and independent official-page cross-checks. The other 19 businesses use public web research, **not TinyFish live API execution**. Evidence is URL-level with retrieval timestamps (2026-11-10 UTC / 2026-11-09 Chicago); page tools may use caches. Three provider-reported exact Atlas product links returned 429 on independent checks and are not used for matching/ranking.
+
+The score separates category breadth, evidence strength and contact-route clarity. **Order feasibility is Unknown for every store** and excluded from the score. Candidate matches and English descriptions are model judgments; buyers' interest, capacity, supplier terms, pricing and U.S. resale rights are unverified. See the tie-break and source weaknesses before interpreting rank. Existing Phase 1 data/importer/tests/images are preserved.
+
+No dashboard, retailer email, submitted form, customer production deployment or measured time saving is claimed. The next step is a human review of samples, commercial feasibility and permitted contact routes. [CASE_STUDY.md](CASE_STUDY.md) explains the FDE work and future measured comparison.

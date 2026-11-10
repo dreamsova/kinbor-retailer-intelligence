@@ -1,0 +1,34 @@
+{
+  "retailers": 20,
+  "sku_matches": 74,
+  "evidence_rows": 148,
+  "phase1_preserved_files": 214,
+  "checks": "passed",
+  "negative_controls_passed": 6,
+  "phase1_unittest_tests_passed": 12,
+  "pdf_pages": 1,
+  "pdf_link_annotations": 6,
+  "pdf_visual_review": "agent-reviewed rendered one-page PNG; no clipping or overlap observed",
+  "github_ci": "not run",
+  "human_review": "pending",
+  "tinyfish": {
+    "completed_runs": 1,
+    "run_id": "98bb203b-8683-4485-8f7b-fc157e5c2a3b",
+    "provider_reported_duration_seconds": 231,
+    "provider_reported_steps": 17,
+    "billed_cost": "unknown"
+  },
+  "checked_at_utc": "2026-11-10T02:31:01Z",
+  "http_checks": {
+    "total": 38,
+    "reachable": 35,
+    "rate_limited_429": 3,
+    "scope": "20 homepages plus selected top-five sources and 3 Atlas product links; title/HTTP checks are not claim verification"
+  },
+  "warnings": [
+    "All order feasibility, retailer interest, supplier acceptance/current supply, pricing, margins and U.S. resale rights unknown.",
+    "Atlas exact provider product URLs remain provider_only and unused by matches/scoring.",
+    "Bob Slate independence evidence historical; Goods ownership from organizer biography; some categories navigation/filter only.",
+    "Rank ties use retailer_id; Atlas is not demonstrated more likely to buy than its tied peers."
+  ]
+}
