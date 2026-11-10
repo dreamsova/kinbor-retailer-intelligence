@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "tinyfish_connector",
+  "website": "https://www.wonderfair.com/",
+  "captured_at_utc": "2026-11-10T02:56:58Z",
+  "run_id": null,
+  "acquisition": "fetch_content",
+  "status": "completed",
+  "pages": [
+    {
+      "url": "https://www.wonderfair.com/",
+      "final_url": "https://www.wonderfair.com/",
+      "title": "WONDER FAIR",
+      "text": ".Cold, hard facts to guide your journey to Wonder Fair.",
+      "links": [
+        "https://www.wonderfairhomeshopping.com/"
+      ],
+      "status": "ok",
+      "error": "",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "excerpt_selection": "Exact span and official link from actual TinyFish output"
+    },
+    {
+      "url": "https://www.wonderfair.com/submit",
+      "final_url": "https://www.wonderfair.com/submit",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "General Submissions \u2014 WONDER FAIR",
+      "text": "submissions@wonderfair.com\ncatalog of goods\nWe are NOT currently\nFan art\nAI-assisted artworks\nPlease refrain from contacting the shop with follow up inquiries",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.wonderfair.com/contact",
+      "final_url": "https://www.wonderfair.com/contact",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Visit & Contact \u2014 WONDER FAIR",
+      "text": "Wonder Fair\n841 Massachusetts St\nLawrence, KS 66044\nHome of art supplies, stationery, prints, gifts, and lots more.\nsubmissions@wonderfair.com",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/",
+      "final_url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Notebooks and Journals",
+      "text": "Notebooks and Journals\nMidori\nMD Notebook A5 Dot Grid\nMossery Stationery\nThreadbound Notebook - Forest Fable\nKOKUYO\nCampus Soft Ring Notebook",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/",
+      "final_url": "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Planners and Calendars",
+      "text": "Planners and Calendars\nMossery Horizontal Wirebound Planner REFILL (Undated)\nField Notes 56-week planner Spiral Undated Weekly Planner brown kraft cover",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    }
+  ],
+  "provider_receipts": [
+    "phase2/sources/pilots/connector_receipts.json"
+  ],
+  "note": "Actual TinyFish fetch_content calls made 2026-11-10 around 02:54\u201302:56 UTC; retained-response observation time recorded on each page, not exact network response time or site publication date. Imported replay makes no new provider call.",
+  "source_capture": "phase2/sources/pilots/wonder-fair_capture.json"
+}

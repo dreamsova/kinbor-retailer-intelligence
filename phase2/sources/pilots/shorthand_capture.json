@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "provider": "tinyfish_connector",
+  "website": "https://shopshorthand.com/",
+  "captured_at_utc": "2026-11-10T02:56:58Z",
+  "run_id": null,
+  "acquisition": "fetch_content",
+  "status": "completed",
+  "pages": [
+    {
+      "url": "https://shopshorthand.com/collections/notebooks",
+      "final_url": "https://shopshorthand.com/collections/notebooks",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Notebooks",
+      "text": "Notebooks\nHobonichi Techo Lined Notebook A5 - Light Blue\nLefty Standard Notebook - Blue Hearts",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+      "final_url": "https://shopshorthand.com/collections/bags-cases-pouches",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Bags, Cases & Pouches",
+      "text": "Bags, Cases & Pouches\nKaweco Eco Leather Pouch Brandy for 1 Sport Pen\nMareku Box Pen Case - Dark Blue",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://shopshorthand.com/collections/planner",
+      "final_url": "https://shopshorthand.com/collections/planner",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Planner",
+      "text": "Planner\n2026-2027 Weekly Notebook Planner - Blossom Pink\n2027 Hobonichi Techo HON A6 - Bow & Tie: Sheep Sheep Sheep",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://shopshorthand.com/pages/faqs",
+      "final_url": "https://shopshorthand.com/pages/faqs",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "FAQs",
+      "text": "small store with a very specific aesthetic\nPlease send us an email with more information about your products.\nwe discourage bringing products",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://shopshorthand.com/pages/contact",
+      "final_url": "https://shopshorthand.com/pages/contact",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Contact",
+      "text": "5030 York Blvd\nLos Angeles, CA 90042\nPlease reach out to us with any comments, questions, concerns, ideas for products to sell",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    }
+  ],
+  "provider_receipts": [
+    "phase2/sources/pilots/connector_receipts.json"
+  ],
+  "note": "Actual TinyFish fetch_content calls made 2026-11-10 around 02:54\u201302:56 UTC; retained-response observation time recorded on each page, not exact network response time or site publication date. Imported replay makes no new provider call.",
+  "source_capture": "phase2/sources/pilots/shorthand_capture.json"
+}

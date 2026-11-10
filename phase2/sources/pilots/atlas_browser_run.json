@@ -1,0 +1,102 @@
+{
+  "run_id": "6b4f0d4a-3a0c-408d-9c1e-ac8736576472",
+  "run_url": "https://agent.tinyfish.ai/runs/6b4f0d4a-3a0c-408d-9c1e-ac8736576472",
+  "status": "completed",
+  "provider_step_count": 22,
+  "provider_duration_seconds": 189,
+  "provider": "TinyFish run_web_automation connected tool",
+  "use_profile": false,
+  "use_vault": false,
+  "requested_max_duration_seconds": 180,
+  "cost_usd": "Unknown",
+  "result_source": "Sanitized actual completed connector response",
+  "result": {
+    "categories": {
+      "notebooks": [
+        "Notebook Covers",
+        "Notebook Refills",
+        "Notebooks",
+        "Notepads",
+        "Paper",
+        "Planner Refills",
+        "Planners",
+        "Sketchbooks"
+      ],
+      "planner_pen_storage": [
+        "Cases",
+        "Pen Storage",
+        "Planners",
+        "Calendars",
+        "Wall Calendars"
+      ]
+    },
+    "brands": {
+      "pen_storage": [
+        "Blackwing",
+        "Esterbrook",
+        "Galen Leather Co",
+        "Girologio",
+        "Hightide Stationery",
+        "Hobonichi",
+        "Itoya",
+        "Kakimori",
+        "King Jim",
+        "Kokuyo",
+        "Kolo",
+        "Leuchtturm1917",
+        "LUDDITE",
+        "Midori",
+        "Monteverde",
+        "PuniLabo",
+        "Rhodia",
+        "Rickshaw",
+        "Soolla",
+        "Stationery Store Day",
+        "TACCIA",
+        "Toyo"
+      ],
+      "notebooks_planners": [
+        "À L'AISE LTD",
+        "Apica",
+        "BGM",
+        "Blackwing",
+        "Caran d'Ache",
+        "Clairefontaine",
+        "CoraCreaCrafts",
+        "Hightide Stationery",
+        "Hobonichi",
+        "Kakimori",
+        "Kokuyo",
+        "Leuchtturm1917",
+        "LOCHBY",
+        "LUDDITE",
+        "Midori",
+        "PuniLabo",
+        "Rhodia",
+        "Rickshaw",
+        "Soolla",
+        "Toyo"
+      ]
+    },
+    "public_business_contact": {
+      "email": "info@atlasstationers.com",
+      "footer_links": [
+        "Careers: https://www.atlasstationers.com/pages/hiring/careers",
+        "Contact Us: https://www.atlasstationers.com/pages/contact-us",
+        "Atlas Affiliate Program: https://af.uppromote.com/atlas-stationers/register"
+      ]
+    },
+    "vendor_policy": "Unknown. No explicit vendor/submission policy found. The site links to a third-party affiliate program (UpPromote) but does not provide an in-house new-brand vendor submission process."
+  },
+  "review": {
+    "accepted": "Category and selected brand names corroborated by fetch_content exact official-page snippets in atlas_capture.json.",
+    "not_accepted": [
+      "The provider's 'No Kinbor brand found' does not prove absence and was not adopted.",
+      "Provider product counts, stock status and availability were not used or retained.",
+      "Narrative pages returned by browser Agent are paraphrases, not verbatim quotes. They are not used as exact quote evidence.",
+      "No explicit vendor policy established; general contact remains separate from buyer access."
+    ],
+    "no_outreach": true
+  },
+  "bounds_note": "Provider reported 189s despite requested 180s cap. This documents provider timing; no hard client cancellation guarantee is claimed."
+}

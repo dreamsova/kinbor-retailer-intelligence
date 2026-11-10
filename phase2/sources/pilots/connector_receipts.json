@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "provider": "TinyFish connected tools",
+  "operator_observation_date_utc": "2026-11-10",
+  "client_date_chicago": "2026-11-09",
+  "requests": [
+    {
+      "tool": "fetch_content",
+      "status": "completed",
+      "run_id": null,
+      "request_groups": [
+        {
+          "urls": [
+            "https://www.atlasstationers.com/collections/notebooks",
+            "https://www.atlasstationers.com/collections/planners",
+            "https://www.atlasstationers.com/collections/pen-storage",
+            "https://www.atlasstationers.com/pages/contact-us",
+            "https://shopshorthand.com/pages/faqs",
+            "https://shopshorthand.com/pages/contact",
+            "https://shopshorthand.com/collections/notebooks",
+            "https://shopshorthand.com/collections/bags-cases-pouches",
+            "https://www.wonderfair.com/submit",
+            "https://www.wonderfair.com/contact",
+            "https://www.wonderfairhomeshopping.com/",
+            "https://shopshorthand.com/collections/planner",
+            "https://www.atlasstationers.com/pages/faq",
+            "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/",
+            "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/"
+          ],
+          "cache_tolerance_seconds": 0,
+          "per_url_timeout_ms": 20000
+        }
+      ],
+      "note": "Connected tool returned results without errors. fetch_content exposes no automation run ID; it is not a run_web_automation execution. Captures retain exact short excerpts selected from the returned pages and source URLs. They omit prices, stock and unrelated content."
+    },
+    {
+      "tool": "run_web_automation",
+      "status": "not_started",
+      "error_code": "INVALID_ARGUMENT",
+      "reason": "Optional agent_config.max_steps requires account beta access. Retried removing only the agent-added unsupported step cap."
+    },
+    {
+      "tool": "run_web_automation",
+      "status": "completed",
+      "run_id": "6b4f0d4a-3a0c-408d-9c1e-ac8736576472",
+      "url": "https://www.atlasstationers.com/",
+      "use_profile": false,
+      "use_vault": false,
+      "max_duration_seconds": 180,
+      "reason": "Interactive category/filter inspection; dynamic navigation context was incomplete in fetch-only extraction.",
+      "provider_step_count": 22,
+      "provider_duration_seconds": 189,
+      "receipt": "phase2/sources/pilots/atlas_browser_run.json",
+      "note": "Provider timing exceeded the requested 180-second cap; no guaranteed hard cutoff claimed."
+    },
+    {
+      "tool": "fetch_content",
+      "status": "completed",
+      "run_id": null,
+      "urls": [
+        "https://www.wonderfair.com/"
+      ],
+      "note": "Confirmed the official link to https://www.wonderfairhomeshopping.com/."
+    }
+  ],
+  "cost_usd": "Unknown",
+  "no_outreach": true
+}

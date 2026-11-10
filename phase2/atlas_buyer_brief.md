@@ -1,3 +1,5 @@
+> **Historical Phase 2 artifact.** This brief and its PDF preserve the original 124-unit selection and obsolete numeric ranking. Use the [current reproducible Atlas brief](pilots/atlas/buyer_brief.md) for the new full-catalog audit, candidates and current field evidence. Historical statements below have not all been revalidated.
+
 # Atlas Stationers | Buyer research brief
 
 **Internal review only · 2026-11-09 Chicago / 2026-11-10 UTC · No outreach or confirmed buying interest**

@@ -1,39 +1,43 @@
-# Kinbor retailer intelligence: a bounded field-engineering pilot
+# From a static retailer MVP to a reusable research workflow
 
-## Customer problem and discovery boundary
+## Problem and delivered behavior
 
-The project owner has 210 real Kinbor catalog SKUs and images, but needs a defensible way to decide which U.S. independent retailers merit a conversation and which products to show. A scraped list alone does not answer why a shop fits, whether a buying route exists, or what a full-carton order entails. This problem comes from the owner's supplied brief; no retailer interview or confirmed buyer demand is claimed.
+The owner has 210 real Kinbor SKUs and product images. The previous Phase 2 snapshot listed 20 U.S. stores and 74 proposed matches, but only used 14 distinct SKUs and could not research a new URL. Its weighted ranking also hid unresolved ties.
 
-Success was scoped to a reviewable decision package: first an Atlas Stationers brief, then 20 real businesses, 3–5 actual SKU candidates each, explicit facts versus inference, a transparent contact queue and validation. A dashboard, CRM, OCR framework, bulk autonomous outreach and production supplier integrations were excluded.
+`research.py` now accepts an official retailer URL, acquires bounded public evidence or imports an actual TinyFish connector capture, scans all 210 catalog records and produces source-linked candidate audits, four review candidates and illustrated Markdown briefs. Separate Product fit, Evidence strength and Buyer access replace the active numerical total. Order feasibility is always Unknown without real buyer confirmation. The three tested stores share a review tie; the filename `top5_buyers.md` is retained without inventing two additional current selections.
 
-## Integration and decisions
+## Actual execution
 
-Preserved the existing catalog/importer/tests and all 210 image files. Phase 2 joins on real `sku`, carries source-sheet/row provenance, and keeps one carton per SKU, including the two 112-unit overrides. Private supplier workbooks, costs, inventory and credentials remain outside the public artifacts. Public images are reused subject to the owner's reported permission; underlying authorization documents are not in the repository and third-party reuse is not licensed by this pilot.
+On November 9, 2026 in Chicago (November 10 UTC), connected TinyFish `fetch_content` read official Atlas Stationers, Shorthand and Wonder Fair pages. Short exact excerpts and source URLs are saved in `phase2/sources/pilots/`. Their capture timestamps record operator observation of the returned content; they do not claim site publication time or cache-free origin retrieval.
 
-Integrated the user's connected TinyFish browser tool for Atlas. One completed run has a persisted receipt (17 steps, provider-reported 231 seconds). An unsupported optional step cap was rejected before execution, then removed. The result was treated as an extraction candidate, not ground truth: independent official-page checks support address, family operation and notebook/planner/storage categories; unconfirmed exact product links and broad negative/superlative claims were not used in matches or ranking. Three product-link GETs returned 429, explicitly retained as limitations. The remaining 19 stores use verifiable public web research and are clearly labeled **not TinyFish live executions**.
+Atlas required interactive navigation/filter inspection. A real `run_web_automation` completed: [6b4f0d4a-3a0c-408d-9c1e-ac8736576472](https://agent.tinyfish.ai/runs/6b4f0d4a-3a0c-408d-9c1e-ac8736576472), provider-reported 22 steps and 189 seconds. An unsupported optional step cap was rejected before starting; only that argument was removed. The successful run exceeded the requested 180-second cap, so the receipt records the discrepancy. No profile, vault, login or outreach was used. Narrative browser output was treated as paraphrase, not a verbatim source; exact field evidence comes from separately fetched official text. A provider observation of not finding Kinbor was not accepted as proof of its absence.
 
-Field findings changed the implementation: replaced closed physical shops, corrected moved addresses, counted multi-location businesses once, replaced inferred group independence with Wet Paint's explicit independent status, and distinguished outward wholesale sales from incoming product submissions. The useful integration is the evidence-to-decision join, with a person deciding whether the merchandise, terms and channel are suitable.
+The standalone script has no TinyFish API client or connector-token access. Codex uses the connected tools and hands their normalized capture to the CLI. Import/validate are honest offline replay, not new API executions; `fetch_content` exposes no browser run ID. Atlas's separate browser receipt is linked without assigning its ID to those page fetches. This operator bridge remains a limitation compared with a fully unattended TinyFish API deployment.
 
-## Delivered behavior and verification
+The public HTTP path was also exercised independently: Wonder Fair completed within its three fetched pages; Atlas and Shorthand returned partial results due to HTTP 429. No bypass or repeated retry occurred. The saved acquisition receipt reports elapsed times for those calls, not human labor or time saved. Initial restricted-environment DNS failures were recorded separately from network-enabled acquisitions.
 
-Delivered 20 businesses, 74 SKU candidates and 148 URL-level evidence records, with UTC observations, source methods and verification limits. Atlas has a one-page illustrated Buyer Brief. A small standard-library script checks dataset integrity and regenerates ranking; optional HTTP checks/PDF generation are explicit actions. No credentials or private spreadsheets are required to inspect or validate the committed snapshot.
+## Three-store results
 
-The ranking separates category breadth (50 points), evidence quality (30) and public contact route (20). Commercial order feasibility stays Unknown for all stores. Paper Plant, Shorthand and Wonder Fair have explicit inbound routes and tie at 100; Penny Post's named buyer yields 93.33; Atlas at 86.67 is tied with four others and reaches fifth by a published administrative tie-break. These are contact-research priorities, not probabilities of purchase.
+| Store | Category-eligible pool / all 210 scanned | Verified review finding |
+|---|---|---|
+| Atlas Stationers | 97 | Notebook/planner/storage overlap; general contact; incoming vendor acceptance Unknown. |
+| Shorthand | 97 | Notebook/planner/case overlap; product-email policy, narrow aesthetic and discouraged unannounced product visits. |
+| Wonder Fair | 93 | Notebook/planner overlap on the officially linked commerce site; catalog submission and no follow-up inquiries. |
 
-Actual checks: 12 existing Phase 1 tests passed; Phase 2 validates the 20-store/3–5-SKU contract, foreign keys, source names, image paths, per-SKU/carton arithmetic, ranking, source limits and preservation hashes for 214 Phase 1 files. Six deliberately corrupted inputs are rejected. HTTP/title checks reached 35 of 38 selected URLs; three Atlas product URLs were rate-limited and remain provider-only. Agent source-page reviews checked the top policies, precise addresses and match rationale; user review is still pending. The PDF is rendered and visually checked as a single page. Final delivery/commit status is recorded in the delivery verification file and must be read separately from these local results; no GitHub CI run is implied.
+Read the full [Shorthand FAQ](https://shopshorthand.com/pages/faqs) and [Wonder Fair submission rules](https://www.wonderfair.com/submit) before any use. Wonder Fair excludes fan art and AI-assisted artwork; merchandise artwork provenance and resale rights require human confirmation. The research process does not determine whether a SKU satisfies that policy.
 
-## Human operating workflow
+Every store currently previews the same tied source-order candidates: DTYC0150, DTYC0045, DTYC0046 and DTYC0047. These total four separate cartons / 300 units under the project rule. Repetition is disclosed rather than obscured by a diversity quota. A person must choose from the full eligible pool after viewing actual images and samples; category overlap does not establish aesthetic fit, paper quality, price suitability, purchase intent or carton acceptance.
 
-1. Review cited store evidence and images; reconfirm pages before using them externally.
-2. Ask the supplier for actual paper/layout samples, current supply, resale/licensing authority and commercial terms without publishing sensitive details.
-3. Calculate a feasible order with a full carton of each selected SKU; Atlas's four-candidate bundle is four cartons/124 units, not four samples.
-4. Have a person approve retailer fit, permitted contact route and any message. Observe Wonder Fair's no-follow-up/sample constraints, Shorthand's aesthetic/no-walk-in guidance and Two Hands' email restriction.
-5. Record any real retailer response and revise assumptions. No retailer was contacted in this pilot.
+## Verification and engineering decisions
 
-## Costs, limits and next measured experiment
+All 214 Phase 1 preservation hashes remain unchanged: the 210 images, catalog, importer, original tests and data dictionary. SKU, image path, source-sheet/row and carton fields join to the real catalog; DTB6611-1 and DTB6616-1 remain 112 units/carton. The existing 20 stores and 148 historical evidence records are preserved. Only the three current pilots are refreshed; 17 stores are explicitly held as `legacy_not_revalidated`. The old Atlas PDF is archived because it contains obsolete scores and selections.
 
-TinyFish billed cost is Unknown because the connector did not expose it. Its reported run duration is not human research time. No production customer deployment, buyer acceptance, measured time savings, sales conversion or revenue is claimed. Ownership evidence for Bob Slate is historical; Goods for the Study uses a secondary official biography. Some categories are navigation/filter evidence, stock is not confirmed, and the sample favors discoverable stationery specialists. Nominal size does not establish refill fit, paper quality or English usability. Full-carton economics and U.S. resale rights may make every candidate unsuitable until resolved.
+Offline tests cover URL/credential boundaries, denied and timeout acquisition, failure without fabricated run IDs, deduplication, exact supporting quotes, negation/injected instructions, secret removal, all-210 joins, policy restrictions and tied review behavior. Review found and corrected a false pen-category inference from pen-pouch names and missing policy constraints. The final validation report records actual test counts and dataset checks. Mocks and replay validation are separate from real network calls; passing them does not authenticate provider origin or guarantee current website truth.
 
-The next experiment is a frozen five-store comparison with the same deliverable and a blinded reviewer: manual versus assisted active minutes and elapsed time, critical claim errors, provenance completeness, policy compliance, corrections, API invoice cost and usefulness of the brief. A separately authorized outreach experiment can later measure response/qualified-interest rates. Do not convert those future metrics into present-tense claims.
+HTTPS/public-host validation, same-site redirects, robots rules, request/page limits, explicit partial/failed states and per-request inactivity timeouts keep public research bounded. The crawl deadline is a scheduling budget; system DNS and an in-flight HTTP operation can overrun it. Untrusted web text never becomes code, a tool instruction or permission for external action. No dashboard, database, CRM, OCR, retailer email, form submission, purchase, private quotation, inventory, key or source workbook was added.
 
-This demonstrates discovery from the owner's real constraint, bounded scoping, live tool integration, a minimal data contract, traceable joins, failure handling, human review and reproducible validation. External customer adoption and commercial effectiveness remain untested.
+## Remaining work and measurement limits
+
+Revalidate the remaining 17 stores using the same workflow before promoting them. Complete human image/layout and policy review for the three pilots, then obtain real supplier and buyer confirmations before any outreach or order. A future unattended TinyFish API integration needs an officially configured credential and separately tested client, rather than pretending that saved-capture import makes API calls.
+
+TinyFish billed cost, human time saved, production adoption, conversion and revenue are Unknown. Provider runtime and HTTP acquisition latency are not business effectiveness metrics. A future frozen-task manual/assisted comparison should measure human minutes, factual errors, rework, permitted-route completeness, billed cost and independently reviewed usefulness. No such result is claimed here.

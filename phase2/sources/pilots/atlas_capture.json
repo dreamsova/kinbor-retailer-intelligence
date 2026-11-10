@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "tinyfish_connector",
+  "website": "https://www.atlasstationers.com/",
+  "captured_at_utc": "2026-11-10T02:56:58Z",
+  "run_id": null,
+  "acquisition": "fetch_content",
+  "status": "completed",
+  "pages": [
+    {
+      "url": "https://www.atlasstationers.com/collections/notebooks",
+      "final_url": "https://www.atlasstationers.com/collections/notebooks",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Notebooks",
+      "text": "Leuchtturm A5 Hardcover Notebook - Dot Grid\nRhodia Sewn Spine A5 Notebook - Dot Grid\nField Notes",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.atlasstationers.com/collections/planners",
+      "final_url": "https://www.atlasstationers.com/collections/planners",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Planners",
+      "text": "Hobonichi Techo Weeks - ONE PIECE magazine: Very Very Merry!\nMidori Professional Diary A5 Slim Monthly Block - Black",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.atlasstationers.com/collections/pen-storage",
+      "final_url": "https://www.atlasstationers.com/collections/pen-storage",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Pen Storage",
+      "text": "Hightide General Purpose Case - A6\nGalen Leather Zipped A5 Notebook Folio\nRickshaw Bagworks Fillmore 6-Pen Case - City Views",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.atlasstationers.com/pages/contact-us",
+      "final_url": "https://www.atlasstationers.com/pages/contact-us",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "Contact Us",
+      "text": "227 W Lake St\nChicago, IL 60606\ninfo@atlasstationers.com\nvia this contact form or give us a call",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    },
+    {
+      "url": "https://www.atlasstationers.com/pages/faq",
+      "final_url": "https://www.atlasstationers.com/pages/faq",
+      "retrieved_at_utc": "2026-11-10T02:56:58Z",
+      "title": "FAQ",
+      "text": "Visit our support center\nExpert help & advice",
+      "links": [],
+      "status": "ok",
+      "error": "",
+      "excerpt_selection": "Short exact spans selected by the research operator from actual TinyFish fetch_content output; no prices, stock, cookies or metadata retained."
+    }
+  ],
+  "provider_receipts": [
+    "phase2/sources/pilots/connector_receipts.json",
+    "phase2/sources/pilots/atlas_browser_run.json"
+  ],
+  "note": "Actual TinyFish fetch_content calls made 2026-11-10 around 02:54\u201302:56 UTC; retained-response observation time recorded on each page, not exact network response time or site publication date. Imported replay makes no new provider call. Related actual browser run corroborates category context; its paraphrases are not quotes and are not the acquisition of these fetch_content pages.",
+  "related_browser_run_id": "6b4f0d4a-3a0c-408d-9c1e-ac8736576472",
+  "source_capture": "phase2/sources/pilots/atlas_capture.json"
+}

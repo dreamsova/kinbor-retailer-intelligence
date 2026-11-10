@@ -1,0 +1,211 @@
+sku,product_category_inferred,eligible,reason,retailer_evidence_ids,selected,tie_group,catalog_display_order,aesthetic_fit,order_feasibility
+DTYC0150,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,true,all_eligible_need_review,1,Needs human image review,Unknown
+DT53605,Notebooks & Journals,false,Phase 1 heuristic category needs manual review for this product subtype,E001|E007,false,,2,Needs human image review,Unknown
+DT53606,Notebooks & Journals,false,Phase 1 heuristic category needs manual review for this product subtype,E001|E007,false,,3,Needs human image review,Unknown
+DT53607,Notebooks & Journals,false,Phase 1 heuristic category needs manual review for this product subtype,E001|E007,false,,4,Needs human image review,Unknown
+DT53608,Notebooks & Journals,false,Phase 1 heuristic category needs manual review for this product subtype,E001|E007,false,,5,Needs human image review,Unknown
+DT53609,Notebooks & Journals,false,Phase 1 heuristic category needs manual review for this product subtype,E001|E007,false,,6,Needs human image review,Unknown
+DT53610,Notebooks & Journals,false,Phase 1 heuristic category needs manual review for this product subtype,E001|E007,false,,7,Needs human image review,Unknown
+DTYC0045,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,true,all_eligible_need_review,8,Needs human image review,Unknown
+DTYC0046,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,true,all_eligible_need_review,9,Needs human image review,Unknown
+DTYC0047,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,true,all_eligible_need_review,10,Needs human image review,Unknown
+DTYC0048,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,11,Needs human image review,Unknown
+DTYC0049,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,12,Needs human image review,Unknown
+DTYC0050,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,13,Needs human image review,Unknown
+DTYC0051,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,14,Needs human image review,Unknown
+DTYC0002,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,15,Needs human image review,Unknown
+DTYC0020,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,16,Needs human image review,Unknown
+DTYC0022,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,17,Needs human image review,Unknown
+DTYC0024,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,18,Needs human image review,Unknown
+DTYC0037,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,19,Needs human image review,Unknown
+DTYC0039,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,20,Needs human image review,Unknown
+DTYC0040,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,21,Needs human image review,Unknown
+DTYC0042,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,22,Needs human image review,Unknown
+DTYC0043,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,23,Needs human image review,Unknown
+DTYC0044,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,24,Needs human image review,Unknown
+DTYC0077,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,25,Needs human image review,Unknown
+DTYC0068,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,26,Needs human image review,Unknown
+DTYC0069,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,27,Needs human image review,Unknown
+DTYC0070,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,28,Needs human image review,Unknown
+DTYC0071,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,29,Needs human image review,Unknown
+DTSL0008,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,30,Needs human image review,Unknown
+DTSL0009,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,31,Needs human image review,Unknown
+DTSL0001,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,32,Needs human image review,Unknown
+DTSL0004,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,33,Needs human image review,Unknown
+DTSL0005,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,34,Needs human image review,Unknown
+DTSL0006,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,35,Needs human image review,Unknown
+DTSL0007,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,36,Needs human image review,Unknown
+DT54726,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,37,Needs human image review,Unknown
+DT54728,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,38,Needs human image review,Unknown
+DT54743,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,39,Needs human image review,Unknown
+DT54744,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,40,Needs human image review,Unknown
+DT54727,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,41,Needs human image review,Unknown
+DT54729,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,42,Needs human image review,Unknown
+DT54739,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,43,Needs human image review,Unknown
+DT54720,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,44,Needs human image review,Unknown
+DT54741,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,45,Needs human image review,Unknown
+DT54742,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,46,Needs human image review,Unknown
+DT54721,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,47,Needs human image review,Unknown
+DT54722,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,48,Needs human image review,Unknown
+DT54724,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,49,Needs human image review,Unknown
+DT54725,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,50,Needs human image review,Unknown
+DT54732,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,51,Needs human image review,Unknown
+DT54731,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,52,Needs human image review,Unknown
+DT54723,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,53,Needs human image review,Unknown
+DT54734,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,54,Needs human image review,Unknown
+DT54740,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,55,Needs human image review,Unknown
+DT54757,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,56,Needs human image review,Unknown
+DT54758,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,57,Needs human image review,Unknown
+DT54759,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,58,Needs human image review,Unknown
+DT54760,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,59,Needs human image review,Unknown
+DT54761,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,60,Needs human image review,Unknown
+DT54762,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,61,Needs human image review,Unknown
+DT54750,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,62,Needs human image review,Unknown
+DT54751,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,63,Needs human image review,Unknown
+DT54752,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,64,Needs human image review,Unknown
+DT54753,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,65,Needs human image review,Unknown
+DT54754,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,66,Needs human image review,Unknown
+DT54755,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,67,Needs human image review,Unknown
+DT54756,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,68,Needs human image review,Unknown
+DTB6604-1,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,69,Needs human image review,Unknown
+DTB6611-1,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,70,Needs human image review,Unknown
+DTB6616-1,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,71,Needs human image review,Unknown
+DT56084,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,72,Needs human image review,Unknown
+DT52048,Pens & Writing,false,No observed official category evidence for this catalog category,,false,,73,Needs human image review,Unknown
+DT57910,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,74,Needs human image review,Unknown
+DT53426,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,75,Needs human image review,Unknown
+DT53428,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,76,Needs human image review,Unknown
+DT53429,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,77,Needs human image review,Unknown
+DT53430,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,78,Needs human image review,Unknown
+DT53431,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,79,Needs human image review,Unknown
+DT53553,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,80,Needs human image review,Unknown
+DT53087,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,81,Needs human image review,Unknown
+DT53156,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,82,Needs human image review,Unknown
+DT53549,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,83,Needs human image review,Unknown
+DT53550,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,84,Needs human image review,Unknown
+DT53551,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,85,Needs human image review,Unknown
+DT56033,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,86,Needs human image review,Unknown
+DT56147,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,87,Needs human image review,Unknown
+DTB6566,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,88,Needs human image review,Unknown
+DT55566,Pouches & Cases,true,Official category overlap; product category is a Phase 1 name inference,E008,false,Pouches & Cases,89,Needs human image review,Unknown
+DTYC0072,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,90,Needs human image review,Unknown
+DTYC0085,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,91,Needs human image review,Unknown
+DTYC0086,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,92,Needs human image review,Unknown
+DTYC0087,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,93,Needs human image review,Unknown
+DTYC0088,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,94,Needs human image review,Unknown
+DTYC0152,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,95,Needs human image review,Unknown
+DTYC0153,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,96,Needs human image review,Unknown
+DTYC0100,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,97,Needs human image review,Unknown
+DTYC0053,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,98,Needs human image review,Unknown
+DTYC0054,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,99,Needs human image review,Unknown
+DTYC0055,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,100,Needs human image review,Unknown
+DTYC0056,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,101,Needs human image review,Unknown
+DTYC0142,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,102,Needs human image review,Unknown
+DTYC0145,Pouches & Cases,true,Official category overlap; product category is a Phase 1 name inference,E008,false,Pouches & Cases,103,Needs human image review,Unknown
+DTYC0146,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,104,Needs human image review,Unknown
+DTYC0148,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,105,Needs human image review,Unknown
+DTYC0149,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,106,Needs human image review,Unknown
+DTYC0032,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,107,Needs human image review,Unknown
+DTYC0034,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,108,Needs human image review,Unknown
+DT53611,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,109,Needs human image review,Unknown
+DTYC0006,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,110,Needs human image review,Unknown
+DTYC0014,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,111,Needs human image review,Unknown
+DTYC0160,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,112,Needs human image review,Unknown
+DTYC0161,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,113,Needs human image review,Unknown
+DTYC0162,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,114,Needs human image review,Unknown
+DTYC0163,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,115,Needs human image review,Unknown
+DTYC0164,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,116,Needs human image review,Unknown
+DTYC0165,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,117,Needs human image review,Unknown
+DTYC0166,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,118,Needs human image review,Unknown
+DTYC0167,Refills & Inserts,false,No observed official category evidence for this catalog category,,false,,119,Needs human image review,Unknown
+DTYC0003,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,120,Needs human image review,Unknown
+HX588237,Sticky Notes & Page Flags,false,No observed official category evidence for this catalog category,,false,,121,Needs human image review,Unknown
+DTBB0060,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,122,Needs human image review,Unknown
+DTBB0061,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,123,Needs human image review,Unknown
+DTBB0062,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,124,Needs human image review,Unknown
+DTBB0063,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,125,Needs human image review,Unknown
+DTBB0042,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,126,Needs human image review,Unknown
+DTBB0043,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,127,Needs human image review,Unknown
+DTBB0058,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,128,Needs human image review,Unknown
+DTBB0059,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,129,Needs human image review,Unknown
+DTBB0050,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,130,Needs human image review,Unknown
+DTBB0051,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,131,Needs human image review,Unknown
+HX588229,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,132,Needs human image review,Unknown
+DTBB0019,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,133,Needs human image review,Unknown
+DTBB0017,Other / Review,false,No observed official category evidence for this catalog category,,false,,134,Needs human image review,Unknown
+DTBB0026,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,135,Needs human image review,Unknown
+DTBB0027,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,136,Needs human image review,Unknown
+DTBB0028,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,137,Needs human image review,Unknown
+DTBB0035,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,138,Needs human image review,Unknown
+DTBB0036,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,139,Needs human image review,Unknown
+DTBB0037,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,140,Needs human image review,Unknown
+DTBB0038,Stickers & Decorative Tape,false,No observed official category evidence for this catalog category,,false,,141,Needs human image review,Unknown
+DTBB0021,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,142,Needs human image review,Unknown
+DTBB0022,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,143,Needs human image review,Unknown
+DTBB0029,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,144,Needs human image review,Unknown
+DTBB0030,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,145,Needs human image review,Unknown
+DTBB0031,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,146,Needs human image review,Unknown
+DTBB0032,Notebooks & Journals,true,Official category overlap; product category is a Phase 1 name inference,E001|E007,false,Notebooks & Journals,147,Needs human image review,Unknown
+DTBB0020,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,148,Needs human image review,Unknown
+HX588205,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,149,Needs human image review,Unknown
+HX588218,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,150,Needs human image review,Unknown
+HX588219,Desk & Office Tools,false,No observed official category evidence for this catalog category,,false,,151,Needs human image review,Unknown
+DTBB0005,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,152,Needs human image review,Unknown
+DTBB0007,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,153,Needs human image review,Unknown
+DTBB0009,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,154,Needs human image review,Unknown
+DTBB0012,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,155,Needs human image review,Unknown
+DT589155,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,156,Needs human image review,Unknown
+DT589000,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,157,Needs human image review,Unknown
+DT589001,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,158,Needs human image review,Unknown
+DT589084,Stickers & Decorative Tape,false,Phase 1 heuristic category needs manual review for this product subtype,,false,,159,Needs human image review,Unknown
+DT589029,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,160,Needs human image review,Unknown
+DT589031,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,161,Needs human image review,Unknown
+DT589033,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,162,Needs human image review,Unknown
+DT589034,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,163,Needs human image review,Unknown
+DT589035,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,164,Needs human image review,Unknown
+DT589003,Pens & Writing,false,No observed official category evidence for this catalog category,,false,,165,Needs human image review,Unknown
+DT589005,Pens & Writing,false,No observed official category evidence for this catalog category,,false,,166,Needs human image review,Unknown
+DT589049,Mugs & Drinkware,false,No observed official category evidence for this catalog category,,false,,167,Needs human image review,Unknown
+DT589050,Mugs & Drinkware,false,No observed official category evidence for this catalog category,,false,,168,Needs human image review,Unknown
+DT589064,Mugs & Drinkware,false,No observed official category evidence for this catalog category,,false,,169,Needs human image review,Unknown
+DT589066,Mugs & Drinkware,false,No observed official category evidence for this catalog category,,false,,170,Needs human image review,Unknown
+DT589076,Mugs & Drinkware,false,No observed official category evidence for this catalog category,,false,,171,Needs human image review,Unknown
+DT589077,Mugs & Drinkware,false,No observed official category evidence for this catalog category,,false,,172,Needs human image review,Unknown
+DTBB0023,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,173,Needs human image review,Unknown
+DTBB0024,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,174,Needs human image review,Unknown
+DTBB0052,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,175,Needs human image review,Unknown
+DTBB0053,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,176,Needs human image review,Unknown
+DTBB0054,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,177,Needs human image review,Unknown
+DTBB0056,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,178,Needs human image review,Unknown
+DTBB0057,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,179,Needs human image review,Unknown
+DTBB0089,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,180,Needs human image review,Unknown
+DTBB0090,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,181,Needs human image review,Unknown
+DTBB0101,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,182,Needs human image review,Unknown
+DTBB0102,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,183,Needs human image review,Unknown
+DTBB0103,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,184,Needs human image review,Unknown
+DTBB0104,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,185,Needs human image review,Unknown
+DTBB0105,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,186,Needs human image review,Unknown
+DTBB0106,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,187,Needs human image review,Unknown
+DTBB0107,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,188,Needs human image review,Unknown
+DTBB0108,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,189,Needs human image review,Unknown
+DTBB0109-1,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,190,Needs human image review,Unknown
+DTBB0111,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,191,Needs human image review,Unknown
+DTBB0113,Pouches & Cases,true,Official category overlap; product category is a Phase 1 name inference,E008,false,Pouches & Cases,192,Needs human image review,Unknown
+DTBB0114,Pouches & Cases,true,Official category overlap; product category is a Phase 1 name inference,E008,false,Pouches & Cases,193,Needs human image review,Unknown
+DTBB0115,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,194,Needs human image review,Unknown
+DTBB0116,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,195,Needs human image review,Unknown
+DTBB0117,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,196,Needs human image review,Unknown
+DTBB0118,Pouches & Cases,false,Phase 1 heuristic category needs manual review for this product subtype,E008,false,,197,Needs human image review,Unknown
+DTBB0119,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,198,Needs human image review,Unknown
+DTBB0120,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,199,Needs human image review,Unknown
+DTBB0121,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,200,Needs human image review,Unknown
+DTBB0122,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,201,Needs human image review,Unknown
+DTBB0123,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,202,Needs human image review,Unknown
+DTBB0127,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,203,Needs human image review,Unknown
+DTBB0128,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,204,Needs human image review,Unknown
+DTBB0129,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,205,Needs human image review,Unknown
+DTBB0130,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,206,Needs human image review,Unknown
+DTBB0076,Gifts & Lifestyle,false,No observed official category evidence for this catalog category,,false,,207,Needs human image review,Unknown
+DTBB0079,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,208,Needs human image review,Unknown
+DTBB0080,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,209,Needs human image review,Unknown
+DTBB0081,Planners & Calendars,true,Official category overlap; product category is a Phase 1 name inference,E004,false,Planners & Calendars,210,Needs human image review,Unknown
