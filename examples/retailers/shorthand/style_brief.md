@@ -11,7 +11,7 @@ Audited 210 SKUs; 8 have a specific text/style hypothesis. Preview has 4 candida
 ## Why these candidates
 
 ### DT54744 — 蘑菇扣线圈硬面本-彩虹
-![DT54744](../../../images/DT54744.webp)
+![DT54744](../../../catalog/images/DT54744.webp)
 **One full carton per SKU: 24 units. Human review: pending.**
 
 **Visible SKU features (analyst inference):** Multicolor checker cover and rainbow motif; ring binding and lined-page diagram visible.
@@ -25,7 +25,7 @@ Audited 210 SKUs; 8 have a specific text/style hypothesis. Preview has 4 candida
 **Verify next:** Compare the linked retailer image with this actual SKU; inspect language/layout, physical sample, paper and authorized resale; ask a human buyer to assess the carton quantity.
 
 ### DT54726 — 皮筋硬面本
-![DT54726](../../../images/DT54726.webp)
+![DT54726](../../../catalog/images/DT54726.webp)
 **One full carton per SKU: 24 units. Human review: pending.**
 
 **Visible SKU features (analyst inference):** Large white/yellow flowers on red-orange cover; elastic closure visible.
@@ -39,7 +39,7 @@ Audited 210 SKUs; 8 have a specific text/style hypothesis. Preview has 4 candida
 **Verify next:** Compare the linked retailer image with this actual SKU; inspect language/layout, physical sample, paper and authorized resale; ask a human buyer to assess the carton quantity.
 
 ### DT54729 — 绣花书套软面本
-![DT54729](../../../images/DT54729.webp)
+![DT54729](../../../catalog/images/DT54729.webp)
 **One full carton per SKU: 24 units. Human review: pending.**
 
 **Visible SKU features (analyst inference):** Red tulip motifs on cream cover; lined page diagram visible.
@@ -53,7 +53,7 @@ Audited 210 SKUs; 8 have a specific text/style hypothesis. Preview has 4 candida
 **Verify next:** Compare the linked retailer image with this actual SKU; inspect language/layout, physical sample, paper and authorized resale; ask a human buyer to assess the carton quantity.
 
 ### DTYC0006 — A6手帐-秘境
-![DTYC0006](../../../images/DTYC0006.webp)
+![DTYC0006](../../../catalog/images/DTYC0006.webp)
 **One full carton per SKU: 40 units. Human review: pending.**
 
 **Visible SKU features (analyst inference):** Flowers, mushrooms and book illustration around gold-colored lettering on olive cover.
@@ -83,4 +83,4 @@ Images are URL references only; image rights remain with the owner. Retailer pix
 
 Saved category baseline: DTBB0079, DTBB0113, DTBB0042, DTBB0021.
 The old baseline is retained in the adjacent original research/CSV files for comparison. Current style decisions and all 210 candidate reasons are in `matching.json`. No accuracy or improvement percentage is available without independent labels.
-Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and `phase2/reviews.csv`; intentional counterexamples are hypotheses, not gold negatives.
+Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and [review worksheet](../../evaluation/reviews.csv); intentional counterexamples are hypotheses, not gold negatives.

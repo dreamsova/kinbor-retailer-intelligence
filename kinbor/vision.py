@@ -20,7 +20,8 @@ from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 
-from research import ROOT, load_catalog, normalize_url, safe_text
+from .research import load_catalog, normalize_url, safe_text
+from .paths import ROOT, CATALOG
 
 ENDPOINT = 'https://api.openai.com/v1/responses'
 NOT_VALIDATED = 'MULTIMODAL LIVE NOT VALIDATED'
@@ -205,7 +206,7 @@ def validate_assessments(assessments, skus, evidence_ids):
 
 
 def assess(candidates, observations, *, enabled=False, authorized=False, model=None,
-           max_candidates=8, catalog_root=ROOT, opener=None):
+           max_candidates=8, catalog_root=CATALOG, opener=None):
     """One bounded Responses request; fail closed, never silently fake vision.
 
     ``opener`` is an injectable urllib-compatible test transport. Production uses

@@ -6,12 +6,11 @@ Run the complete suite from the repository root:
 python3 -m unittest discover -v
 ```
 
-The root `test_import.py` is intentionally kept in its original location and
-unchanged. It is one of the 214 Phase 1 files protected by
-[`docs/phase1_manifest.json`](../docs/phase1_manifest.json), alongside the catalog,
-210 product images, importer and data dictionary. Root discovery runs that frozen
-catalog suite together with the tests in this package.
+Application tests import the `kinbor` package and use synthetic transport and model responses. The frozen catalog suite lives at `catalog/test_import.py`, beside `catalog/import.py`, `products.csv` and the 210 images it checks. Root discovery includes that suite through the `catalog` package. Its bytes retain the original preservation hash.
 
-Tests use synthetic transport and model responses. Passing tests establish code
-behavior and evidence integrity; they do not establish live multimodal validation,
-human recommendation quality or commercial conversion.
+```bash
+python3 -m unittest -v catalog.test_import
+python3 scripts/verify_repository.py
+```
+
+All public tests and saved-output checks use the standard library. Pillow is only needed for actual image export from authorized private workbooks. Passing tests establish code behavior and evidence integrity; they do not establish live multimodal validation, human recommendation quality or commercial conversion. [Preservation and baseline guide](../docs/BASELINES.md).

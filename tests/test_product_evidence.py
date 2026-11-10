@@ -3,10 +3,10 @@ import json
 import unittest
 from unittest.mock import patch
 
-import research
+from kinbor import research
 from tests.test_direct_research import SyntheticResponse, SyntheticTransport, fetch_result, page, URL, KEY
 from tests.test_research import PUBLIC_DNS
-import tinyfish_client
+from kinbor import tinyfish_client
 
 
 STAMP = '2026-11-10T02:00:00Z'

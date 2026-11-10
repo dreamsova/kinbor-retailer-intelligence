@@ -11,7 +11,7 @@ Audited 210 SKUs; 1 have a specific text/style hypothesis. Preview has 1 candida
 ## Why these candidates
 
 ### DT55566 — 透明笔袋-紫
-![DT55566](../../../images/DT55566.webp)
+![DT55566](../../../catalog/images/DT55566.webp)
 **One full carton per SKU: 100 units. Human review: pending.**
 
 **Visible SKU features (analyst inference):** Purple translucent rectangular zipped pen pouch; structure and dimensions need review.
@@ -42,4 +42,4 @@ Images are URL references only; image rights remain with the owner. Retailer pix
 
 Saved category baseline: DTBB0079, DT54750, DT589003, DTBB0113.
 The old baseline is retained in the adjacent original research/CSV files for comparison. Current style decisions and all 210 candidate reasons are in `matching.json`. No accuracy or improvement percentage is available without independent labels.
-Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and `phase2/reviews.csv`; intentional counterexamples are hypotheses, not gold negatives.
+Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and [review worksheet](../../evaluation/reviews.csv); intentional counterexamples are hypotheses, not gold negatives.

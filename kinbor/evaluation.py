@@ -14,7 +14,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
-import research
+from . import research
+from .paths import CATALOG, RETAILERS, EVALUATION
 
 RETAILERS = ('atlas', 'shorthand', 'wonder-fair')
 REVIEW_COLUMNS = ('review_id', 'retailer_id', 'sku', 'name_zh', 'image_path',
@@ -131,14 +132,14 @@ def build_review_rows(results, products, seed='kinbor-style-v1'):
     return rows, keys
 
 
-def generate(pilot_root, output, *, catalog_path=research.ROOT / 'products.csv', force=False, seed='kinbor-style-v1'):
+def generate(pilot_root, output, *, catalog_path=CATALOG / 'products.csv', force=False, seed='kinbor-style-v1'):
     output = Path(output)
     key_path = output.with_suffix('.key.csv')
     if not force and (output.exists() or key_path.exists()):
         raise ValueError('Review output exists; preserve responses or use a new --output. --force explicitly replaces both files.')
     # Import locally so the evaluator stays a consumer of the matching workflow,
     # and never publishes a comparison from edited/stale unsupported decisions.
-    import matching
+    from . import matching
     for retailer in RETAILERS:
         matching.validate_saved(Path(pilot_root) / retailer)
     results = [json.loads((Path(pilot_root) / r / 'matching.json').read_text(encoding='utf-8')) for r in RETAILERS]
@@ -200,8 +201,8 @@ def main(argv=None):
     action = parser.add_mutually_exclusive_group(required=True)
     action.add_argument('--generate', action='store_true')
     action.add_argument('--summarize', type=Path, metavar='REVIEWS_CSV')
-    parser.add_argument('--pilot-root', type=Path, default=research.ROOT / 'phase2' / 'live')
-    parser.add_argument('--output', type=Path, default=research.ROOT / 'phase2' / 'reviews.csv')
+    parser.add_argument('--pilot-root', type=Path, default=RETAILERS)
+    parser.add_argument('--output', type=Path, default=EVALUATION / 'reviews.csv')
     parser.add_argument('--key', type=Path, help='System mapping file for summarize only')
     parser.add_argument('--seed', default='kinbor-style-v1')
     parser.add_argument('--force', action='store_true', help='Explicitly replace existing generated review and key files')

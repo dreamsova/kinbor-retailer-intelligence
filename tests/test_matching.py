@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import unittest
 
-import research
+from kinbor import research
 
 
 def baseline(*args, **kwargs):
@@ -106,7 +106,7 @@ class EvidenceReviewMatching(unittest.TestCase):
         }
         for slug, digest in expected.items():
             with self.subTest(slug=slug):
-                folder = Path(research.ROOT) / 'phase2' / 'live' / slug
+                folder = Path(research.ROOT) / 'examples' / 'retailers' / slug
                 def read(name):
                     with (folder / name).open(encoding='utf-8-sig', newline='') as f:
                         return list(csv.DictReader(f))
@@ -118,7 +118,7 @@ class EvidenceReviewMatching(unittest.TestCase):
     def test_saved_direct_api_bundles_recompute_without_network(self):
         for slug in ('atlas', 'shorthand', 'wonder-fair'):
             with self.subTest(slug=slug):
-                folder = Path(research.ROOT) / 'phase2' / 'live' / slug
+                folder = Path(research.ROOT) / 'examples' / 'retailers' / slug
                 self.assertEqual(research.validate_output(folder)['status'], 'passed')
 
 

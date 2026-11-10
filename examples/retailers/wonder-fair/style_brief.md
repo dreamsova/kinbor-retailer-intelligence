@@ -34,4 +34,4 @@ Submission page places fan art, AI-assisted artworks, and clothing or accessorie
 
 Saved category baseline: DTBB0042, DTBB0021, DTBB0035, DTBB0043.
 The old baseline is retained in the adjacent original research/CSV files for comparison. Current style decisions and all 210 candidate reasons are in `matching.json`. No accuracy or improvement percentage is available without independent labels.
-Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and `phase2/reviews.csv`; intentional counterexamples are hypotheses, not gold negatives.
+Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and [review worksheet](../../evaluation/reviews.csv); intentional counterexamples are hypotheses, not gold negatives.

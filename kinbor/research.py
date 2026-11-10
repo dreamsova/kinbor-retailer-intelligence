@@ -24,7 +24,7 @@ from urllib.parse import unquote, urljoin, urlsplit, urlunsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
 from urllib.robotparser import RobotFileParser
 
-ROOT = Path(__file__).resolve().parent
+from .paths import ROOT, CATALOG
 UNKNOWN = 'Unknown'
 AGENT = 'KinborResearch/2.0'
 MAX_BYTES = 1_500_000
@@ -538,7 +538,7 @@ def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
     is optional discovery only: snippets are never assortment evidence. No
     catalog, images, supplier details or website text is sent as an agent goal.
     """
-    from tinyfish_client import TinyFishClient, TinyFishError
+    from .tinyfish_client import TinyFishClient, TinyFishError
     website = normalize_url(website)
     if product_urls and not product_focus:
         raise ValueError('Explicit product URLs require product_focus')
@@ -790,7 +790,7 @@ def extract_evidence(pages, acquisition='public_http', run_id=None, *, typed=Fal
     return evidence
 
 
-def load_catalog(path=ROOT / 'products.csv'):
+def load_catalog(path=CATALOG / 'products.csv'):
     with Path(path).open(encoding='utf-8-sig', newline='') as handle:
         products = list(csv.DictReader(handle))
     if len(products) != 210 or len({p['sku'] for p in products}) != 210:
@@ -979,7 +979,7 @@ def derived_fields(evidence, pages, audit, recs, catalog_count):
     return fields, summary
 
 
-def write_results(capture, output_dir, *, mode, catalog_path=ROOT / 'products.csv', limit=4):
+def write_results(capture, output_dir, *, mode, catalog_path=CATALOG / 'products.csv', limit=4):
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     products = load_catalog(catalog_path)
@@ -1060,7 +1060,7 @@ def write_results(capture, output_dir, *, mode, catalog_path=ROOT / 'products.cs
     return result
 
 
-def validate_output(output_dir, catalog_path=ROOT / 'products.csv'):
+def validate_output(output_dir, catalog_path=CATALOG / 'products.csv'):
     output = Path(output_dir)
     result = json.loads((output / 'research.json').read_text(encoding='utf-8'))
     products = load_catalog(catalog_path)
@@ -1126,7 +1126,7 @@ def validate_output(output_dir, catalog_path=ROOT / 'products.csv'):
 
 def validate_outputs(output_dir, repo_root=ROOT):
     """Compatibility helper for the Phase 2 data integrator."""
-    return validate_output(output_dir, Path(repo_root) / 'products.csv')
+    return validate_output(output_dir, Path(repo_root) / 'catalog' / 'products.csv')
 
 
 def main(argv=None):
@@ -1136,7 +1136,7 @@ def main(argv=None):
     parser.add_argument('--url', help='Official retailer HTTPS URL; required for public/import')
     parser.add_argument('--input', type=Path, help='Version 1 normalized real TinyFish connector capture JSON (import only)')
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'work' / 'research', help='Output folder or existing folder to validate')
-    parser.add_argument('--catalog', type=Path, default=ROOT / 'products.csv')
+    parser.add_argument('--catalog', type=Path, default=CATALOG / 'products.csv')
     parser.add_argument('--limit', type=int, choices=(3, 4, 5), default=4, help='Maximum human-review candidate preview size')
     parser.add_argument('--max-pages', type=int, default=6, help='Page cap: API 1–10; public HTTP 1–12')
     parser.add_argument('--timeout', type=float, default=15, help='Per-request seconds, 1–30')
@@ -1203,7 +1203,7 @@ def main(argv=None):
             (args.output_dir / 'product_evidence.json').write_text(json.dumps(artifact, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
             # The optional style matcher is kept separate from acquisition and
             # historical API receipts; missing evidence produces safe abstention.
-            from matching import run as match_products
+            from .matching import run as match_products
             style_result = match_products(args.output_dir, limit=args.limit)
         display = {k: result[k] for k in ('status', 'acquisition', 'run_id', 'summary', 'errors')}
         if args.product_evidence:

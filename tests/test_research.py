@@ -2,7 +2,7 @@
 
 Mocks below exercise failure handling and data integrity. They are never receipts
 of a real TinyFish/API execution. Run real saved-pilot validation explicitly with
-``python3 research.py --mode validate --output-dir phase2/live/atlas``.
+``python3 -m kinbor.research --mode validate --output-dir examples/retailers/atlas``.
 """
 import csv
 import copy
@@ -14,10 +14,10 @@ import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError
 
-import research
+from kinbor import research
 
 
-ROOT = research.ROOT
+ROOT = research.CATALOG
 WEBSITE = "https://retailer-fixture.org/"
 TIMESTAMP = "2026-11-10T02:00:00Z"
 

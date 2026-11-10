@@ -1,17 +1,14 @@
 """Offline evaluation integrity tests; fixtures are not human quality labels."""
 import csv
-import importlib.util
 import json
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
 
-import research
+from kinbor import research
 
-spec = importlib.util.spec_from_file_location('matching_eval', research.ROOT / 'eval.py')
-evaluation = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(evaluation)
+from kinbor import evaluation
 
 
 class ReviewEvaluationTests(unittest.TestCase):
@@ -109,7 +106,7 @@ class ReviewEvaluationTests(unittest.TestCase):
             output = root / 'reviews.csv'
             # Synthetic fixture decisions are not real evidence bundles. Test
             # orchestration here; matching's own tests cover saved validation.
-            with patch('matching.validate_saved', create=True) as validate:
+            with patch('kinbor.matching.validate_saved', create=True) as validate:
                 report = evaluation.generate(root, output)
                 self.assertEqual(validate.call_count, 3)
             self.assertEqual(report['gold_labels'], 0)
@@ -128,7 +125,7 @@ class ReviewEvaluationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             output = root / 'reviews.csv'
-            with patch('matching.validate_saved', create=True, side_effect=ValueError('Unsupported saved evidence')):
+            with patch('kinbor.matching.validate_saved', create=True, side_effect=ValueError('Unsupported saved evidence')):
                 with self.assertRaisesRegex(ValueError, 'Unsupported'):
                     evaluation.generate(root, output)
             self.assertFalse(output.exists())

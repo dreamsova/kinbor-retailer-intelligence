@@ -14,8 +14,8 @@ import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError
 
-import research
-import tinyfish_client
+from kinbor import research
+from kinbor import tinyfish_client
 
 
 URL = 'https://retailer-fixture.org/'

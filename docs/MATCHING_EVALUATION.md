@@ -2,16 +2,16 @@
 
 This is a small decision-usefulness comparison for Atlas Stationers, Shorthand and Wonder Fair. It does not establish accuracy, buyer preference or a commercial outcome. No human gold labels have been supplied.
 
-Run offline after generating each store's `matching.json`:
+Run offline after generating each store's `matching.json`. Use a new worksheet path to preserve the supplied pending rows and any future responses:
 
 ```bash
-python3 eval.py --generate
-python3 eval.py --summarize phase2/reviews.csv
+python3 -m kinbor.evaluation --generate --output work/reviews-round2.csv
+python3 -m kinbor.evaluation --summarize examples/evaluation/reviews.csv
 ```
 
 Generation validates all three saved matching outputs offline before writing anything, then creates 36 blank review rows: 12 unique real catalog SKUs per store. The deterministic sample includes the frozen pre-change category baseline, the new shortlist, evidence-supported alternatives and deliberate design/function challenges. The four probes include a blind-box pen, a storage item, a blank A6 refill and an illustrated A6 journal. These are hypotheses to inspect, never pre-labelled positive or negative examples. The same SKU can be suitable for multiple stores; diversity is not a quality metric.
 
-`phase2/reviews.csv` is the reviewer-facing worksheet. `phase2/reviews.key.csv` contains the hidden A/B system mapping and sampling rationale. Give reviewers only the worksheet, actual catalog images, retailer source pages and the instructions below. Keep the key and implementation/output shortlist files away from them until answers are locked. Side assignments and row order are reproducible from a fixed seed; each row compares two explanations for the same retailer–SKU pair. System names are concealed, but the prose and “not selected” baseline statements may reveal origin. This is partial blinding, not a fully blinded experiment. Do not treat its responses as an independent training or accuracy benchmark.
+`examples/evaluation/reviews.csv` is the reviewer-facing worksheet. `examples/evaluation/reviews.key.csv` contains the hidden A/B system mapping and sampling rationale. Give reviewers only the worksheet, actual catalog images, retailer source pages and the instructions below. Keep the key and implementation/output shortlist files away from them until answers are locked. Side assignments and row order are reproducible from a fixed seed; each row compares two explanations for the same retailer–SKU pair. System names are concealed, but the prose and “not selected” baseline statements may reveal origin. This is partial blinding, not a fully blinded experiment. Do not treat its responses as an independent training or accuracy benchmark.
 
 For each row:
 

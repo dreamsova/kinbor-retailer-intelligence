@@ -4,11 +4,11 @@
 
 | Retailer | Current candidates | Review |
 |---|---|---|
-| atlas | DT55566 | [Evidence and reasons](live/atlas/style_brief.md) |
-| shorthand | DT54744, DT54726, DT54729, DTYC0006 | [Evidence and reasons](live/shorthand/style_brief.md) |
-| wonder-fair | Insufficient evidence; no forced recommendation | [Evidence and reasons](live/wonder-fair/style_brief.md) |
+| atlas | DT55566 | [Evidence and reasons](retailers/atlas/style_brief.md) |
+| shorthand | DT54744, DT54726, DT54729, DTYC0006 | [Evidence and reasons](retailers/shorthand/style_brief.md) |
+| wonder-fair | Insufficient evidence; no forced recommendation | [Evidence and reasons](retailers/wonder-fair/style_brief.md) |
 
-Use [reviews.csv](reviews.csv) with the [evaluation protocol](../docs/MATCHING_EVALUATION.md). The category CSV tables and older briefs below are frozen comparators; they do not represent current style recommendations.
+Use [reviews.csv](evaluation/reviews.csv) with the [evaluation protocol](../docs/MATCHING_EVALUATION.md). The category CSV tables and older briefs below are frozen comparators; they do not represent current style recommendations.
 
 ---
 
@@ -18,12 +18,12 @@ This is a human-review queue, not a list of confirmed buyers. There is no weight
 
 | Review priority | Retailer | Product fit | Evidence strength | Buyer access | All-candidate minimum |
 |---|---|---|---|---|---|
-| 1 (tie; human review) | [Atlas Stationers](live/atlas/buyer_brief.md) | Category overlap; human review required | Official page observations; not independent verification | General contact only | 4 cartons / 1068 units |
-| 1 (tie; human review) | [Shorthand](live/shorthand/buyer_brief.md) | Category overlap; human review required | Official page observations; not independent verification | Submission-related policy; applicability requires human review | 4 cartons / 380 units |
-| 1 (tie; human review) | [Wonder Fair](live/wonder-fair/buyer_brief.md) | Category overlap; human review required | Official page observations; not independent verification | Submission-related policy; applicability requires human review | 4 cartons / 740 units |
+| 1 (tie; human review) | [Atlas Stationers](retailers/atlas/buyer_brief.md) | Category overlap; human review required | Official page observations; not independent verification | General contact only | 4 cartons / 1068 units |
+| 1 (tie; human review) | [Shorthand](retailers/shorthand/buyer_brief.md) | Category overlap; human review required | Official page observations; not independent verification | Submission-related policy; applicability requires human review | 4 cartons / 380 units |
+| 1 (tie; human review) | [Wonder Fair](retailers/wonder-fair/buyer_brief.md) | Category overlap; human review required | Official page observations; not independent verification | Submission-related policy; applicability requires human review | 4 cartons / 740 units |
 
 ## Atlas Stationers
-Current field-level evidence, exact source links and retrieval times: [pilot brief](live/atlas/buyer_brief.md).
+Current field-level evidence, exact source links and retrieval times: [pilot brief](retailers/atlas/buyer_brief.md).
 **Candidate SKUs:** DTBB0079 (120 units / carton; [category evidence](https://www.atlasstationers.com/collections/hightide-planners)), DT54750 (60 units / carton; [category evidence](https://www.atlasstationers.com/)), DT589003 (768 units / carton; [category evidence](https://www.atlasstationers.com/)), DTBB0113 (120 units / carton; [category evidence](https://www.atlasstationers.com/)).
 **Product fit:** category-level inference from the entire 210-SKU candidate audit. Images link to the unchanged original SKU photos. Aesthetic fit, language/layout and paper performance need human review.
 **Order feasibility: Unknown.** Each individual SKU requires one separate full carton under the project rule. No buyer confirmed buying interest, carton acceptance or commercial terms.
@@ -32,7 +32,7 @@ Current field-level evidence, exact source links and retrieval times: [pilot bri
 **Vendor submission policy: Unknown.** A general contact route is not incoming-vendor permission.
 
 ## Shorthand
-Current field-level evidence, exact source links and retrieval times: [pilot brief](live/shorthand/buyer_brief.md).
+Current field-level evidence, exact source links and retrieval times: [pilot brief](retailers/shorthand/buyer_brief.md).
 **Candidate SKUs:** DTBB0079 (120 units / carton; [category evidence](https://shopshorthand.com/collections/daily-planner-category)), DTBB0113 (120 units / carton; [category evidence](https://shopshorthand.com/collections/bags-cases-pouches)), DTBB0042 (100 units / carton; [category evidence](https://shopshorthand.com/collections/bags-cases-pouches)), DTBB0021 (40 units / carton; [category evidence](https://shopshorthand.com/)).
 **Product fit:** category-level inference from the entire 210-SKU candidate audit. Images link to the unchanged original SKU photos. Aesthetic fit, language/layout and paper performance need human review.
 **Order feasibility: Unknown.** Each individual SKU requires one separate full carton under the project rule. No buyer confirmed buying interest, carton acceptance or commercial terms.
@@ -44,7 +44,7 @@ Current field-level evidence, exact source links and retrieval times: [pilot bri
 - "Our buyer is not always in the store so we discourage bringing products to the store. Please send us an email with more information about your products." [Source](https://shopshorthand.com/pages/faqs) (R05-P-E027).
 
 ## Wonder Fair
-Current field-level evidence, exact source links and retrieval times: [pilot brief](live/wonder-fair/buyer_brief.md).
+Current field-level evidence, exact source links and retrieval times: [pilot brief](retailers/wonder-fair/buyer_brief.md).
 **Candidate SKUs:** DTBB0042 (100 units / carton; [category evidence](https://www.wonderfair.com/contact)), DTBB0021 (40 units / carton; [category evidence](https://www.wonderfair.com/submit)), DTBB0035 (500 units / carton; [category evidence](https://www.wonderfair.com/submit)), DTBB0043 (100 units / carton; [category evidence](https://www.wonderfair.com/contact)).
 **Product fit:** category-level inference from the entire 210-SKU candidate audit. Images link to the unchanged original SKU photos. Aesthetic fit, language/layout and paper performance need human review.
 **Order feasibility: Unknown.** Each individual SKU requires one separate full carton under the project rule. No buyer confirmed buying interest, carton acceptance or commercial terms.

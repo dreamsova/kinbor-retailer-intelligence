@@ -15,8 +15,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-ROOT = Path(__file__).resolve().parent
-DATA = ROOT / 'phase2'
+from .paths import ROOT, CATALOG, EXAMPLES, phase1_path
+
+DATA = EXAMPLES
 PILOTS = {'atlas': 'R01', 'shorthand': 'R05', 'wonder-fair': 'R16'}
 LEGACY_FIELDS = (
     'category_fit_0_5', 'category_fit_reason', 'evidence_strength_0_5',
@@ -31,30 +32,46 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def saved_artifact(value):
+    """Resolve frozen live/... capture paths without rewriting historical rows."""
+    relative = Path(value)
+    require(not relative.is_absolute() and '..' not in relative.parts,
+            'Evidence path must stay relative to examples')
+    if relative.parts and relative.parts[0] == 'live':
+        relative = Path('retailers', *relative.parts[1:])
+    resolved = (DATA / relative).resolve()
+    require(resolved.is_relative_to(DATA.resolve()), 'Evidence path must stay inside examples')
+    return resolved
+
+
+def artifact_link(value):
+    return saved_artifact(value).relative_to(DATA.resolve()).as_posix()
+
+
 def current_style_reviews():
     """Current matching is separate from the frozen category CSV comparator."""
-    from matching import validate_saved
+    from .matching import validate_saved
     reports=[]
     for slug in PILOTS:
-        directory=DATA/'live'/slug
+        directory=DATA/'retailers'/slug
         if (directory/'matching.json').exists():
             checked=validate_saved(directory)
             result=json.loads((directory/'matching.json').read_text(encoding='utf-8'))
             reports.append({'retailer':slug,'selected_skus':result['selected_skus'],
-                            'brief':f'live/{slug}/style_brief.md',**checked})
+                            'brief':f'retailers/{slug}/style_brief.md',**checked})
     require(len(reports) in (0,3),'All three style pilot bundles must be present together')
     return reports
 
 
 def read(name):
-    with (DATA / name).open(encoding='utf-8-sig', newline='') as f:
+    with (DATA / 'baselines' / name).open(encoding='utf-8-sig', newline='') as f:
         return list(csv.DictReader(f))
 
 
 def write(name, rows):
     require(bool(rows), 'Cannot write empty review table')
     fields = list(dict.fromkeys(key for row in rows for key in row))
-    with (DATA / name).open('w', encoding='utf-8', newline='') as f:
+    with (DATA / 'baselines' / name).open('w', encoding='utf-8', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
         w.writeheader()
         w.writerows(rows)
@@ -100,9 +117,9 @@ def _joined(value):
 
 def integrate_pilots(retailers, matches, evidence, pilot_root=None):
     """Replace only the three pilot matches; retain all historical evidence rows."""
-    from research import validate_outputs
-    pilot_root = Path(pilot_root or DATA / 'live').resolve()
-    require(DATA.resolve() in pilot_root.parents, 'Pilot outputs must be under phase2 for portable evidence links')
+    from .research import validate_outputs
+    pilot_root = Path(pilot_root or DATA / 'retailers').resolve()
+    require(DATA.resolve() in pilot_root.parents, 'Pilot outputs must be under examples for portable evidence links')
     retailers, matches, evidence = migrate(copy.deepcopy(retailers), copy.deepcopy(matches), copy.deepcopy(evidence))
     by_id = {r['retailer_id']: r for r in retailers}
     for slug, rid in PILOTS.items():
@@ -183,7 +200,7 @@ def integrate_pilots(retailers, matches, evidence, pilot_root=None):
 
 
 def validate(retailers, matches, evidence):
-    with (ROOT / 'products.csv').open(encoding='utf-8-sig', newline='') as f:
+    with (CATALOG / 'products.csv').open(encoding='utf-8-sig', newline='') as f:
         products = {p['sku']: p for p in csv.DictReader(f)}
     require(len(products) == 210, 'Need the unchanged 210-SKU catalog')
     ids = {r['retailer_id'] for r in retailers}
@@ -205,11 +222,11 @@ def validate(retailers, matches, evidence):
         require(e['evidence_scope'] in ('current_pilot', 'legacy_not_revalidated'), 'Missing evidence scope')
         if e['evidence_scope'] == 'current_pilot':
             require(bool(e['quote'].strip()) and bool(e['confidence'].strip()), 'Current field evidence needs exact quote and confidence')
-            path = (DATA / e['source_capture']).resolve()
-            require(DATA.resolve() in path.parents and path.is_file(), 'Current evidence capture missing or outside phase2')
+            path = saved_artifact(e['source_capture'])
+            require(DATA.resolve() in path.parents and path.is_file(), 'Current evidence capture missing or outside examples')
             directory = path.parent
             if directory not in checked_pilots:
-                from research import validate_outputs
+                from .research import validate_outputs
                 validate_outputs(directory, ROOT)
                 with (directory / 'evidence.csv').open(encoding='utf-8', newline='') as f:
                     checked_pilots[directory] = {row['evidence_id']: row for row in csv.DictReader(f)}
@@ -241,7 +258,7 @@ def validate(retailers, matches, evidence):
             pilot_count += 1
             require(rid in PILOTS.values(), 'Unexpected current-pilot business')
             require(r['review_priority'] == '1 (tie; human review)', 'Pilot tie must remain explicit; no artificial top-five cutoff')
-            report = (DATA / r['pilot_report']).resolve()
+            report = saved_artifact(r['pilot_report'])
             require(DATA.resolve() in report.parents and report.is_file(), 'Pilot report missing')
             result = json.loads((report.parent / 'research.json').read_text(encoding='utf-8'))
             for field in ('product_fit', 'evidence_strength', 'buyer_access'):
@@ -265,7 +282,7 @@ def validate(retailers, matches, evidence):
                           ('product_source_sheet', 'source_sheet'), ('product_source_row', 'source_row')):
             require(m[dest] == p[src], f'SKU source mismatch: {m["sku"]} {dest}')
         require(int(m['moq_cartons']) == 1 and int(m['moq_units']) == int(m['units_per_carton']), 'Per-SKU carton rule violated')
-        require((ROOT / m['image_path']).is_file(), 'Missing image')
+        require((CATALOG / m['image_path']).is_file(), 'Missing image')
         require('inference' in m['match_basis'], 'Match must be labeled inference')
         require(m['order_feasibility'] == UNKNOWN and m['commercial_status'] == 'research_candidate_only', 'Commercial overclaim')
         require(bool(m['aesthetic_fit']), 'Aesthetic uncertainty missing')
@@ -284,7 +301,7 @@ def validate(retailers, matches, evidence):
     manifest = json.loads((ROOT / 'docs/phase1_manifest.json').read_text())
     require(len(manifest['phase1_files']) == 214, 'Phase 1 preservation manifest incomplete')
     for path, expected in manifest['phase1_files'].items():
-        require(hashlib.sha256((ROOT / path).read_bytes()).hexdigest() == expected, 'Phase 1 file changed: ' + path)
+        require(hashlib.sha256(phase1_path(path).read_bytes()).hexdigest() == expected, 'Phase 1 file changed: ' + path)
     return {'retailers': len(retailers), 'current_pilots': pilot_count, 'legacy_not_revalidated': 20 - pilot_count,
             'sku_matches': len(matches), 'evidence_rows': len(evidence), 'phase1_preserved_files': 214,
             'purchase_probability': 'Not modeled', 'order_feasibility': UNKNOWN, 'checks': 'passed'}
@@ -328,15 +345,15 @@ def refresh(retailers, matches, evidence):
                  '', '| Retailer | Current candidates | Review |','|---|---|---|']
         for s in styles:
             style_intro.append(f"| {s['retailer']} | {', '.join(s['selected_skus']) or 'Insufficient evidence; no forced recommendation'} | [Evidence and reasons]({s['brief']}) |")
-        style_intro += ['', 'Use [reviews.csv](reviews.csv) with the [evaluation protocol](../docs/MATCHING_EVALUATION.md). '
+        style_intro += ['', 'Use [reviews.csv](evaluation/reviews.csv) with the [evaluation protocol](../docs/MATCHING_EVALUATION.md). '
                     'The category CSV tables and older briefs below are frozen comparators; they do not represent current style recommendations.', '', '---', '']
         text=style_intro+text
     for r in current:
-        text.append(f'| 1 (tie; human review) | [{r["name"]}]({r["pilot_report"]}) | {r["product_fit"]} | {r["evidence_strength"]} | {r["buyer_access"]} | {r["minimum_cartons_all_candidates"]} cartons / {r["minimum_units_all_candidates"]} units |')
+        text.append(f'| 1 (tie; human review) | [{r["name"]}]({artifact_link(r["pilot_report"])}) | {r["product_fit"]} | {r["evidence_strength"]} | {r["buyer_access"]} | {r["minimum_cartons_all_candidates"]} cartons / {r["minimum_units_all_candidates"]} units |')
     for r in current:
         selected = [m for m in matches if m['retailer_id'] == r['retailer_id']]
         text += ['', '## ' + r['name'],
-                 'Current field-level evidence, exact source links and retrieval times: [pilot brief](' + r['pilot_report'] + ').',
+                 'Current field-level evidence, exact source links and retrieval times: [pilot brief](' + artifact_link(r['pilot_report']) + ').',
                  '**Candidate SKUs:** ' + ', '.join(f'{m["sku"]} ({m["moq_units"]} units / carton; [category evidence]({m["retailer_evidence_url"]}))' for m in selected) + '.',
                  '**Product fit:** category-level inference from the entire 210-SKU candidate audit. Images link to the unchanged original SKU photos. Aesthetic fit, language/layout and paper performance need human review.',
                  '**Order feasibility: Unknown.** Each individual SKU requires one separate full carton under the project rule. No buyer confirmed buying interest, carton acceptance or commercial terms.',
@@ -365,7 +382,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--refresh', action='store_true', help='Validate and regenerate the tied human-review queue; no network')
     parser.add_argument('--integrate-pilots', action='store_true', help='Import all three existing validated research.py output directories and refresh CSVs/queue')
-    parser.add_argument('--pilot-root', type=Path, help='Validated pilot directory, e.g. phase2/live; requires --integrate-pilots')
+    parser.add_argument('--pilot-root', type=Path, help='Validated pilot directory, e.g. examples/retailers; requires --integrate-pilots')
     parser.add_argument('--brief', action='store_true', help='Print the saved Atlas Markdown brief path')
     args = parser.parse_args()
     if args.pilot_root and not args.integrate_pilots:
@@ -381,8 +398,7 @@ def main():
     report['current_style_reviews']=current_style_reviews()
     report['negative_controls_passed'] = fault_checks(retailers, matches, evidence)
     if args.brief:
-        atlas = next(r for r in retailers if r['retailer_id'] == PILOTS['atlas'])
-        report['brief'] = 'phase2/' + atlas['pilot_report']
+        report['brief'] = str((DATA / 'retailers/atlas/style_brief.md').relative_to(ROOT))
     report['checked_at_utc'] = datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
     print(json.dumps(report, indent=2))
 

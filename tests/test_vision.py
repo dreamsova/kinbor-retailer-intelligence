@@ -6,8 +6,8 @@ import os
 import unittest
 from unittest.mock import patch
 
-import research
-import vision
+from kinbor import research
+from kinbor import vision
 
 
 class Response(io.BytesIO):
@@ -44,7 +44,7 @@ class VisionTests(unittest.TestCase):
         self.env.start()
         self.addCleanup(self.env.stop)
         # Avoid DNS/network in these tests while exercising the same URL parser.
-        self.urls = patch('vision.normalize_url', side_effect=lambda value, **kw:
+        self.urls = patch('kinbor.vision.normalize_url', side_effect=lambda value, **kw:
                           research.normalize_url(value, resolve=False))
         self.urls.start()
         self.addCleanup(self.urls.stop)
@@ -162,8 +162,8 @@ class VisionTests(unittest.TestCase):
 
     def test_private_dns_and_redirected_success_are_rejected(self):
         transport = Transport(self.body())
-        with patch('vision.normalize_url', side_effect=research.normalize_url), patch(
-                'research.socket.getaddrinfo', return_value=[(2, 1, 6, '', ('10.0.0.1', 443))]):
+        with patch('kinbor.vision.normalize_url', side_effect=research.normalize_url), patch(
+                'kinbor.research.socket.getaddrinfo', return_value=[(2, 1, 6, '', ('10.0.0.1', 443))]):
             result = self.call(transport)
         self.assertEqual(result['status'], vision.NOT_VALIDATED)
         self.assertFalse(transport.requests)

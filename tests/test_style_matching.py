@@ -5,15 +5,15 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-import matching
-import research
+from kinbor import matching
+from kinbor import research
 
 
 class StyleMatchingTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.products=research.load_catalog()
-        cls.notes=matching.load_notes(research.ROOT/'phase2/sku_visual_notes.json',cls.products)
+        cls.notes=matching.load_notes(research.ROOT/'examples/sku_visual_notes.json',cls.products)
 
     def bundle(self, title='Notebook botanical flowers', facts='Floral cover and lined pages.'):
         return {'retailer_id':'fixture','website':'https://retailer-fixture.org/', 'observations':[
@@ -97,7 +97,7 @@ class StyleMatchingTests(unittest.TestCase):
             with self.assertRaises(ValueError):matching.validate_result(corrupt,self.products,b,self.notes)
 
     def test_validated_visual_conflicts_recompute_selection_and_stay_inference(self):
-        from vision import ENDPOINT
+        from kinbor.vision import ENDPOINT
         b=self.bundle()
         b['observations'][0]['product_image_url']='https://cdn.retailer-fixture.org/flower.webp'
         r,_=self.result(b)
@@ -125,7 +125,7 @@ class StyleMatchingTests(unittest.TestCase):
         with self.assertRaises(ValueError):matching.normalize_evidence(b)
 
     def test_visual_note_sku_and_image_hash_drift_rejected(self):
-        x=json.loads((research.ROOT/'phase2/sku_visual_notes.json').read_text())
+        x=json.loads((research.ROOT/'examples/sku_visual_notes.json').read_text())
         x['notes'][0]['image_sha256']='0'*64
         with tempfile.TemporaryDirectory() as td:
             p=Path(td)/'notes.json'; p.write_text(json.dumps(x))

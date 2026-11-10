@@ -23,22 +23,22 @@ Direct API receipt: [api_receipt.json](api_receipt.json). Authenticated response
 | DTBB0021 | Notebooks & Journals | 1 carton / 40 units | [E001|E028|E038|E048|E015|E022](https://shopshorthand.com/) |
 
 ### DTBB0079 — 周计划-亲故最棒
-![DTBB0079](../../../images/DTBB0079.webp)
+![DTBB0079](../../../catalog/images/DTBB0079.webp)
 Observed Planners & Calendars through category-specific page text. No product-specific preference established. Review preview rotates observed categories and equally supported collections. SKU alphabetical order breaks display ties only; all candidates require human image and commercial review.
 Source: `Brunch Brother新品`, row 92. Aesthetic fit: **Needs human image review**. MOQ: one full carton, 120 units. Order feasibility: **Unknown**.
 
 ### DTBB0113 — BB peper手提收纳包
-![DTBB0113](../../../images/DTBB0113.webp)
+![DTBB0113](../../../catalog/images/DTBB0113.webp)
 Observed Pouches & Cases through category-specific page text. No product-specific preference established. Review preview rotates observed categories and equally supported collections. SKU alphabetical order breaks display ties only; all candidates require human image and commercial review.
 Source: `Brunch Brother新品`, row 76. Aesthetic fit: **Needs human image review**. MOQ: one full carton, 120 units. Order feasibility: **Unknown**.
 
 ### DTBB0042 — Mogry造型手腕垫（黑色）
-![DTBB0042](../../../images/DTBB0042.webp)
+![DTBB0042](../../../catalog/images/DTBB0042.webp)
 Observed Desk & Office Tools through page text. No product-specific preference established. Review preview rotates observed categories and equally supported collections. SKU alphabetical order breaks display ties only; all candidates require human image and commercial review.
 Source: `Brunch Brother新品`, row 10. Aesthetic fit: **Needs human image review**. MOQ: one full carton, 100 units. Order feasibility: **Unknown**.
 
 ### DTBB0021 — A6手帐-小邦妮
-![DTBB0021](../../../images/DTBB0021.webp)
+![DTBB0021](../../../catalog/images/DTBB0021.webp)
 Observed Notebooks & Journals through page text. No product-specific preference established. Review preview rotates observed categories and equally supported collections. SKU alphabetical order breaks display ties only; all candidates require human image and commercial review.
 Source: `Brunch Brother新品`, row 26. Aesthetic fit: **Needs human image review**. MOQ: one full carton, 40 units. Order feasibility: **Unknown**.
 

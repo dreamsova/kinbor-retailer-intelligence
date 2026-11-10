@@ -8,9 +8,9 @@ import re
 import time
 from pathlib import Path
 from urllib.parse import urlsplit
-import research
+from . import research
 
-ROOT = Path(__file__).resolve().parent
+from .paths import ROOT, CATALOG, EVALUATION, NOTES
 UNKNOWN = 'Unknown'
 STRATEGY = 'style_evidence_v1'
 # Deliberately small, inspectable vocabulary. These tags are text interpretations,
@@ -72,7 +72,7 @@ def normalize_evidence(bundle):
         if image != UNKNOWN:
             # Validate but retain ordinary public CDN resize parameters. Signed/
             # credential URLs are excluded rather than published in output.
-            from vision import safe_image_url
+            from .vision import safe_image_url
             try:
                 image = safe_image_url(image)
             except ValueError:
@@ -140,7 +140,7 @@ def product_family(product):
             'Pens & Writing':'writing_instrument'}.get(product['category'], 'unassessed')
 
 
-def load_notes(path, products, catalog_root=ROOT):
+def load_notes(path, products, catalog_root=CATALOG):
     notes = json.loads(Path(path).read_text(encoding='utf-8'))
     by_sku = {p['sku']:p for p in products}
     result = {}
@@ -289,7 +289,7 @@ def vision_selection(multimodal, expected, limit):
     An offline receipt is an audit record, not independent proof of execution.
     Strict comparisons detect accidental/tampered joins without claiming otherwise.
     """
-    from vision import ENDPOINT, NOT_VALIDATED, validate_assessments
+    from .vision import ENDPOINT, NOT_VALIDATED, validate_assessments
     rows=multimodal.get('assessments')
     if not isinstance(rows,list):
         raise ValueError('Invalid multimodal assessments')
@@ -350,10 +350,10 @@ def validate_result(result, products, bundle, notes):
             'multimodal':result['multimodal']['status']}
 
 
-def validate_saved(directory, notes_path=ROOT/'phase2/sku_visual_notes.json'):
+def validate_saved(directory, notes_path=NOTES):
     directory=Path(directory)
     r=json.loads((directory/'matching.json').read_text(encoding='utf-8'))
-    if (r['catalog_sha256']!=digest(ROOT/'products.csv')
+    if (r['catalog_sha256']!=digest(CATALOG/'products.csv')
             or r['product_evidence_sha256']!=digest(directory/'product_evidence.json')
             or r['visual_notes_sha256']!=digest(notes_path)):
         raise ValueError('Input identity drift')
@@ -383,7 +383,7 @@ def write_brief(result, directory):
                  '; mixed product references do not establish one store-wide preference.']
     for sku in result['selected_skus']:
         r=by_sku[sku]
-        relative=Path(__import__('os').path.relpath(ROOT/r['image_path'],directory)).as_posix()
+        relative=Path(__import__('os').path.relpath(CATALOG/r['image_path'],directory)).as_posix()
         text += ['',f"### {sku} — {r['name_zh']}",f"![{sku}]({relative})",
                  f"**One full carton per SKU: {r['moq_units']} units. Human review: pending.**",
                  '', '**Visible SKU features (analyst inference):** '+r['visible_style_features_inferred'],
@@ -408,23 +408,23 @@ def write_brief(result, directory):
             text += ['',p['observed_policy']+' [Read full policy]('+p['source_url']+'). '+p['commercial_unknown']]
     text += ['', '## Before/after review', '', 'Saved category baseline: '+', '.join(result.get('baseline_skus',[]))+'.',
              'The old baseline is retained in the adjacent original research/CSV files for comparison. Current style decisions and all 210 candidate reasons are in `matching.json`. No accuracy or improvement percentage is available without independent labels.',
-             'Use [the evaluation protocol](../../../docs/MATCHING_EVALUATION.md) and `phase2/reviews.csv`; intentional counterexamples are hypotheses, not gold negatives.']
+             f'Use [the evaluation protocol]({Path(__import__("os").path.relpath(ROOT/"docs/MATCHING_EVALUATION.md", directory)).as_posix()}) and [the review worksheet]({Path(__import__("os").path.relpath(EVALUATION/"reviews.csv", directory)).as_posix()}); intentional counterexamples are hypotheses, not gold negatives.']
     (Path(directory)/'style_brief.md').write_text('\n'.join(text)+'\n',encoding='utf-8')
 
 
-def run(directory, *, notes_path=ROOT/'phase2/sku_visual_notes.json', limit=4, vision_enabled=False, authorized=False, model=None):
+def run(directory, *, notes_path=NOTES, limit=4, vision_enabled=False, authorized=False, model=None):
     started=time.monotonic(); directory=Path(directory)
     bundle=json.loads((directory/'product_evidence.json').read_text(encoding='utf-8'))
     products=research.load_catalog(); notes=load_notes(notes_path,products)
     result=match(products,bundle,notes,limit=limit)
-    result.update(requested_limit=limit,catalog_sha256=digest(ROOT/'products.csv'),
+    result.update(requested_limit=limit,catalog_sha256=digest(CATALOG/'products.csv'),
                   product_evidence_sha256=digest(directory/'product_evidence.json'),visual_notes_sha256=digest(notes_path))
     recs=baseline(directory,products) if (directory/'research.json').exists() else []
     result['baseline_skus']=[r['sku'] for r in recs]
     result['baseline_reasons']={r['sku']:r['match_reason'] for r in recs}
     result['baseline_strategy']='saved '+(json.loads((directory/'research.json').read_text()).get('matching_strategy','legacy_source_order_v1') if recs else 'unavailable')
     if vision_enabled:
-        from vision import assess
+        from .vision import assess
         supported=[r for r in result['candidates'] if r['status']=='needs_human_review'][:8]
         relevant={s['evidence_id'] for r in supported for s in r['support']}
         result['multimodal']=assess(supported,[e for e in result['observations'] if e['evidence_id'] in relevant],enabled=True,authorized=authorized,model=model)
@@ -449,7 +449,7 @@ def run(directory, *, notes_path=ROOT/'phase2/sku_visual_notes.json', limit=4, v
 def main(argv=None):
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--pilot-dir',type=Path,required=True)
-    parser.add_argument('--notes',type=Path,default=ROOT/'phase2/sku_visual_notes.json')
+    parser.add_argument('--notes',type=Path,default=NOTES)
     parser.add_argument('--limit',type=int,default=4)
     parser.add_argument('--validate',action='store_true')
     parser.add_argument('--vision',action='store_true',help='Send bounded selected catalog images and public retailer image URLs to OpenAI Responses; requires OPENAI_API_KEY and KINBOR_VISION_MODEL')

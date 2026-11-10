@@ -5,17 +5,17 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-import phase2
+from kinbor import pipeline
 
 
 class ReviewQueueIntegrity(unittest.TestCase):
     def setUp(self):
-        self.rows = phase2.migrate(
-            phase2.read("retailers.csv"), phase2.read("sku_matches.csv"), phase2.read("evidence.csv")
+        self.rows = pipeline.migrate(
+            pipeline.read("retailers.csv"), pipeline.read("sku_matches.csv"), pipeline.read("evidence.csv")
         )
 
     def test_catalog_and_provenance_corruption_is_rejected(self):
-        phase2.validate(*self.rows)
+        pipeline.validate(*self.rows)
         for field, value in (
             ("sku", "INVENTED-SKU"), ("moq_units", "1"), ("image_path", "images/WRONG.webp"),
             ("product_source_row", "99999"), ("retailer_evidence_ids", "R20-E04"),
@@ -24,7 +24,7 @@ class ReviewQueueIntegrity(unittest.TestCase):
                 rows = copy.deepcopy(self.rows)
                 rows[1][0][field] = value
                 with self.assertRaises(ValueError):
-                    phase2.validate(*rows)
+                    pipeline.validate(*rows)
 
     def test_no_active_total_score_or_confirmed_feasibility(self):
         for field, value in (("contact_priority_score", "99.99"), ("order_feasibility", "Confirmed")):
@@ -32,7 +32,7 @@ class ReviewQueueIntegrity(unittest.TestCase):
                 rows = copy.deepcopy(self.rows)
                 rows[0][0][field] = value
                 with self.assertRaises(ValueError):
-                    phase2.validate(*rows)
+                    pipeline.validate(*rows)
 
     def test_ties_and_legacy_hold_are_explicit(self):
         for retailer in self.rows[0]:
@@ -48,10 +48,10 @@ class ReviewQueueIntegrity(unittest.TestCase):
                  'brief':'live/atlas/style_brief.md'},
                 {'retailer':'wonder-fair','selected_skus':[],
                  'brief':'live/wonder-fair/style_brief.md'}]
-        with tempfile.TemporaryDirectory() as td, patch.object(phase2,'DATA',Path(td)), \
-                patch.object(phase2,'write'),patch.object(phase2,'validate'), \
-                patch.object(phase2,'current_style_reviews',return_value=styles):
-            phase2.refresh(*self.rows)
+        with tempfile.TemporaryDirectory() as td, patch.object(pipeline,'DATA',Path(td)), \
+                patch.object(pipeline,'write'),patch.object(pipeline,'validate'), \
+                patch.object(pipeline,'current_style_reviews',return_value=styles):
+            pipeline.refresh(*self.rows)
             text=(Path(td)/'review_queue.md').read_text()
         self.assertIn('DT55566',text)
         self.assertIn('Insufficient evidence; no forced recommendation',text)

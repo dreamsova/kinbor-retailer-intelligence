@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
 
-from tinyfish_client import TinyFishClient, TinyFishError, FETCH, SEARCH, AGENT
+from kinbor.tinyfish_client import TinyFishClient, TinyFishError, FETCH, SEARCH, AGENT
 
 KEY = 'OFFLINE_SYNTHETIC_TEST_SECRET_12345'
 URL = 'https://retailer-fixture.org/'
@@ -192,7 +192,7 @@ class OfflineTransportTests(unittest.TestCase):
                 api.fetch([URL])
             self.assertEqual(error.exception.code, expected)
         api = client(Transport(Response(b'x' * 100)))
-        with patch('tinyfish_client.MAX_RESPONSE_BYTES', 10):
+        with patch('kinbor.tinyfish_client.MAX_RESPONSE_BYTES', 10):
             with self.assertRaises(TinyFishError) as error:
                 api.fetch([URL])
         self.assertEqual(error.exception.code, 'response_too_large')
@@ -217,7 +217,7 @@ class OfflineTransportTests(unittest.TestCase):
             api.search('test', include_domains=['retailer-fixture.org/path'])
 
     def test_redirect_does_not_forward_credentials(self):
-        from tinyfish_client import NoRedirect
+        from kinbor.tinyfish_client import NoRedirect
         from urllib.request import Request
         with self.assertRaises(TinyFishError) as error:
             NoRedirect().redirect_request(Request(FETCH), None, 302, 'redirect', {}, 'https://untrusted.org')

@@ -1,8 +1,8 @@
 # TinyFish direct API implementation
 
-Implementation reference date: November 9, 2026 (Chicago). `tinyfish_client.py` remains a small Python standard-library REST client; no Work connector or manually imported capture is required for `research.py --mode tinyfish`.
+Implementation reference date: November 9, 2026 (Chicago). `kinbor/tinyfish_client.py` remains a small Python standard-library REST client; no Work connector or manually imported capture is required for `python3 -m kinbor.research --mode tinyfish`.
 
-Current matching update: `--product-evidence` prioritizes actual product pages, optionally follows one observed shop/collection discovery hop within the budget, and adds the documented `image_links: true` request option. It writes `product_evidence.json` and automatically runs `matching.py` for a current `style_brief.md` plus the full 210-SKU `matching.json` audit. Repeat `--product-url` for known official product URLs; an explicit URL does not authorize an unrelated commerce domain. Category-only acquisition now abstains by default.
+Current matching update: `--product-evidence` prioritizes actual product pages, optionally follows one observed shop/collection discovery hop within the budget, and adds the documented `image_links: true` request option. It writes `product_evidence.json` and automatically runs `kinbor/matching.py` for a current `style_brief.md` plus the full 210-SKU `matching.json` audit. Repeat `--product-url` for known official product URLs; an explicit URL does not authorize an unrelated commerce domain. Category-only acquisition now abstains by default.
 
 The [official Fetch reference](https://docs.tinyfish.ai/fetch-api/reference) was checked for this extension. REST product mode requests `image_links`, not the connector-only `page_metadata` option. It retains documented response description/image links when available; missing or ambiguous image, price and currency values stay `Unknown`. The public HTTP parser can read actual HTML JSON-LD/Open Graph product metadata. None of these paths fetches image bytes.
 
@@ -20,7 +20,7 @@ The new 19-product pilot used the connected official TinyFish Search/Fetch tools
 | Agent poll | `GET https://agent.tinyfish.ai/v1/runs/{id}` | Client helper with bounded polling. |
 | Agent cancel | `POST https://agent.tinyfish.ai/v1/runs/{id}/cancel` | Client helper verifies the returned terminal state. |
 
-Search and Fetch suffice for the observed public retailer pages. Browser interaction was not needed for the three frozen direct REST runs. No Agent request, profile or vault was used. The optional Agent helpers are covered by network mocks. The older `research.json` / `api_receipt.json` bundles contain no live Agent or Search execution; the newer `product_evidence.json` acquisition includes the connected Search calls described above. The interview cleanup uses offline checks only.
+Search and Fetch suffice for the observed public retailer pages. Browser interaction was not needed for the three frozen direct REST runs. No Agent request, profile or vault was used. The optional Agent helpers are covered by network mocks. The older `research.json` / `api_receipt.json` bundles contain no live Agent or Search execution; the newer `product_evidence.json` acquisition includes the connected Search calls described above. Repository verification uses offline checks only.
 
 The [official overview](https://docs.tinyfish.ai/) lists canonical public API surfaces. The implementation references the [Search reference](https://docs.tinyfish.ai/search-api/reference), [Fetch reference](https://docs.tinyfish.ai/fetch-api/reference), [Agent reference](https://docs.tinyfish.ai/agent/api/agent) and [run retrieval reference](https://docs.tinyfish.ai/api-reference/runs/get-run-by-id). Those references informed the existing implementation rather than older examples. The [cookbook](https://github.com/tinyfish-io/tinyfish-cookbook) and [competitor scout recipe](https://github.com/tinyfish-io/tinyfish-cookbook/tree/main/competitor-scout-cli) confirm the Search/Fetch/Agent separation; recipe fallbacks are not evidence of a successful API call.
 
@@ -65,20 +65,24 @@ As documented at the check date, personal limits default to Search 30 requests/m
 
 `--collect-usage` reads one time-bounded Fetch usage page and keeps only records matching this client's provider request IDs. Other account activity is excluded. Usage can lag, the page is capped at 100 records, and missing matches remain uncertain. Per-URL usage records expose counts/status/latency; no returned money amount means billed cost is **Unknown**. URL count, a free allowance or elapsed seconds do not establish the invoice amount. See [Fetch usage](https://docs.tinyfish.ai/fetch-api/reference#usage-endpoint) and [Search usage](https://docs.tinyfish.ai/api-reference/list-search-usage).
 
-The committed `phase2/live/{atlas,shorthand,wonder-fair}/` receipts represent previously captured real Python API executions. This cleanup validates those saved files without making new live calls. Each final run has two authenticated Fetch responses and one authenticated usage response, all HTTP 200. They cover 6/6/4 successfully fetched pages and 210 SKU audits per store. Optional Search/Agent mocks are not live API evidence. Obsolete connector versions are recoverable from Git history.
+The committed `examples/retailers/{atlas,shorthand,wonder-fair}/` receipts represent previously captured real Python API executions. This cleanup validates those saved files without making new live calls. Each final run has two authenticated Fetch responses and one authenticated usage response, all HTTP 200. They cover 6/6/4 successfully fetched pages and 210 SKU audits per store. Optional Search/Agent mocks are not live API evidence. Obsolete connector versions are recoverable from Git history.
 
 ## Commands and explicit non-API modes
 
 ```bash
-python3 research.py --mode tinyfish --url https://www.atlasstationers.com/ \
+# Current product-first mode; live credentials required and provider charges may apply:
+python3 -m kinbor.research --mode tinyfish --url https://www.atlasstationers.com/ \
+  --product-evidence --max-pages 10 --output-dir work/atlas-new
+# Category research transport, retained for comparator compatibility:
+python3 -m kinbor.research --mode tinyfish --url https://www.atlasstationers.com/ \
   --output-dir work/atlas --collect-usage
 # Optional discovery, still direct API; consumes the default fourth attempt:
-python3 research.py --mode tinyfish --url https://www.atlasstationers.com/ \
+python3 -m kinbor.research --mode tinyfish --url https://www.atlasstationers.com/ \
   --output-dir work/atlas-search --tinyfish-search --collect-usage
 python3 -m unittest discover -v
-python3 research.py --mode validate --output-dir phase2/live/atlas
+python3 -m kinbor.research --mode validate --output-dir examples/retailers/atlas
 python3 scripts/verify_repository.py
-python3 phase2.py
+python3 -m kinbor.pipeline
 ```
 
-`public_http` (and its compatibility alias `public`) is direct public website acquisition, not TinyFish. `import` replays a normalized connector capture; `validate` checks saved outputs. These modes do not contact the TinyFish API. No mode sends retailer email, submits a form or buys products. The [historical validation report](../phase2/validation_report.json) records its earlier checks and scope. The existing test suite and saved-output validation use the standard library; Pillow is needed only for actual image rebuilding from private workbooks. Test mocks prove boundary behavior only, not authentication or live site truth. Mutation flags such as `phase2.py --integrate-pilots` rewrite historical combined outputs; see [regeneration boundaries](BASELINES.md#regeneration-boundaries) before using them.
+`public_http` (and its compatibility alias `public`) is direct public website acquisition, not TinyFish. `import` replays a normalized connector capture; `validate` checks saved outputs. These modes do not contact the TinyFish API. No mode sends retailer email, submits a form or buys products. The [historical validation report](../examples/history/validation_report.json) records its earlier checks and scope. The existing test suite and saved-output validation use the standard library; Pillow is needed only for actual image rebuilding from private workbooks. Test mocks prove boundary behavior only, not authentication or live site truth. Mutation flags such as `python3 -m kinbor.pipeline --integrate-pilots` rewrite historical combined outputs; see [regeneration boundaries](BASELINES.md#regeneration-boundaries) before using them.
