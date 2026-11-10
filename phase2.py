@@ -86,7 +86,8 @@ def _joined(value):
 def integrate_pilots(retailers, matches, evidence, pilot_root=None):
     """Replace only the three pilot matches; retain all historical evidence rows."""
     from research import validate_outputs
-    pilot_root = Path(pilot_root or DATA / 'pilots')
+    pilot_root = Path(pilot_root or DATA / 'pilots').resolve()
+    require(DATA.resolve() in pilot_root.parents, 'Pilot outputs must be under phase2 for portable evidence links')
     retailers, matches, evidence = migrate(copy.deepcopy(retailers), copy.deepcopy(matches), copy.deepcopy(evidence))
     by_id = {r['retailer_id']: r for r in retailers}
     for slug, rid in PILOTS.items():
@@ -342,11 +343,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--refresh', action='store_true', help='Validate and regenerate the tied human-review queue; no network')
     parser.add_argument('--integrate-pilots', action='store_true', help='Import all three existing validated research.py output directories and refresh CSVs/queue')
+    parser.add_argument('--pilot-root', type=Path, help='Validated pilot directory, e.g. phase2/live; requires --integrate-pilots')
     parser.add_argument('--brief', action='store_true', help='Print the current Atlas Markdown brief path; historical PDF is not regenerated')
     args = parser.parse_args()
+    if args.pilot_root and not args.integrate_pilots:
+        parser.error('--pilot-root requires --integrate-pilots')
     retailers, matches, evidence = read('retailers.csv'), read('sku_matches.csv'), read('evidence.csv')
     if args.integrate_pilots:
-        retailers, matches, evidence = integrate_pilots(retailers, matches, evidence)
+        retailers, matches, evidence = integrate_pilots(retailers, matches, evidence, args.pilot_root)
     else:
         retailers, matches, evidence = migrate(retailers, matches, evidence)
     if args.refresh or args.integrate_pilots:
@@ -354,7 +358,8 @@ def main():
     report = validate(retailers, matches, evidence)
     report['negative_controls_passed'] = fault_checks(retailers, matches, evidence)
     if args.brief:
-        report['brief'] = 'phase2/pilots/atlas/buyer_brief.md'
+        atlas = next(r for r in retailers if r['retailer_id'] == PILOTS['atlas'])
+        report['brief'] = 'phase2/' + atlas['pilot_report']
         report['historical_pdf_status'] = 'Archived; obsolete score and SKU selection, not regenerated'
     report['checked_at_utc'] = datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z')
     print(json.dumps(report, indent=2))

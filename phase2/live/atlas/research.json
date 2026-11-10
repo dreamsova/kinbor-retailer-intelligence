@@ -1,0 +1,5689 @@
+{
+  "schema_version": 2,
+  "website": "https://www.atlasstationers.com/",
+  "generated_at_utc": "2026-11-10T03:19:30Z",
+  "mode": "tinyfish",
+  "status": "completed",
+  "acquisition": "tinyfish_api_fetch",
+  "matching_strategy": "evidence_review_v2",
+  "requested_limit": 4,
+  "run_id": null,
+  "related_browser_run_id": null,
+  "source_capture": null,
+  "fields": {
+    "categories": {
+      "value": [
+        "Notebooks & Journals",
+        "Pens & Writing",
+        "Planners & Calendars",
+        "Pouches & Cases",
+        "Stickers & Decorative Tape",
+        "Sticky Notes & Page Flags"
+      ],
+      "evidence_ids": [
+        "E001",
+        "E002",
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "E021",
+        "E022",
+        "E023",
+        "E024",
+        "E025",
+        "E027",
+        "E030",
+        "E031",
+        "E032",
+        "E033",
+        "E034",
+        "E036",
+        "E038",
+        "E039",
+        "E040",
+        "E041",
+        "E042",
+        "E044",
+        "E045",
+        "E047",
+        "E048",
+        "E049",
+        "E050"
+      ],
+      "confidence": "medium"
+    },
+    "brands": {
+      "value": [
+        "Hightide",
+        "Hobonichi",
+        "Kokuyo",
+        "Lamy",
+        "Leuchtturm1917",
+        "Penco",
+        "Pilot",
+        "TWSBI"
+      ],
+      "evidence_ids": [
+        "E003",
+        "E004",
+        "E005",
+        "E006",
+        "E012",
+        "E028",
+        "E029",
+        "E037",
+        "E046"
+      ],
+      "confidence": "medium"
+    },
+    "contact": {
+      "value": [
+        "https://www.atlasstationers.com/pages/contact-us"
+      ],
+      "evidence_ids": [
+        "E011",
+        "E013",
+        "E026",
+        "E035",
+        "E043",
+        "E051"
+      ],
+      "confidence": "medium"
+    },
+    "vendor_policy": {
+      "value": "Unknown",
+      "evidence_ids": [],
+      "confidence": "Unknown"
+    }
+  },
+  "summary": {
+    "catalog_count": 210,
+    "eligible_count": 118,
+    "recommendation_count": 4,
+    "product_fit": "Category overlap; human review required",
+    "evidence_strength": "Official page observations; not independent verification",
+    "buyer_access": "General contact only",
+    "order_feasibility": "Unknown"
+  },
+  "errors": [],
+  "pages": [
+    {
+      "url": "https://www.atlasstationers.com/",
+      "final_url": "https://www.atlasstationers.com/",
+      "title": "Atlas Stationers",
+      "text": "It's that time again!\n\n## Fountain Pen Day 2026\n\nFind Your New Pen\n\n## Fountain Pen Day Doorbusters\n\nView all\n\n* Doorbuster\n\n  Pelikan\n\n  (2)\n\n  Sale price\n  $120.00\n\n  Regular price\n  $260.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  Pelikan\n\n  (8)\n\n  Sale price\n  $120.00\n\n  Regular price\n  $250.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  Pelikan\n\n  (1)\n\n  Sale price\n  $120.00\n\n  Regular price\n  $290.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  Pelikan\n\n  (7)\n\n  Sale price\n  $120.00\n\n  Regular price\n  $290.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  Pelikan\n\n  (1)\n\n  Sale price\n  $120.00\n\n  Regular price\n  $250.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  Diplomat\n\n  (3)\n\n  Sale price\n  $140.00\n\n  Regular price\n  $280.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  New arrival\n\n  Stipula\n\n  Sale price\n  $357.00\n\n  Regular price\n  $595.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Doorbuster\n\n  Out of Stock\n\n  Nahvalur\n\n  (3)\n\n  Sale price\n  $90.00\n\n  Regular price\n  $180.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n\n## New Arrivals\n\nView all\n\n## Just Dropped at Atlas\n\nDiscover the latest arrivals everyone's talking about - fun, fresh, and ready for you.\n\nNew Arrivals\n\n* New arrival\n\n  Lamy\n\n  Regular price\n  $799.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* New arrival\n\n  Delta\n\n  Regular price\n  $235.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* New arrival\n\n  Benu\n\n  Regular price\n  $230.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* New arrival\n\n  Lamy\n\n  Regular price\n  $459.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* New arrival\n\n  Laban\n\n  Sale price\n  $304.00\n\n  Regular price\n  $380.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* New arrival\n\n  Laban\n\n  Sale price\n  $304.00\n\n  Regular price\n  $380.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Out of Stock\n\n  New arrival\n\n  Pelikan\n\n  Sale price\n  $876.00\n\n  Regular price\n  $1,095.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* New arrival\n\n  Delta\n\n  Sale price\n  $220.00\n\n  Regular price\n  $275.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n\n## Last Chance\n\nView all\n\n## Extra Savings Await\n\nSnag these goodies before they’re gone and watch the price drop like magic in your cart! Take 50% off when added to your shopping cart!\n\nLast Chance\n\n## Events\n\nView all\n\n## Events & Happenings\n\nStay connected with what’s going on at Atlas Stationers. From in-store experiences to workshops and community meetups, this is where you’ll find all the details on upcoming events.\n\nView Events\n\n* Reserve Your Spot\n\n  Atlas Stationers\n\n  Atlas Mushroom Forager Junk Journal Event\n\n  Regular price\n  $30.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Reserve Your Spot\n\n  Atlas Stationers\n\n  Atlas Refillable Journal Cover Workshop\n\n  Regular price\n  $115.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Reserve Your Spot\n\n  Out of Stock\n\n  Atlas Stationers\n\n  Atlas DIY Carved Journal Stamps Workshop\n\n  Regular price\n  $30.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Out of Stock\n\n  Atlas Stationers\n\n  Sidewalk Sale 39 Meetups - 2026\n\n  (3)\n\n  Regular price\n  $0.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Out of Stock\n\n  Atlas Stationers\n\n  (1)\n\n  Regular price\n  $30.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n\n## Coming Soon\n\nView all\n\n## Fresh finds on the way\n\nBe the first to know when they land so you never miss out on the latest must-haves.\n\nComing Soon\n\n* Coming Soon\n\n  Sailor\n\n  Sale price\n  $220.00\n\n  Regular price\n  $275.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Pre-order\n\n  Out of Stock\n\n  TWSBI\n\n  TWSBI Eco Fountain Pen - Jade Jelly w/ Bronze\n\n  (5)\n\n  Regular price\n  $55.99\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Coming Soon\n\n  Tom's Studio\n\n  Tom's Studio Studio Handmade Fountain Pen - Yew\n\n  Regular price\n  $395.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Coming Soon\n\n  Tom's Studio\n\n  Tom's Studio Studio Handmade Rollerball - Yew\n\n  Regular price\n  $395.00\n\n  Unit price\n   /\n\n  **Unavailable**\n* Coming Soon\n\n  Tom's Studio\n\n  Regular price\n  $395.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Coming Soon\n\n  Tom's Studio\n\n  Regular price\n  $395.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\n  View details\n* Coming Soon\n\n  Tom's Studio\n\n  Regular price\n  $395.00\n\n  Unit price\n   /\n\n  **Unavailable**\n* Coming Soon\n\n  Tom's Studio\n\n  Regular price\n  $395.00\n\n  Unit price\n   /\n\n  **Unavailable**\n\nLocated in the heart of Downtown Chicago\n\n### The Store\n\nExplore\n\n### Experienced Pen Sale\n\nLearn More\n\n### Live Order Pulls\n\nLearn More\n\nStay up to date with the latest happenings\n\n### Events\n\nPlan Your Visit\n\n## Atlas Happenings\n\nView all\n\n* ## Happy Fountain Pen Day 2026!\n\n  Thinking about trying a new fountain pen? Whether you’re just getting into the fountain pen world or you’re looking to grow your collection, now is the best time to pick one...\n* ## September Events at Atlas💌\n\n  We are bringing you some new-to-Atlas workshops and Events this month that you don’t want to miss!   Here’s what’s coming up this September:  September 11: Decorate Your Own Pilot Kakuno Fountain Pen...\n* ## Hobonichi FAQ - 2027\n\n  9/21 Update - Outside a few orders, we are caught up with all shipping! Most orders should now ship within one business day. Thank you so much for the support...\n* ## Local Eats & Drinks Near Sidewalk Sale 39\n\n  Need a break from shopping? We’ve got you covered. Sidewalk Sale 39 is surrounded by some of our favorite local spots for coffee, food, drinks, and a quick bite between...\n* Sidewalk Sale 39 Update: A Stationery Festival Is Bigger Than Ever Back in March, we announced Sidewalk Sale 39: A Stationery Festival, and since then, our team has been hard...\n* ## July Events at Atlas 💌\n\n  July Events at Atlas 💌  We are bringing you some new-to-Atlas workshops and Events this July that you don’t want to miss!    Here’s what’s coming up this month:  Atlas x Lina Nguyen:...\n* ## June Events at Atlas (2026)\n\n  June Events at Atlas 💌  We are bringing back some exciting events and workshops for you next month, and we cannot wait to share the festivities with you!  Here’s what’s coming up next...\n* ## April Events at Atlas 🌷 (2026)\n\n  April Events at Atlas 🌷 We are bringing back some of our most popular events and workshops for you this month, and we cannot wait to share the creativity with you!    Here’s what’s coming up this month:   Fountain Pen 101 Workshop with...",
+      "links": [
+        {
+          "url": "https://www.atlasstationers.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/customer_authentication/redirect",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/all",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fine-writing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glass-dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-lead",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-sharpeners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/inks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ink-cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/converters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/loose-leaf-paper",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/paper-sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sketchbooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pens-markers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/arts-crafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/washi-tape",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/labels-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamps-stamp-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wax-seals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/crayons",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pen-storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clips",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebook-covers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/by-brand",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/anderillium",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/apica",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/art-by-elowyn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/aurora",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bande",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/benu",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bgm",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/blackwing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bloom-paper-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/caran-dache",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clairefontaine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/colorverse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/conklin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coracreacrafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dana-ate-oatmeal",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/david-oscarson",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/de-atramentis",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delfonics",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diamine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diplomat",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dominant-industry",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/edison-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/emii-creations",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/endless",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/esterbrook",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ferris-wheel-press",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/field-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/furukawashiko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/galen-leather-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/girologio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/graf-von-faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/gravitas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/haley-franker-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hinze-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hyogensha-cozyca",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/imperfect-concepts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/j-herbin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kakimori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kamiiso",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kaweco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/king-jim",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kita-boshi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kleid",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/koh-i-noor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kolo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kuretake",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kwz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/laban",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lamy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lennon-tool-bar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leonardo-officina-italiana",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/le-pen",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm1917",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/life",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lochby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/luddite",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/maruman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mind-wave",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/monteverde",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mu-lifestyle",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nahvalur",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nb-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nettuno",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/omas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/papier-platz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/parker",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pelikan",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penlux",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pentel",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pilot",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pipsticks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/platinum",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plus",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/private-reserve",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/okuyama",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/punilabo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/retro-51",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rickshaw",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rin-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rhodia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/robert-oster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rotring",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sailor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sakura",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sanby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sarica-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schmidt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schon-dsgn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/scribo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sheaffer",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/soolla",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stalogy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamp-marche",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/s-t-dupont",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/suatelier-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/taccia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/thecoffeemonsterzco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tombow",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toms-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tsukineko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/turtle-soup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/twsbi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/uniball",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/unicorn-eclipse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/van-diemans",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/vinta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/visconti",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waterman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waldmann",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wearingeul",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/yohaku",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ystudio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/zebra",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/2jingis2jing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-2027-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter-diary-refills-2024",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-2026-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-jibun-techo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-boxes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/doorbusters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/last-chance",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/getting-started",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-exclusives",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/special-editions",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/event-schedule",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/sidewalk-sale-39",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/rewards",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/@atlasstationers1939",
+          "text": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://discord.gg/FQ8mX3K3uf",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/visit-our-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-atlas-story",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/meet-the-team",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/pelikan-classic-m200-fountain-pen-orange-delight-special-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/pelikan-classic-m205-fountain-pen-rose-quartz-special-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/pelikan-classic-m200-fountain-pen-apricot-achat-gift-set-special-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/pelikan-classic-m205-fountain-pen-apatite-special-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/pelikan-classic-m200-fountain-pen-golden-lapis-special-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/diplomat-aero-fountain-pen-pure-black",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/stipula-novecento-fountain-pen-mocha-mousse-atlas-exclusive",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026/products/nahvalur-narwhal-voyage-vacation-fountain-pen-cancun-special-edition-doorbuster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/lamy-2000-fountain-pen-bog-oak-limited-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/delta-duna-fountain-pen-champagne-wishes-w-rose-gold-trim-atlas-exclusive-limited-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/benu-tribute-collection-fountain-pen-rose-de-mai",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/lamy-scala-fountain-pen-pearl-limited-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/laban-oceana-abalone-skeleton-fountain-pen-gold",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/laban-oceana-abalone-skeleton-fountain-pen-silver",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/pelikan-souveran-m1000-fountain-pen-black-blue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals/products/delta-duna-fountain-pen-reflection-pool-w-chrome-trim-limited-edition-188",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events/products/atlas-mushroom-forager-junk-journal-event",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events/products/atlas-refillable-journal-cover-workshop",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events/products/atlas-diy-carved-journal-stamps-workshop",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events/products/sidewalk-sale-meetups-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events/products/sidewalk-sale-39-nibmeister-appointments-w-gena-salorino-custom-nib-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/sailor-pro-gear-fountain-pen-iriomote-cat-limited-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/twsbi-eco-fountain-pen-jade-jelly-w-bronze",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/toms-studio-studio-handmade-fountain-pen-yew",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/toms-studio-studio-handmade-rollerball-yew",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/toms-studio-studio-handmade-fountain-pen-fabreco-pink-beach",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/toms-studio-studio-handmade-fountain-pen-fabreco-monochrome",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/toms-studio-studio-handmade-rollerball-fabreco-pink-beach",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon/products/toms-studio-studio-handmade-rollerball-fabreco-monochrome",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-store",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers/experiencedpensale",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers/liveorderpulling",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/happy-fountain-pen-day-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/september-events-at-atlas%F0%9F%92%8C",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/hobonichi-faq-2027",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/sidewalk-sale-39-local-eats-and-drinks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/sidewalk-sale-39-expands-chicago-s-biggest-stationery-festival-returns-august-13-14",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/july-events-at-atlas-%F0%9F%92%8C",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/june-events-at-atlas-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news/april-events-at-atlas-%F0%9F%92%8C",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/faq",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/reviews",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/hiring/careers",
+          "text": ""
+        },
+        {
+          "url": "https://af.uppromote.com/atlas-stationers/register",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/contact-us",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/pickup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shop-pay-installments",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/discount-code-terms",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/privacy-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/terms-of-service",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/data-sale-opt-out",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:27Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.atlasstationers.com/pages/contact-us",
+      "final_url": "https://www.atlasstationers.com/pages/contact-us",
+      "title": "Contact Us",
+      "text": "### Contact Us\n\nFeel free to drop us a line via this contact form or give us a call. We would love to hear from you!   \n  \n**A quick note on response times:** with our Hobonichi 2027 launch in full swing, our team is focused on pulling and packing orders, so it's taking us a bit longer than usual to reply to emails and messages right now. Please expect up to 24 hours for a response. We haven't forgotten about you, and we appreciate you bearing with us during this busy stretch.\n\n#### Address\n\n227 W Lake St\n  \nChicago, IL 60606\n\n#### Customer Service\n\nMon - Fri: 9:00am - 4:00pm\n\n#### Phone\n\nPhone: 312-726-5261\n\n#### Email\n\ninfo@atlasstationers.com\n\n#### Get in touch",
+      "links": [
+        {
+          "url": "https://www.atlasstationers.com/pages/contact-us",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/customer_authentication/redirect",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/all",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fine-writing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glass-dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-lead",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-sharpeners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/inks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ink-cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/converters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/loose-leaf-paper",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/paper-sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sketchbooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pens-markers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/arts-crafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/washi-tape",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/labels-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamps-stamp-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wax-seals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/crayons",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pen-storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clips",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebook-covers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/by-brand",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/anderillium",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/apica",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/art-by-elowyn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/aurora",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bande",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/benu",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bgm",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/blackwing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bloom-paper-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/caran-dache",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clairefontaine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/colorverse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/conklin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coracreacrafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dana-ate-oatmeal",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/david-oscarson",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/de-atramentis",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delfonics",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diamine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diplomat",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dominant-industry",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/edison-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/emii-creations",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/endless",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/esterbrook",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ferris-wheel-press",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/field-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/furukawashiko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/galen-leather-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/girologio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/graf-von-faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/gravitas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/haley-franker-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hinze-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hyogensha-cozyca",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/imperfect-concepts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/j-herbin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kakimori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kamiiso",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kaweco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/king-jim",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kita-boshi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kleid",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/koh-i-noor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kolo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kuretake",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kwz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/laban",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lamy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lennon-tool-bar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leonardo-officina-italiana",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/le-pen",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm1917",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/life",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lochby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/luddite",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/maruman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mind-wave",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/monteverde",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mu-lifestyle",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nahvalur",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nb-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nettuno",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/omas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/papier-platz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/parker",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pelikan",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penlux",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pentel",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pilot",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pipsticks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/platinum",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plus",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/private-reserve",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/okuyama",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/punilabo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/retro-51",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rickshaw",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rin-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rhodia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/robert-oster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rotring",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sailor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sakura",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sanby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sarica-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schmidt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schon-dsgn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/scribo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sheaffer",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/soolla",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stalogy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamp-marche",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/s-t-dupont",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/suatelier-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/taccia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/thecoffeemonsterzco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tombow",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toms-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tsukineko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/turtle-soup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/twsbi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/uniball",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/unicorn-eclipse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/van-diemans",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/vinta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/visconti",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waterman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waldmann",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wearingeul",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/yohaku",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ystudio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/zebra",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/2jingis2jing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-2027-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter-diary-refills-2024",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-2026-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-jibun-techo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-boxes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/doorbusters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/last-chance",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/getting-started",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-exclusives",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/special-editions",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/event-schedule",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/sidewalk-sale-39",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/rewards",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/@atlasstationers1939",
+          "text": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://discord.gg/FQ8mX3K3uf",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/visit-our-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-atlas-story",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/meet-the-team",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/faq",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/reviews",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/hiring/careers",
+          "text": ""
+        },
+        {
+          "url": "https://af.uppromote.com/atlas-stationers/register",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/pickup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shop-pay-installments",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/discount-code-terms",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/privacy-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/terms-of-service",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/data-sale-opt-out",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:29Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.atlasstationers.com/pages/faq",
+      "final_url": "https://www.atlasstationers.com/pages/faq",
+      "title": "FAQ",
+      "text": "Fountain Pen Day Sale - 20% Off Most Products! Some Exclusions\n\nHeads up: Order processing currently 5-7 business days - Learn More\n\nYour cart is empty\n\nSubtotal:$0.00\n\nLoading...\n\nVisit our support center\n\nExpert help & advice\n\nFast Shipping\n\nUpdates & tracking\n\nHassle-Free Returns\n\nZero Return Stress\n\nVerified Reviews\n\nGenuine Feedback",
+      "links": [
+        {
+          "url": "https://www.atlasstationers.com/pages/faq",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/customer_authentication/redirect",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/all",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fine-writing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glass-dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-lead",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-sharpeners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/inks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ink-cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/converters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/loose-leaf-paper",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/paper-sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sketchbooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pens-markers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/arts-crafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/washi-tape",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/labels-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamps-stamp-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wax-seals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/crayons",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pen-storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clips",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebook-covers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/by-brand",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/anderillium",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/apica",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/art-by-elowyn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/aurora",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bande",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/benu",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bgm",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/blackwing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bloom-paper-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/caran-dache",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clairefontaine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/colorverse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/conklin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coracreacrafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dana-ate-oatmeal",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/david-oscarson",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/de-atramentis",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delfonics",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diamine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diplomat",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dominant-industry",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/edison-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/emii-creations",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/endless",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/esterbrook",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ferris-wheel-press",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/field-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/furukawashiko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/galen-leather-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/girologio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/graf-von-faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/gravitas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/haley-franker-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hinze-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hyogensha-cozyca",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/imperfect-concepts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/j-herbin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kakimori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kamiiso",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kaweco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/king-jim",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kita-boshi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kleid",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/koh-i-noor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kolo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kuretake",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kwz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/laban",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lamy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lennon-tool-bar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leonardo-officina-italiana",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/le-pen",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm1917",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/life",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lochby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/luddite",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/maruman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mind-wave",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/monteverde",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mu-lifestyle",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nahvalur",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nb-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nettuno",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/omas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/papier-platz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/parker",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pelikan",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penlux",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pentel",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pilot",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pipsticks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/platinum",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plus",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/private-reserve",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/okuyama",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/punilabo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/retro-51",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rickshaw",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rin-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rhodia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/robert-oster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rotring",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sailor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sakura",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sanby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sarica-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schmidt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schon-dsgn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/scribo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sheaffer",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/soolla",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stalogy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamp-marche",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/s-t-dupont",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/suatelier-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/taccia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/thecoffeemonsterzco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tombow",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toms-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tsukineko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/turtle-soup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/twsbi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/uniball",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/unicorn-eclipse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/van-diemans",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/vinta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/visconti",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waterman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waldmann",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wearingeul",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/yohaku",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ystudio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/zebra",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/2jingis2jing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-2027-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter-diary-refills-2024",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-2026-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-jibun-techo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-boxes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/doorbusters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/last-chance",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/getting-started",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-exclusives",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/special-editions",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/event-schedule",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/sidewalk-sale-39",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/rewards",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/@atlasstationers1939",
+          "text": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://discord.gg/FQ8mX3K3uf",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/visit-our-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-atlas-story",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/meet-the-team",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/reviews",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/hiring/careers",
+          "text": ""
+        },
+        {
+          "url": "https://af.uppromote.com/atlas-stationers/register",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/contact-us",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/pickup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shop-pay-installments",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/discount-code-terms",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/privacy-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/terms-of-service",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/data-sale-opt-out",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:29Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.atlasstationers.com/collections/hightide-planners",
+      "final_url": "https://www.atlasstationers.com/collections/hightide-planners",
+      "title": "Hightide Planners",
+      "text": "* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Poche A6 Block\n\n  Regular price $24.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Lepre A6 Block\n\n  Regular price $28.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Egg Toast Square\n\n  Regular price $12.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Iris B6\n\n  Regular price $32.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary My Diary Square\n\n  Regular price $24.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Reno B6 Free\n\n  Regular price $32.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Worter B6\n\n  Regular price $33.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Diary A6 Block\n\n  Regular price $24.00Unit price /Unavailable\n* Hightide Stationery\n\n  Penco 2027 Desk Calendar - New Retro\n\n  Regular price $22.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Monthly Square Diary coton A5\n\n  Regular price $28.00Unit price /Unavailable\n* Hightide Stationery\n\n  Regular price From $20.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Papillon B6 - Blue Green\n\n  Regular price $33.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Calm A5 Vertical\n\n  Regular price $42.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Paper Cloth B6\n\n  Regular price $32.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Shade B6 Slim Vertical\n\n  Regular price $36.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Sanmarino A6 Block\n\n  Regular price $28.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Lepre - Square\n\n  Regular price $28.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Classic A5 Vertical\n\n  Regular price $40.00Unit price /Unavailable\n* Hightide Stationery\n\n  Hightide 2027 Weekly Diary Balloon A6 Block\n\n  Regular price $26.00Unit price /Unavailable",
+      "links": [
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/customer_authentication/redirect",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/all",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fine-writing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glass-dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-lead",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-sharpeners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/inks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ink-cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/converters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/loose-leaf-paper",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/paper-sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sketchbooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pens-markers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/arts-crafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/washi-tape",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/labels-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamps-stamp-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wax-seals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/crayons",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pen-storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clips",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebook-covers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/by-brand",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/anderillium",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/apica",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/art-by-elowyn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/aurora",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bande",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/benu",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bgm",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/blackwing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bloom-paper-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/caran-dache",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clairefontaine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/colorverse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/conklin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coracreacrafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dana-ate-oatmeal",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/david-oscarson",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/de-atramentis",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delfonics",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diamine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diplomat",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dominant-industry",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/edison-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/emii-creations",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/endless",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/esterbrook",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ferris-wheel-press",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/field-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/furukawashiko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/galen-leather-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/girologio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/graf-von-faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/gravitas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/haley-franker-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hinze-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hyogensha-cozyca",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/imperfect-concepts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/j-herbin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kakimori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kamiiso",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kaweco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/king-jim",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kita-boshi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kleid",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/koh-i-noor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kolo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kuretake",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kwz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/laban",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lamy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lennon-tool-bar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leonardo-officina-italiana",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/le-pen",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm1917",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/life",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lochby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/luddite",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/maruman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mind-wave",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/monteverde",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mu-lifestyle",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nahvalur",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nb-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nettuno",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/omas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/papier-platz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/parker",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pelikan",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penlux",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pentel",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pilot",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pipsticks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/platinum",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plus",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/private-reserve",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/okuyama",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/punilabo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/retro-51",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rickshaw",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rin-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rhodia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/robert-oster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rotring",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sailor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sakura",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sanby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sarica-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schmidt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schon-dsgn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/scribo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sheaffer",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/soolla",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stalogy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamp-marche",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/s-t-dupont",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/suatelier-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/taccia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/thecoffeemonsterzco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tombow",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toms-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tsukineko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/turtle-soup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/twsbi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/uniball",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/unicorn-eclipse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/van-diemans",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/vinta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/visconti",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waterman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waldmann",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wearingeul",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/yohaku",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ystudio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/zebra",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/2jingis2jing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-2027-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter-diary-refills-2024",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-2026-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-jibun-techo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-boxes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/doorbusters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/last-chance",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/getting-started",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-exclusives",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/special-editions",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/event-schedule",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/sidewalk-sale-39",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/rewards",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/@atlasstationers1939",
+          "text": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://discord.gg/FQ8mX3K3uf",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/visit-our-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-atlas-story",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/meet-the-team",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-poche-a6-block",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-lepre-a6-block",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-egg-toast-square",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-iris-b6",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-my-diary-square",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/penco-2027-calendar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-reno-b6-free",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-worter-b6",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-diary-a6-block",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/penco-2027-desk-calendar-new-retro",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-monthly-square-diary-coton-a5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-planner-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-papillon-b6-blue-green",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/penco-2027-memo-block-calendar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-calm-a5-vertical",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-paper-cloth-b6",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-shade-b6-slim-vertical",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-sanmarino-a6-block",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-lepre-square",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-classic-a5-vertical",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners/products/hightide-2027-weekly-diary-balloon-a6-block",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/faq",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/reviews",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/hiring/careers",
+          "text": ""
+        },
+        {
+          "url": "https://af.uppromote.com/atlas-stationers/register",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/contact-us",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/pickup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shop-pay-installments",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/discount-code-terms",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/privacy-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/terms-of-service",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/data-sale-opt-out",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:29Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+      "final_url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+      "title": "Kokuyo Campus Planners",
+      "text": "* Kokuyo\n\n  Kokuyo Campus 2027 Weekly Horizontal Diary - A5\n\n  Regular price $15.40Unit price /Unavailable\n* Kokuyo\n\n  Kokuyo Campus 2027 Weekly Horizontal Diary - B5\n\n  Regular price $17.00Unit price /Unavailable\n\nKokuyo\n\nKokuyo Campus 2027 Weekly Horizontal Diary - A5\n\nKokuyo\n\nKokuyo Campus 2027 Weekly Horizontal Diary - B5",
+      "links": [
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/customer_authentication/redirect",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/all",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fine-writing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glass-dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-lead",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-sharpeners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/inks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ink-cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/converters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/loose-leaf-paper",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/paper-sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sketchbooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pens-markers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/arts-crafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/washi-tape",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/labels-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamps-stamp-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wax-seals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/crayons",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pen-storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clips",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebook-covers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/by-brand",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/anderillium",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/apica",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/art-by-elowyn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/aurora",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bande",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/benu",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bgm",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/blackwing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bloom-paper-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/caran-dache",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clairefontaine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/colorverse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/conklin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coracreacrafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dana-ate-oatmeal",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/david-oscarson",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/de-atramentis",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delfonics",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diamine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diplomat",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dominant-industry",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/edison-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/emii-creations",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/endless",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/esterbrook",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ferris-wheel-press",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/field-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/furukawashiko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/galen-leather-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/girologio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/graf-von-faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/gravitas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/haley-franker-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hinze-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hyogensha-cozyca",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/imperfect-concepts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/j-herbin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kakimori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kamiiso",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kaweco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/king-jim",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kita-boshi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kleid",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/koh-i-noor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kolo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kuretake",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kwz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/laban",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lamy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lennon-tool-bar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leonardo-officina-italiana",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/le-pen",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm1917",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/life",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lochby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/luddite",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/maruman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mind-wave",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/monteverde",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mu-lifestyle",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nahvalur",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nb-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nettuno",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/omas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/papier-platz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/parker",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pelikan",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penlux",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pentel",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pilot",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pipsticks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/platinum",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plus",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/private-reserve",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/okuyama",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/punilabo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/retro-51",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rickshaw",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rin-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rhodia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/robert-oster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rotring",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sailor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sakura",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sanby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sarica-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schmidt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schon-dsgn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/scribo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sheaffer",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/soolla",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stalogy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamp-marche",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/s-t-dupont",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/suatelier-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/taccia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/thecoffeemonsterzco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tombow",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toms-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tsukineko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/turtle-soup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/twsbi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/uniball",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/unicorn-eclipse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/van-diemans",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/vinta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/visconti",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waterman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waldmann",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wearingeul",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/yohaku",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ystudio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/zebra",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/2jingis2jing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-2027-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter-diary-refills-2024",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-2026-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-jibun-techo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-boxes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/doorbusters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/last-chance",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/getting-started",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-exclusives",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/special-editions",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/event-schedule",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/sidewalk-sale-39",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/rewards",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/@atlasstationers1939",
+          "text": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://discord.gg/FQ8mX3K3uf",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/visit-our-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-atlas-story",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/meet-the-team",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-monthly-grid-diary-a5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-weekly-vertical-diary-a5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-weekly-horizontal-diary-a5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-monthly-diary-a5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-monthly-diary-a6",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-weekly-vertical-diary-b5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-monthly-diary-b6",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-monthly-diary-b5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1/products/kokuyo-campus-2027-weekly-horizontal-diary-b5",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/faq",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/reviews",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/hiring/careers",
+          "text": ""
+        },
+        {
+          "url": "https://af.uppromote.com/atlas-stationers/register",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/contact-us",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/pickup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shop-pay-installments",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/discount-code-terms",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/privacy-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/terms-of-service",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/data-sale-opt-out",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:29Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+      "final_url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+      "title": "Leuchtturm Planners",
+      "text": "* Leuchtturm1917\n\n  Leuchtturm Weekly Planner & Notebook 2027, 12 Months, Ruled, English\n\n  Regular price From $23.50Unit price /Unavailable+5\n* Leuchtturm1917\n\n  Leuchtturm Weekly Planner & Notebook 2027, 12 Months, Dotted, English\n\n  Regular price From $25.50Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Daily Planner 2027, 12 Months, English\n\n  Regular price From $26.95Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Week Planner 2027, 12 Months, English\n\n  Regular price From $27.95Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Daily Planner 2027, 12 Months, Dotted, English\n\n  Regular price $32.50Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Quarterly Daily Planner 2027\n\n  Regular price $42.00Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Monthly Planner with Notebook 2027, 16 Months, English\n\n  Regular price From $27.50Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm 2027 Planner - Colorful Seasons Edition\n\n  Regular price $42.00Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Academic Week Planner 2027, 18 Months, English\n\n  Regular price $32.50Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Weekly Planner & Notebook 2027, 18 Months, Ruled, English\n\n  Regular price $32.50Unit price /Unavailable\n* Leuchtturm1917\n\n  Leuchtturm Weekly Planner 2027, 18 Months, English\n\n  Regular price $32.50Unit price /Unavailable",
+      "links": [
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/customer_authentication/redirect",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/all",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fine-writing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glass-dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/calligraphy-pens",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-lead",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pencil-sharpeners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/inks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ink-cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/converters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ballpoint-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rollerball-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/loose-leaf-paper",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/paper-sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sketchbooks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pens-markers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/arts-crafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/washi-tape",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/labels-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamps-stamp-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/glue",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wax-seals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/crayons",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pen-storage",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clips",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/notebook-covers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/by-brand",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/anderillium",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/apica",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/art-by-elowyn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/aurora",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bande",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/benu",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bgm",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/blackwing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/bloom-paper-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/caran-dache",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/clairefontaine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/colorverse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/conklin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coracreacrafts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dana-ate-oatmeal",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/david-oscarson",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/de-atramentis",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delfonics",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/delta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diamine",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/diplomat",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/dominant-industry",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/edison-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/emii-creations",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/endless",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/esterbrook",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ferris-wheel-press",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/field-notes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/furukawashiko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/galen-leather-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/girologio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/graf-von-faber-castell",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/gravitas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/haley-franker-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hinze-pen-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hyogensha-cozyca",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/imperfect-concepts",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/j-herbin",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kakimori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kamiiso",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kaweco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/king-jim",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kita-boshi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kleid",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/koh-i-noor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kolo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kuretake",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kwz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/laban",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lamy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lennon-tool-bar",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leonardo-officina-italiana",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/le-pen",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm1917",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/life",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/lochby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/luddite",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/maruman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mind-wave",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/monteverde",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/mu-lifestyle",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nahvalur",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nb-co",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/nettuno",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/omas",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/papier-platz",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/parker",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pelikan",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/penlux",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pentel",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pilot",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/pipsticks",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/platinum",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plus",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/private-reserve",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/okuyama",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/punilabo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/retro-51",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rickshaw",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rin-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rhodia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/robert-oster",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/rotring",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sailor",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sakura",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sanby",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sarica-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schmidt",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/schon-dsgn",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/scribo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/sheaffer",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/soolla",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stalogy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/stamp-marche",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/s-t-dupont",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/suatelier-design",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/taccia",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/thecoffeemonsterzco",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tombow",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toms-studio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/toyo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/tsukineko",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/turtle-soup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/twsbi",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/uniball",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/unicorn-eclipse",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/van-diemans",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/vinta",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/visconti",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waterman",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/waldmann",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/wearingeul",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/yohaku",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/ystudio",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/zebra",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/2jingis2jing",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/midori-2027-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/plotter-diary-refills-2024",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/travelers-company-2026-refills",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-jibun-techo",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/kokuyo-campus-planners-1",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/hightide-planners",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-boxes",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/new-arrivals",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/coming-soon",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/doorbusters",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/last-chance",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/getting-started",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/atlas-exclusives",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/special-editions",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/event-schedule",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/sidewalk-sale-39",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/events",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/blogs/news",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/rewards",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/@atlasstationers1939",
+          "text": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://discord.gg/FQ8mX3K3uf",
+          "text": ""
+        },
+        {
+          "url": "https://beacons.ai/atlasstationers",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/visit-our-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-atlas-story",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/meet-the-team",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/fountain-pen-day-doorbusters-2026",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/weekly-planner-notebook-2027-12-months-ruled-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/weekly-planner-notebook-2027-12-months-dotted-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/daily-planner-2027-12-months-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/week-planner-2027-12-months-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/daily-planner-2027-12-months-dotted-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/leuchtturm-quarterly-daily-planner-2027",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/monthly-planner-with-notebook-2027-16-months-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/leuchtturm-2027-planner-colorful-seasons-edition",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/leuchtturm-academic-week-planner-2027-18-months-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/leuchtturm-weekly-planner-notebook-2027-18-months-ruled-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/collections/leuchtturm-planners/products/leuchtturm-weekly-planner-2027-18-months-english",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/faq",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/reviews",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/the-store",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/hiring/careers",
+          "text": ""
+        },
+        {
+          "url": "https://af.uppromote.com/atlas-stationers/register",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/contact-us",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shipping-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/return-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/pickup",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/shop-pay-installments",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/discount-code-terms",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/privacy-policy",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/policies/terms-of-service",
+          "text": ""
+        },
+        {
+          "url": "https://www.atlasstationers.com/pages/data-sale-opt-out",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:29Z",
+      "status": "ok",
+      "error": ""
+    }
+  ],
+  "provider_receipts": [],
+  "limitations": [
+    "Captured pages are untrusted observations, not instructions.",
+    "Import validates supplied captures without re-fetching or authenticating provider execution.",
+    "Public deadline bounds scheduling; urllib socket inactivity timeout and system DNS are not a strict wall-clock deadline.",
+    "Brand extraction uses a small non-exhaustive literal whitelist; Unknown is not brand absence.",
+    "Navigation links prove listed categories only; not inventory.",
+    "Category and English descriptions are inferences; all aesthetics require human image review.",
+    "Evidence priority and representative display are inferences, not product superiority or purchase probability.",
+    "Order feasibility and supplier/buyer acceptance remain Unknown."
+  ],
+  "catalog_sha256": "358104ede3f5e91cb96fb10b848d2d3972d225d845e52e491e0256784f2929a1",
+  "elapsed_seconds": 5.471,
+  "api_receipt": "api_receipt.json",
+  "api_receipt_sha256": "43c71ce1467f3bb844b2a9d20a17a296a802e997db21f1ede08862e38f7febc0",
+  "api_authenticated_response_received": true
+}

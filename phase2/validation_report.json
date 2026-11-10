@@ -3,55 +3,128 @@
   "current_pilots": 3,
   "legacy_not_revalidated": 17,
   "sku_matches": 74,
-  "evidence_rows": 177,
+  "evidence_rows": 267,
   "phase1_preserved_files": 214,
   "purchase_probability": "Not modeled",
   "order_feasibility": "Unknown",
   "checks": "passed",
   "negative_controls_passed": 6,
-  "checked_at_utc": "2026-11-10T03:02:06Z",
+  "brief": "phase2/live/atlas/buyer_brief.md",
+  "historical_pdf_status": "Archived; obsolete score and SKU selection, not regenerated",
+  "checked_at_utc": "2026-11-10T03:21:56Z",
   "unittest": {
-    "tests_run": 27,
-    "passed": 27,
+    "tests_run": 63,
+    "passed": 63,
     "failed": 0,
+    "command": "python3 -m unittest discover -v",
+    "network_calls_during_tests": false,
     "groups": {
       "unchanged_phase1": 12,
-      "offline_research_mocks_and_boundary_tests": 12,
-      "phase2_review_integrity": 3
-    },
-    "command": "python3 -m unittest -v test_import test_research test_phase2",
-    "network_calls_during_tests": false
-  },
-  "pilots": {
-    "atlas": {
-      "all_skus_scanned": 210,
-      "eligible": 97,
-      "recommendations": 4
-    },
-    "shorthand": {
-      "all_skus_scanned": 210,
-      "eligible": 97,
-      "recommendations": 4
-    },
-    "wonder-fair": {
-      "all_skus_scanned": 210,
-      "eligible": 93,
-      "recommendations": 4
+      "existing_research": 12,
+      "existing_phase2": 3,
+      "new_matching": 7,
+      "new_tinyfish_client_mocks": 19,
+      "new_direct_pipeline_mocks": 10
     }
   },
-  "live_browser": {
-    "run_id": "6b4f0d4a-3a0c-408d-9c1e-ac8736576472",
-    "status": "completed",
-    "provider_steps": 22,
-    "provider_duration_seconds": 189,
-    "cost_usd": "Unknown",
-    "receipt": "sources/pilots/atlas_browser_run.json"
+  "direct_api_live": {
+    "atlas": {
+      "status": "completed",
+      "authenticated_response_received": true,
+      "pages": 6,
+      "all_skus_scanned": 210,
+      "eligible": 118,
+      "recommendations": 4,
+      "http_requests": 3,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "provider_fetch_request_ids": [
+        "71a35e65-409c-4140-8cec-3731c3ec69e4",
+        "1fe1564b-4337-4922-a76c-00f52882436c"
+      ],
+      "usage_url_records": 6,
+      "matched_fetch_requests": 2,
+      "elapsed_seconds": 5.471,
+      "run_id": null,
+      "billed_cost": "Unknown",
+      "receipt": "live/atlas/api_receipt.json",
+      "brief": "live/atlas/buyer_brief.md"
+    },
+    "shorthand": {
+      "status": "completed",
+      "authenticated_response_received": true,
+      "pages": 6,
+      "all_skus_scanned": 210,
+      "eligible": 126,
+      "recommendations": 4,
+      "http_requests": 3,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "provider_fetch_request_ids": [
+        "508bf8b9-ac86-4090-807f-755483380b0d",
+        "e32905e7-1f19-46b2-aa62-8a81490850b8"
+      ],
+      "usage_url_records": 6,
+      "matched_fetch_requests": 2,
+      "elapsed_seconds": 4.596,
+      "run_id": null,
+      "billed_cost": "Unknown",
+      "receipt": "live/shorthand/api_receipt.json",
+      "brief": "live/shorthand/buyer_brief.md"
+    },
+    "wonder-fair": {
+      "status": "completed",
+      "authenticated_response_received": true,
+      "pages": 4,
+      "all_skus_scanned": 210,
+      "eligible": 87,
+      "recommendations": 4,
+      "http_requests": 3,
+      "http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "provider_fetch_request_ids": [
+        "de04e5ac-8e37-456f-b0af-3ac196ff142d",
+        "ac2c682f-c4ce-4415-bb71-c50ba8995a69"
+      ],
+      "usage_url_records": 4,
+      "matched_fetch_requests": 2,
+      "elapsed_seconds": 6.995,
+      "run_id": null,
+      "billed_cost": "Unknown",
+      "receipt": "live/wonder-fair/api_receipt.json",
+      "brief": "live/wonder-fair/buyer_brief.md"
+    }
+  },
+  "direct_api_totals": {
+    "final_research_executions": 3,
+    "final_fetch_requests": 6,
+    "final_usage_requests": 3,
+    "final_successful_url_observations": 16,
+    "initial_scope_refinement_executions": 2,
+    "initial_successful_url_observations": 8,
+    "total_http_requests_including_refinements": 15,
+    "total_successful_url_observations_including_refinements": 24,
+    "billed_cost": "Unknown",
+    "agent_or_connector_calls_in_this_task": 0,
+    "search_live_test": "Not exercised; offline mocked only",
+    "agent_live_test": "Not exercised; async submit/poll/cancel offline mocked only"
   },
   "source_verification_limits": [
-    "Offline validation checks exact quote support and derived fields within saved captures, not authenticated provider origin or present website truth.",
-    "Three connector fetch captures and one separate Atlas browser run were actual; import/validate do not call TinyFish.",
-    "Public HTTP smoke was actual and separately recorded; Atlas/Shorthand partial 429, Wonder Fair complete within scope.",
-    "Legacy 17 retailer sources not revalidated; old Atlas PDF archived.",
-    "No retailer outreach or buyer acceptance; all order feasibility Unknown."
-  ]
+    "Actual Python CLI sent authenticated REST requests; offline tests are separate and use synthetic transport.",
+    "Receipts are local observations with provider request IDs and reconciled usage, not cryptographic provider attestations.",
+    "Observation timestamps are response receipt times, not source publication times. ttl=0 requested live fetch.",
+    "Costs, aesthetic fit, inventory, supplier acceptance, carton feasibility and buying intent remain Unknown.",
+    "17 legacy sources were not revalidated. No retailer messages, forms or purchases.",
+    "HTTP deadline is a scheduling budget; standard-library DNS and socket inactivity may overrun."
+  ],
+  "phase1_manifest_check": "214/214 identical"
 }

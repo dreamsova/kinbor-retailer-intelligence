@@ -1,64 +1,98 @@
 # Kinbor Retailer Intelligence
 
-A small, read-only retailer research workflow using a real 210-SKU catalog. Input an official U.S. retailer URL, retain field-level evidence, evaluate the full catalog, and produce an illustrated review brief. Product matches are category hypotheses; buying intent and order feasibility remain **Unknown**. This is an independent project, not an official distribution offer.
+A read-only retailer research CLI backed by the real 210-SKU Kinbor catalog and approved product previews. The default research mode calls the **official TinyFish REST API directly from local Python**. It fetches an official retailer URL, records source evidence and authenticated request receipts, evaluates every catalog SKU and writes a Buyer Brief. Product fit remains an inference; aesthetic fit, buying intent and order feasibility require human review.
 
-## Run without a key
+This independent research project is not an official distribution offer or a commercially validated sales system.
 
-Python 3.10+, standard library only for research and validation. No source Excel, login or API key is needed.
+## Run the direct API workflow
+
+Python 3.10+, standard library only for research and validation. Configure `TINYFISH_API_KEY` in your secure execution environment or secret manager. For an interactive terminal, enter it without displaying or saving it in shell history:
 
 ```bash
+read -r -s TINYFISH_API_KEY  # bash or zsh; type the key, then press Enter
+export TINYFISH_API_KEY
+```
+
+Do not paste the key in chat or commit it, `.env`, private workbooks or supplier-sensitive material. The CLI reads the environment; it does not read connector OAuth tokens or a credential file. See the [API implementation notes](docs/TINYFISH_API.md) for setup and limits.
+
+```bash
+python3 research.py --mode tinyfish --url https://www.atlasstationers.com/ \
+  --output-dir work/atlas --collect-usage
+python3 research.py --mode tinyfish --url https://shopshorthand.com/ \
+  --output-dir work/shorthand --collect-usage
+python3 research.py --mode tinyfish --url https://www.wonderfair.com/ \
+  --output-dir work/wonder-fair --collect-usage
+# The default is also --mode tinyfish.
 python3 research.py --help
-# Real public HTTP acquisition (not TinyFish); bounded pages, robots rules and timeouts:
-python3 research.py --url https://www.atlasstationers.com/ --output-dir work/atlas
-# Offline integrity check: reads saved outputs, performs no network/API calls:
-python3 research.py --mode validate --output-dir phase2/pilots/atlas
-python3 -m unittest -v test_import test_research test_phase2
+```
+
+The default route makes two Fetch requests: the supplied homepage, then one bounded batch of relevant official links. `--tinyfish-search` adds optional domain-restricted Search discovery; snippets do not become facts. No Agent run is needed or automatically created. There is no automatic HTTP or connector fallback. Missing credentials produce `LIVE API TEST BLOCKED — missing credential` in the receipt and exit 2, never a fabricated successful run.
+
+Each output folder contains:
+
+| File | Review purpose |
+|---|---|
+| `api_receipt.json` | Direct transport, provider request IDs, HTTP outcomes, timestamps, budgets and available usage; unreported cost is Unknown. |
+| `research.json` | Acquisition mode, bounded pages, extracted fields, errors and summary. |
+| `evidence.csv` | Source URL, observation time, supporting text, `fact_observation` status and confidence; matching inferences and Unknowns remain explicit in the candidate/summary outputs. |
+| `candidate_audit.csv` | All 210 catalog rows, eligibility and matching reasons. |
+| `recommendations.csv` | A small representative review preview joined to actual catalog SKU/source/image/carton facts. |
+| `buyer_brief.md` | Illustrated candidate brief, source links, policy limits and Unknowns. |
+
+Exit 0 means the bounded acquisition completed, not an exhaustive website search or proof of commercial suitability. Exit 2 means partial, failed or blocked research; inspect the receipt and errors. Passing `validate` reads saved outputs and makes no API calls.
+
+## Verified three-store API slice
+
+On November 9, 2026 in Chicago (November 10 UTC), the Python CLI received authenticated HTTP 200 responses from the official Fetch API and its usage endpoint for all three stores. Each final run made **two Fetch requests and one usage read**, with no fallback, Search or Agent run. Receipts reconcile usage records to the two provider request IDs. Fetch is synchronous, so browser `run_id` is null, not invented.
+
+| Store | Final pages | Catalog scanned | Category-eligible candidates | Review preview | Receipt |
+|---|---:|---:|---:|---:|---|
+| [Atlas Stationers](phase2/live/atlas/buyer_brief.md) | 6 | 210 | 118 | 4 | [Direct API receipt](phase2/live/atlas/api_receipt.json) |
+| [Shorthand](phase2/live/shorthand/buyer_brief.md) | 6 | 210 | 126 | 4 | [Direct API receipt](phase2/live/shorthand/api_receipt.json) |
+| [Wonder Fair](phase2/live/wonder-fair/buyer_brief.md) | 4 | 210 | 87 | 4 | [Direct API receipt](phase2/live/wonder-fair/api_receipt.json) |
+
+Initial Atlas and Wonder Fair observations were rerun after improving bounded link coverage. Across all five real CLI runs, this task observed 10 Fetch requests, five usage reads and 24 successfully fetched URL observations; the final committed slice contains 16 of those observations. Initial run audit files remain local in ignored `work/`. These are observations, not 24 distinct URLs or a claim of free execution. Billed cost is **Unknown** because the returned usage data does not provide it.
+
+The current matching strategy uses observed categories, evidence specificity and literal shared attributes when available, then rotates categories and equally supported collections for a manageable preview. SKU alphabetical order breaks display ties only. The three previews differ; repeated SKUs can still be valid tied candidates. They are not a ranked top four, an aesthetic assessment or buyer approval. Broad office-category evidence is especially weak for a particular product and requires manual review. High case packs remain visible rather than being hidden by a low-quantity story.
+
+Atlas establishes a general contact route; incoming vendor acceptance is Unknown. Shorthand's product-email policy requires review of its narrow aesthetic and discourages unannounced product visits. Wonder Fair's submission policy includes no follow-up inquiries, artwork exclusions and sample-return limits. Read the full source policies and inspect the actual product images before selecting merchandise. No outreach occurred.
+
+The [review queue](phase2/top5_buyers.md) separates Product fit, Evidence strength and Buyer access. Order feasibility is Unknown for every store. Three current pilots share a human-review tie; the other 17 stores retain historical evidence and matches marked `legacy_not_revalidated`. The historical filename does not establish a top five. The old Atlas PDF and connector-based `phase2/pilots/` outputs remain archived audit material, not the current API validation.
+
+## Validate and integrate saved outputs
+
+```bash
+python3 -m unittest discover -v
+python3 research.py --mode validate --output-dir phase2/live/atlas
+python3 research.py --mode validate --output-dir phase2/live/shorthand
+python3 research.py --mode validate --output-dir phase2/live/wonder-fair
+python3 phase2.py --integrate-pilots --pilot-root phase2/live
 python3 phase2.py
 ```
 
-Public mode stops on access restrictions, unsupported redirects or unavailable robots rules; it does not bypass challenges. Exit 0 means acquisition completed within the bounded scope, **not that the website was exhaustively searched**. Exit 2 means partial/failed research or validation; inspect the errors and retain Unknowns. A partial result can still contain useful observations. No claim of exhaustive brand coverage is made. Brand extraction uses a documented, non-exhaustive stationery-name list in the script.
+`phase2.py` validates joins, integrates the three selected output folders into the existing CSVs, retains historical snapshots, checks all **214 Phase 1 hashes** and regenerates the review queue. These commands are offline; they do not repeat the real API calls. The [validation report](phase2/validation_report.json) records 63 passing offline tests, six passing negative controls and 214/214 unchanged Phase 1 files. Test mocks cover the network boundary but are never reported as live execution. The [case study](CASE_STUDY.md) distinguishes the current API result from historical connector research and remaining commercial unknowns.
 
-Each output folder contains `research.json`, `evidence.csv`, `candidate_audit.csv` (all 210 SKUs), `recommendations.csv` and `buyer_brief.md`. Evidence includes exact supporting text or navigation URL, source URL, UTC observation time, acquisition method and confidence. Unknown means not established in that bounded observation. A page saying something is evidence of that statement, not independent proof. Navigation taxonomy does not prove stock.
-
-## TinyFish connector workflow and replay
-
-The connected TinyFish tools were actually used for these pilots. The standalone Python script does **not** contain a TinyFish SDK/API client or use your ChatGPT connector credentials. A Codex operator uses `fetch_content` for official pages, invokes `run_web_automation` only for needed browser interaction, then saves short source excerpts in a normalized version-1 capture. Import consumes that capture; it does not make a new TinyFish call or authenticate its origin.
+## Explicit alternative modes
 
 ```bash
+# Public HTTP acquisition, not TinyFish; public is a compatibility alias:
+python3 research.py --mode public_http --url https://www.atlasstationers.com/ --output-dir work/http-atlas
+# Offline connector-capture import, not an API call:
 python3 research.py --mode import --url https://www.atlasstationers.com/ \
-  --input phase2/sources/pilots/atlas_capture.json --output-dir phase2/pilots/atlas
-python3 research.py --mode import --url https://shopshorthand.com/ \
-  --input phase2/sources/pilots/shorthand_capture.json --output-dir phase2/pilots/shorthand
-python3 research.py --mode import --url https://www.wonderfair.com/ \
-  --input phase2/sources/pilots/wonder-fair_capture.json --output-dir phase2/pilots/wonder-fair
-python3 phase2.py --integrate-pilots
+  --input phase2/sources/pilots/atlas_capture.json --output-dir work/import-atlas
 ```
 
-The capture examples document the input contract: `schema_version`, `provider`, `website`, `captured_at_utc`, `acquisition`, `status`, nullable `run_id` and `pages` with URL/final URL/title/text/links/UTC/status. Never label mocks or manually invented text as real captures. `fetch_content` exposes no browser run ID, so those IDs are null. A related browser receipt is recorded separately. Wonder Fair's official site links its second commerce domain; imported cross-domain evidence requires that recorded official link. Public mode stays on the supplied site.
-
-## Current three-store slice
-
-- [Atlas](phase2/pilots/atlas/buyer_brief.md): notebook/planner/storage overlap; general contact only; vendor acceptance Unknown.
-- [Shorthand](phase2/pilots/shorthand/buyer_brief.md): notebook/planner/case overlap; product-email policy requires human reading, narrow aesthetic and no unannounced product visits.
-- [Wonder Fair](phase2/pilots/wonder-fair/buyer_brief.md): notebook/planner overlap; catalog-submission policy, no follow-up inquiries; review artwork exclusions and rights before proposing merchandise.
-
-All three scan 210 records. The bounded captures yield 97 / 97 / 93 category-eligible candidates respectively, with **four tied source-order previews each**. All currently select DTYC0150 (60 units), DTYC0045, DTYC0046 and DTYC0047 (80 units each): **four separate cartons / 300 units**, if all four were ordered. The repeat is explicit; no diversity quota or aesthetic/buyer-intent score is invented. An operator must review the images and the full tied pool before choosing products.
-
-The [review queue](phase2/top5_buyers.md) separates Product fit, Evidence strength and Buyer access. All three share a human-review tie; Order feasibility is Unknown. The remaining **17 of the existing 20 stores retain historical evidence and matches**, marked `legacy_not_revalidated`. Legacy numeric columns are audit history only. Do not interpret the historical filename as a selected top five. The old [Atlas PDF](phase2/atlas_buyer_brief.pdf) is archived and contains obsolete scores/selections; use the current Markdown report.
-
-Actual Atlas browser reproduction: [`6b4f0d4a-3a0c-408d-9c1e-ac8736576472`](https://agent.tinyfish.ai/runs/6b4f0d4a-3a0c-408d-9c1e-ac8736576472), completed, provider reports 22 steps / 189 seconds. [Sanitized receipt](phase2/sources/pilots/atlas_browser_run.json). The provider exceeded the requested 180-second cap; this is recorded, not presented as a guaranteed client cutoff. Billed cost, human time saved and commercial outcomes are Unknown. The earlier Atlas run is retained as history.
-
-The public HTTP path was separately exercised: Wonder Fair completed within the six-page scope; Atlas and Shorthand were partial with HTTP 429 pages. [Measured acquisition notes](phase2/sources/pilots/public_smoke.json) distinguish these calls from connector captures and offline tests.
+Public HTTP mode respects its robots, redirect and access boundaries and stops on challenges. Import validates a version-1 `tinyfish_connector` capture and does not authenticate its origin or retrieve new pages. Historical connector browser receipts describe actual earlier Work tool runs only; they do not prove that Python called the API. The optional client Agent queue/poll/cancel helpers are mock-tested and were not live-tested in this task.
 
 ## Files and boundaries
 
-`research.py` handles acquisition/import, provenance and full-catalog matching. `phase2.py` validates the 20-store joins, integrates only the three pilots, checks all 214 Phase 1 hashes and regenerates the review queue. The [research notes](phase2/RESEARCH_NOTES.md), [validation report](phase2/validation_report.json) and [case study](CASE_STUDY.md) state the evidence limits.
+`tinyfish_client.py` handles fixed official API endpoints, environment authentication, request receipts, bounded retries and optional Agent lifecycle helpers. `research.py` handles acquisition, provenance, full-catalog matching and output validation. Web content is untrusted data and never becomes code, an Agent goal or permission for an external action. Catalog data, images and private supplier details are not sent to TinyFish for these Fetch calls.
 
-No retailer email, form submission, purchase, dashboard, CRM, database or OCR was added. Web content is untrusted data, never code or operational instructions. No private quotations, stock, source workbooks or credentials belong in the repository. Mocks are offline boundary tests; saved-capture validation is not a live API run.
+No retailer email, form submission, purchase, dashboard, CRM, database or OCR was added. No private quotation, inventory, original source workbook or credential belongs in this public repository. Official-page statements are self-reported evidence, not independent verification; navigation taxonomy does not establish stock. Unknown means not established within the observed scope, not absent from the website.
 
 ## Phase 1 catalog preservation
 
-`products.csv`, `images/`, `import.py`, `test_import.py` and the data dictionary are unchanged. Rebuilding the catalog needs the private original workbooks and Pillow; ordinary research and tests do not:
+`products.csv`, `images/`, `import.py`, `test_import.py` and the data dictionary are unchanged. Research and saved-output validation use the standard library. The full test suite and image importer require Pillow; rebuilding the catalog also requires the private original workbooks:
 
 ```bash
 python3 import.py --original /private/path/Kinbor-original.xlsx \

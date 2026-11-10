@@ -4,7 +4,7 @@ This upgrade promotes only Atlas Stationers, Shorthand and Wonder Fair after the
 
 ## Current evidence and previous work
 
-- `pilots/atlas/`, `pilots/shorthand/` and `pilots/wonder-fair/` contain the current field-level evidence, source observations, full 210-row SKU audits, candidates and Markdown briefs. Their `research.json` records acquisition mode, real run IDs when supplied by the provider, failures and Unknown fields. A connector capture imported for offline verification is not a new live API request.
+- `live/atlas/`, `live/shorthand/` and `live/wonder-fair/` contain current evidence acquired by the local Python CLI directly from the official TinyFish REST API. Each has `api_receipt.json` with authenticated HTTP 200 responses, provider request IDs and matching usage records, plus the full 210-row audit and illustrated brief. Fetch is synchronous and has no browser run ID. `pilots/` and `sources/pilots/` preserve the earlier connector-import snapshots as history; import/validate never initiate live API requests.
 - `retailers.csv` retains the original 20 real businesses. Current pilot fields cover category, brand, public contact and supplier-submission information only. Location and ownership evidence are explicitly historical and require revalidation before use.
 - `evidence.csv` preserves every historical row and adds the three pilots' accepted evidence under IDs such as `R01-P-E001`. Current rows contain an exact supporting quotation, field-level confidence, retrieval timestamp and source-capture path. Historical rows are labeled separately; old retrieval timestamps are never relabeled as fresh.
 - `sku_matches.csv` replaces only the three pilot selections using their full-catalog audit. The remaining 17 selections are historical candidate hypotheses. Every candidate still joins to the unchanged `products.csv`, source sheet/row and exact image path.
@@ -40,10 +40,10 @@ No private supplier spreadsheet, quotation, stock, credential, correspondence or
 ## Reproduce
 
 ```bash
-python3 -m unittest -v test_import test_research
+python3 -m unittest discover -v
 python3 research.py --help
 # See the root README for each pilot's real acquisition and replay commands.
-python3 phase2.py --integrate-pilots
+python3 phase2.py --integrate-pilots --pilot-root phase2/live
 python3 phase2.py
 python3 phase2.py --refresh
 python3 phase2.py --brief

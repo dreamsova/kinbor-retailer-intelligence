@@ -1,0 +1,3866 @@
+{
+  "schema_version": 2,
+  "website": "https://shopshorthand.com/",
+  "generated_at_utc": "2026-11-10T03:18:23Z",
+  "mode": "tinyfish",
+  "status": "completed",
+  "acquisition": "tinyfish_api_fetch",
+  "matching_strategy": "evidence_review_v2",
+  "requested_limit": 4,
+  "run_id": null,
+  "related_browser_run_id": null,
+  "source_capture": null,
+  "fields": {
+    "categories": {
+      "value": [
+        "Desk & Office Tools",
+        "Notebooks & Journals",
+        "Pens & Writing",
+        "Planners & Calendars",
+        "Pouches & Cases",
+        "Stickers & Decorative Tape",
+        "Sticky Notes & Page Flags"
+      ],
+      "evidence_ids": [
+        "E001",
+        "E002",
+        "E003",
+        "E005",
+        "E006",
+        "E007",
+        "E008",
+        "E011",
+        "E012",
+        "E013",
+        "E014",
+        "E015",
+        "E016",
+        "E017",
+        "E018",
+        "E019",
+        "E020",
+        "E021",
+        "E022",
+        "E023",
+        "E024",
+        "E028",
+        "E029",
+        "E030",
+        "E031",
+        "E032",
+        "E033",
+        "E034",
+        "E038",
+        "E039",
+        "E040",
+        "E041",
+        "E042",
+        "E043",
+        "E044",
+        "E048",
+        "E049",
+        "E050",
+        "E051",
+        "E052",
+        "E053",
+        "E054"
+      ],
+      "confidence": "medium"
+    },
+    "brands": {
+      "value": [
+        "Hobonichi",
+        "Kaweco",
+        "Midori"
+      ],
+      "evidence_ids": [
+        "E004",
+        "E035",
+        "E036",
+        "E045",
+        "E046",
+        "E055"
+      ],
+      "confidence": "medium"
+    },
+    "contact": {
+      "value": [
+        "https://shopshorthand.com/pages/contact"
+      ],
+      "evidence_ids": [
+        "E009",
+        "E010",
+        "E025",
+        "E037",
+        "E047",
+        "E056"
+      ],
+      "confidence": "medium"
+    },
+    "vendor_policy": {
+      "value": [
+        "Our buyer is not always in the store so we discourage bringing products to the store. Please send us an email with more information about your products.",
+        "We are always on the hunt for new products - please keep in mind that we are a small store with a very specific aesthetic and product offering. Please send us an email with more information about your products."
+      ],
+      "evidence_ids": [
+        "E026",
+        "E027"
+      ],
+      "confidence": "medium"
+    }
+  },
+  "summary": {
+    "catalog_count": 210,
+    "eligible_count": 126,
+    "recommendation_count": 4,
+    "product_fit": "Category overlap; human review required",
+    "evidence_strength": "Official page observations; not independent verification",
+    "buyer_access": "Submission-related policy; applicability requires human review",
+    "order_feasibility": "Unknown"
+  },
+  "errors": [],
+  "pages": [
+    {
+      "url": "https://shopshorthand.com/",
+      "final_url": "https://shopshorthand.com/",
+      "title": "FOR THE LOVE OF YOUR DESK",
+      "text": "## Making and selling beautiful tools for your desk\n\n## Beautiful and useful tools for your desk\n\nThe items we use every day should be functional, serve a purpose, and we also think it's not too much to ask that they provide a bit of delight. We search the world over looking for items we can use over and over again because they are both beautiful and useful.\n\n## Featured Collection: Planners\n\nSold Out\n\nView all\n\nvisit shorthand\n\nCome shop with us in person!\n\nWe are ready to help you find the perfect pen or notebook for your next adventure.\n\n## UPCOMING EVENTS\n\nJoin us for this year's Kaweco DIY event featuring a Glow In The Dark Sport pen.\n\n11am to 5pm\n\nHighland Park // Oct 2nd - 5th\n\nLarchmont // Oct 7th - 11th\n\nSan Anselmo // Oct 15th - 18th",
+      "links": [
+        {
+          "url": "https://shopshorthand.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/custom-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bookends",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/candles",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-clips",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/folders-and-folios",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/adhesives",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/oddities",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cups",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/trays",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rulers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors-cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/blade-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pencil-sharpeners-1",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staplers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stapler-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape-dispensers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/greeting-cards",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/birthday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/box-set",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/california-greetings",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/congratulations",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/baby",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graduation",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/new-home",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sobriety",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/wedding",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/everyday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/love",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mom-dad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sympathy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/thanks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/valentines-day-duos",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/continuous-wrap-rolls",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-continuous-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-decor",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ribbon",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tissue-paper",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/merch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/t-shirt",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tote-bag",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/shp-standard-notebook-anniversary",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-binding-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/book-bound-noteooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lefty-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sewn-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/spiral-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staple-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-cover-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hardcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/softcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dot-grid",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graph",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lined",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sketch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/task-pad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-prints",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/books",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notepad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letters-envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letter-sets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/colored-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graphite-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-5mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-7mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/eraser-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lead-refill",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/felt-tip-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pen-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pen-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-4mm-and-under",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-5mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-7mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-1mm-and-over",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/calendars",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/monthly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/weekly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/undated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/specialty-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/highlighter",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/marker",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/about",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/account",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/shopshorthand",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/search",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-products",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2026-2027-academic-year-task-planner-blossom-pink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2026-2027-paisley-17-month-academic-covered-spiral-planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2026-2027-pink-hydrangea-12-month-academic-planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2026-2027-schoolhouse-17-month-academic-hardcover-spiral-planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2026-2027-weekly-notebook-planner-blossom-pink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2026-2027-weekly-notebook-planner-hunter-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2027-a5-left-minute-manager-ex-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2027-a5-left-minute-manager-ex-ivory",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2027-a5-left-minute-manager-ex-yellow",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2027-a5-vertical-planner-classic-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2027-a6-block-poche-planner-cream",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner/products/2027-a6-block-poche-planner-lavender-copy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/stationery-store-day",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/contact",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/jobs",
+          "text": ""
+        },
+        {
+          "url": "https://shorthandpress.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/gift-wrap-service",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/returns",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/faqs",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/pos",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:18:19Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://shopshorthand.com/pages/contact",
+      "final_url": "https://shopshorthand.com/pages/contact",
+      "title": "Contact",
+      "text": "### HIGHLAND PARK\n\n5030 York Blvd  \nLos Angeles, CA 90042  \n(323) 642-9039\n\n10am - 7pm every day\n\nGet directions\n\n### LARCHMONT VILLAGE\n\n126 N Larchmont Blvd  \nLos Angeles, CA 90004  \n(323) 640-1793\n\n10am - 7pm every day\n\nGet directions\n\n### SAN ANSELMO\n\n629 San Anselmo Ave  \nSan Anselmo, CA 94960  \n(628) 285-7078\n\n10am - 7pm every day\n\nGet directions\n\n## How can we help?\n\nPlease reach out to us with any comments, questions, concerns, ideas for products to sell, book recommendations or great jokes!\n\n## Contact us",
+      "links": [
+        {
+          "url": "https://shopshorthand.com/pages/contact",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/custom-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bookends",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/candles",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-clips",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/folders-and-folios",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/adhesives",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/oddities",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cups",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/trays",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rulers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors-cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/blade-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pencil-sharpeners-1",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staplers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stapler-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape-dispensers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/greeting-cards",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/birthday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/box-set",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/california-greetings",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/congratulations",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/baby",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graduation",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/new-home",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sobriety",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/wedding",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/everyday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/love",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mom-dad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sympathy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/thanks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/valentines-day-duos",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/continuous-wrap-rolls",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-continuous-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-decor",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ribbon",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tissue-paper",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/merch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/t-shirt",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tote-bag",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/shp-standard-notebook-anniversary",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-binding-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/book-bound-noteooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lefty-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sewn-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/spiral-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staple-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-cover-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hardcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/softcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dot-grid",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graph",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lined",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sketch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/task-pad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-prints",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/books",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notepad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letters-envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letter-sets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/colored-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graphite-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-5mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-7mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/eraser-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lead-refill",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/felt-tip-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pen-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pen-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-4mm-and-under",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-5mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-7mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-1mm-and-over",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/calendars",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/monthly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/weekly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/undated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/specialty-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/highlighter",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/marker",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/about",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/account",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/shopshorthand",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/search",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://hcaptcha.com/privacy",
+          "text": ""
+        },
+        {
+          "url": "https://hcaptcha.com/terms",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/stationery-store-day",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/jobs",
+          "text": ""
+        },
+        {
+          "url": "https://shorthandpress.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/gift-wrap-service",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/returns",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/faqs",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/pos",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:18:21Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://shopshorthand.com/pages/faqs",
+      "final_url": "https://shopshorthand.com/pages/faqs",
+      "title": "FAQs",
+      "text": "**Can I order online and choose pick up?**  \nAbsolutely! Pick up orders are exclusive to our Highland Park, Los Angeles location. Orders are typically ready to be picked up within about 15 minutes of being placed for orders made every day from 10-7pm. Outside of those hours we will have your order picked and packed as soon as possible on the following business day. You will receive an order confirmation email and then shortly thereafter an email letting you know the order is ready for pick-up.\n\n**I saw a product on your website recently, but now I can't find it!**  \nWe do our best to keep our products in-stock at all times, but there will be times when products are temporarily unavailable. Check back to see if the item has become available again, or send us an email if you would like a notification when it is back in stock.\n\n**I am part of the Card Enthusiasts Club. Can my online greeting card purchases count towards my free card?**  \nAbsolutely! During checkout, add a note letting us know you are part of the Card Enthusiasts Club and we will stamp your card appropriately. Please note: your free card is only redeemable in store.\n\n**What is the Shorthand Card Enthusiasts Club?**  \nBuy 10 greeting cards and get your 11th for free! Please note: your free card is only redeemable in store.\n\n**I ordered an item, but I need it right away!**  \nYou are welcome to make your purchase online and then pick-up from our store in Highland Park, Los Angeles. You may also specify expedited shipping and we will do our best to ensure the products are mailed as quickly as possible.\n\n**I placed an order a while ago and my order has not arrived yet. Where is it?**  \nWe do our best to ship orders as quickly and efficiently as possible. If it is taking longer for your order to arrive than you think it should, please contact us with your order number and we will do our best to help figure out where your order is and when you can expect to receive it.\n\n**I have some ideas for products you should sell - can I tell you about them?**  \nSure thing! We love learning more about the kinds of products our customers are looking for and we love hunting to find them. Send us an email!\n\n**I have some products that I design and / or manufacture that I think would be a great fit for your store. Can I show them to you?**  \nWe are always on the hunt for new products - please keep in mind that we are a small store with a very specific aesthetic and product offering. Please send us an email with more information about your products.\n\n**Can I bring these products in to show you?**  \nOur buyer is not always in the store so we discourage bringing products to the store. Please send us an email with more information about your products.",
+      "links": [
+        {
+          "url": "https://shopshorthand.com/pages/faqs",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/custom-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bookends",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/candles",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-clips",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/folders-and-folios",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/adhesives",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/oddities",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cups",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/trays",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rulers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors-cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/blade-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pencil-sharpeners-1",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staplers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stapler-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape-dispensers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/greeting-cards",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/birthday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/box-set",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/california-greetings",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/congratulations",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/baby",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graduation",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/new-home",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sobriety",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/wedding",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/everyday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/love",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mom-dad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sympathy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/thanks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/valentines-day-duos",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/continuous-wrap-rolls",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-continuous-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-decor",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ribbon",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tissue-paper",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/merch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/t-shirt",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tote-bag",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/shp-standard-notebook-anniversary",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-binding-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/book-bound-noteooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lefty-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sewn-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/spiral-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staple-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-cover-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hardcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/softcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dot-grid",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graph",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lined",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sketch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/task-pad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-prints",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/books",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notepad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letters-envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letter-sets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/colored-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graphite-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-5mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-7mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/eraser-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lead-refill",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/felt-tip-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pen-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pen-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-4mm-and-under",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-5mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-7mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-1mm-and-over",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/calendars",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/monthly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/weekly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/undated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/specialty-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/highlighter",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/marker",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/about",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/account",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/shopshorthand",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/search",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/stationery-store-day",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/contact",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/jobs",
+          "text": ""
+        },
+        {
+          "url": "https://shorthandpress.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/gift-wrap-service",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/returns",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/pos",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:18:21Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+      "final_url": "https://shopshorthand.com/collections/bags-cases-pouches",
+      "title": "Bags, Cases & Pouches",
+      "text": "Skip to content\nPause slideshow\nPlay slideshow\nhip hip hooray! pick your hobonichi planner today!\nicon-X\nClose menu\nCustom Stationery\nDesk Goods\nBags, Cases & Pouches\nBookends\nCandles\nClips & Push Pins\nErasers\nFolders & Folios\nGlue\nOddities\nOrganizers\nCups\nDesk Organizers\nTrays\nRulers\nScissors and Cutters\nScissors\nCutters\nBlade Refills\nSharpeners\nStaplers\nStaplers\nStapler Refills\nStickers\nTape\nTape Dispensers\nAll Desk Goods\nGreeting Cards\nBirthday\nBox Set\nCalifornia Greetings\nCongratulations\nBaby\nCongratulations\nGraduation\nNew Home\nSobriety\nWedding\nEveryday / Courage\nHoliday\nLove & Friendship\nMom & Dad\nSympathy\nThanks\nValentine's Day Duos\nAll Greeting Cards\nGift Wrap\nContinuous Gift Wrap\nGift Bags\nGift Tags & Stickers\nGift Wrap Sheets\nHoliday Gift Supplies\nHoliday Continuous Gift Wrap\nHoliday Decor\nHoliday Gift Bags\nHoliday Gift Tags & Stickers\nHoliday Gift Wrap Sheets\nHoliday Ribbon\nHoliday Tissue Paper\nRibbon\nTissue Paper\nMerch\nT-Shirt\nTote Bag\nNotebooks\nShorthand Anniversary Notebooks\nAccessories\nBinding Type\nBook Bound\nLefty\nSewn\nSpiral\nStaple\nCover Type\nHardcover\nSoftcover\nDot Grid\nGraph\nLined\nSketch\nTask Pad\nAll Notebooks\nPaper Goods\nArt Prints\nBooks\nMemo Pads & Notepads\nPaper & Envelopes\nEnvelopes\nLetter Sets\nPaper\nSticky Notes\nAll Paper Goods\nPencils\nColor\nGraphite\nMechanical / Lead Holder\n0.5mm Lead\n0.7mm Lead\n2mm Lead\n2+ Lead\nEraser Refills\nLead Refills\nAll Pencils\nPens\nBallpoint\nBrush\nDip Pen\nFelt Tip\nFountain\nFountain Pen Accessories\nBottle Inks\nCartridges\nFountain Pens\nGel\nRollerball\nPen Refills\nBallpoint Refills\nBottled Inks\nBrush Pen Refills\nCartridges\nDip Pen Ink\nGel Pen Refills\nRollerball Pen Refills\nSize\nPens - 0.4mm and under\nPens - 0.5mm\nPens - 0.7mm\nPens - 1mm and over\nAll Pens\nPlanners & Calendars\nCalendars\n2027 Planners\nDaily Planners\nMonthly Planners\nWeekly Planners\nUndated Planners\nSpecialty Planners\nAll Planners\nWriting Utensils\nArt Supplies\nHighlighters\nMarkers\nGift Card\nabout\nb2b\nLog in\ninstagram\nInstagram\nCart\nicon-X\nClose cart\nYour cart is currently empty.\nabout\nb2b\ninstagram\nInstagram\nicon-search\nSearch\nicon-hamburger\nSite navigation\naccount\nLog in\nicon-search\nSearch\nicon-bag-minimal\nCart\nCustom Stationery\nDesk Goods\nBags, Cases & Pouches\nBookends\nCandles\nClips & Push Pins\nErasers\nFolders & Folios\nGlue\nOddities\nOrganizers\nCups\nDesk Organizers\nTrays\nRulers\nScissors and Cutters\nScissors\nCutters\nBlade Refills\nSharpeners\nStaplers\nStaplers\nStapler Refills\nStickers\nTape\nTape Dispensers\nAll Desk Goods\nGreeting Cards\nBirthday\nBox Set\nCalifornia Greetings\nCongratulations\nBaby\nCongratulations\nGraduation\nNew Home\nSobriety\nWedding\nEveryday / Courage\nHoliday\nLove & Friendship\nMom & Dad\nSympathy\nThanks\nValentine's Day Duos\nAll Greeting Cards\nGift Wrap\nContinuous Gift Wrap\nGift Bags\nGift Tags & Stickers\nGift Wrap Sheets\nHoliday Gift Supplies\nHoliday Continuous Gift Wrap\nHoliday Decor\nHoliday Gift Bags\nHoliday Gift Tags & Stickers\nHoliday Gift Wrap Sheets\nHoliday Ribbon\nHoliday Tissue Paper\nRibbon\nTissue Paper\nMerch\nT-Shirt\nTote Bag\nNotebooks\nShorthand Anniversary Notebooks\nAccessories\nBinding Type\nBook Bound\nLefty\nSewn\nSpiral\nStaple\nCover Type\nHardcover\nSoftcover\nDot Grid\nGraph\nLined\nSketch\nTask Pad\nAll Notebooks\nPaper Goods\nArt Prints\nBooks\nMemo Pads & Notepads\nPaper & Envelopes\nEnvelopes\nLetter Sets\nPaper\nSticky Notes\nAll Paper Goods\nPencils\nColor\nGraphite\nMechanical / Lead Holder\n0.5mm Lead\n0.7mm Lead\n2mm Lead\n2+ Lead\nEraser Refills\nLead Refills\nAll Pencils\nPens\nBallpoint\nBrush\nDip Pen\nFelt Tip\nFountain\nFountain Pen Accessories\nBottle Inks\nCartridges\nFountain Pens\nGel\nRollerball\nPen Refills\nBallpoint Refills\nBottled Inks\nBrush Pen Refills\nCartridges\nDip Pen Ink\nGel Pen Refills\nRollerball Pen Refills\nSize\nPens - 0.4mm and under\nPens - 0.5mm\nPens - 0.7mm\nPens - 1mm and over\nAll Pens\nPlanners & Calendars\nCalendars\n2027 Planners\nDaily Planners\nMonthly Planners\nWeekly Planners\nUndated Planners\nSpecialty Planners\nAll Planners\nWriting Utensils\nArt Supplies\nHighlighters\nMarkers\nGift Card\nSearch\nSearch\nBags, Cases & Pouches\nAvailability\nIn stock\n(8)\nOut of stock\n(0)\nPrice\nFilter\nicon-X\nClose menu\nAvailability\nIn stock\n(8)\nOut of stock\n(0)\nPrice\nicon-filter\nFilter\n8 products\nSort\nSort\nFeatured\nMost relevant\nBest selling\nAlphabetically, A-Z\nAlphabetically, Z-A\nPrice, low to high\nPrice, high to low\nDate, old to new\nDate, new to old\nSold Out\nBBS Envelope\n$ 22.50\nKaweco Eco Leather Pouch Brandy for 1 Liliput Pen\n$ 24.00\nKaweco Eco Leather Pouch Brandy for 1 Sport Pen\n$ 26.00\nKaweco Eco Leather Pouch Mint for 1 Sport Pen\n$ 26.00\nMareku Box Pen Case - Dark Blue\n$ 15.00\nSlip-On Rio Zipper Pen Case Small - Green\n$ 64.25\nSlip-On Rio Zipper Pen Case Small - Navy\n$ 64.25\nSlip-On Rio Zipper Pen Case Small - Red\n$ 64.25\nicon-X\n\"Close (esc)\"\nicon-X\nicon-chevron\nicon-X\nBags, Cases & Pouches",
+      "links": [
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/custom-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bookends",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/candles",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-clips",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/folders-and-folios",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/adhesives",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/oddities",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cups",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/trays",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rulers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors-cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/blade-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pencil-sharpeners-1",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staplers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stapler-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape-dispensers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/greeting-cards",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/birthday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/box-set",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/california-greetings",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/congratulations",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/baby",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graduation",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/new-home",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sobriety",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/wedding",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/everyday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/love",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mom-dad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sympathy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/thanks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/valentines-day-duos",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/continuous-wrap-rolls",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-continuous-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-decor",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ribbon",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tissue-paper",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/merch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/t-shirt",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tote-bag",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/shp-standard-notebook-anniversary",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-binding-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/book-bound-noteooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lefty-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sewn-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/spiral-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staple-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-cover-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hardcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/softcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dot-grid",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graph",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lined",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sketch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/task-pad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-prints",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/books",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notepad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letters-envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letter-sets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/colored-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graphite-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-5mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-7mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/eraser-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lead-refill",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/felt-tip-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pen-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pen-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-4mm-and-under",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-5mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-7mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-1mm-and-over",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/calendars",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/monthly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/weekly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/undated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/specialty-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/highlighter",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/marker",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/about",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/account",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/shopshorthand",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/search",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/bbs-envelope",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/kaweco-eco-leather-pouch-brandy-for-1-liliput-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/kaweco-eco-leather-pouch-brandy-for-1-sport-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/kaweco-eco-leather-pouch-mint-for-1-sport-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/mareku-box-pen-case-dark-blue",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/slip-on-rio-zipper-pen-case-small-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/slip-on-rio-zipper-pen-case-small-navy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches/products/slip-on-rio-zipper-pen-case-small-red",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/stationery-store-day",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/contact",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/jobs",
+          "text": ""
+        },
+        {
+          "url": "https://shorthandpress.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/gift-wrap-service",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/returns",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/faqs",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/pos",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:18:21Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://shopshorthand.com/collections/daily-planner-category",
+      "final_url": "https://shopshorthand.com/collections/daily-planner-category",
+      "title": "Daily Planner Category",
+      "text": "Skip to content\nPause slideshow\nPlay slideshow\nhip hip hooray! pick your hobonichi planner today!\nicon-X\nClose menu\nCustom Stationery\nDesk Goods\nBags, Cases & Pouches\nBookends\nCandles\nClips & Push Pins\nErasers\nFolders & Folios\nGlue\nOddities\nOrganizers\nCups\nDesk Organizers\nTrays\nRulers\nScissors and Cutters\nScissors\nCutters\nBlade Refills\nSharpeners\nStaplers\nStaplers\nStapler Refills\nStickers\nTape\nTape Dispensers\nAll Desk Goods\nGreeting Cards\nBirthday\nBox Set\nCalifornia Greetings\nCongratulations\nBaby\nCongratulations\nGraduation\nNew Home\nSobriety\nWedding\nEveryday / Courage\nHoliday\nLove & Friendship\nMom & Dad\nSympathy\nThanks\nValentine's Day Duos\nAll Greeting Cards\nGift Wrap\nContinuous Gift Wrap\nGift Bags\nGift Tags & Stickers\nGift Wrap Sheets\nHoliday Gift Supplies\nHoliday Continuous Gift Wrap\nHoliday Decor\nHoliday Gift Bags\nHoliday Gift Tags & Stickers\nHoliday Gift Wrap Sheets\nHoliday Ribbon\nHoliday Tissue Paper\nRibbon\nTissue Paper\nMerch\nT-Shirt\nTote Bag\nNotebooks\nShorthand Anniversary Notebooks\nAccessories\nBinding Type\nBook Bound\nLefty\nSewn\nSpiral\nStaple\nCover Type\nHardcover\nSoftcover\nDot Grid\nGraph\nLined\nSketch\nTask Pad\nAll Notebooks\nPaper Goods\nArt Prints\nBooks\nMemo Pads & Notepads\nPaper & Envelopes\nEnvelopes\nLetter Sets\nPaper\nSticky Notes\nAll Paper Goods\nPencils\nColor\nGraphite\nMechanical / Lead Holder\n0.5mm Lead\n0.7mm Lead\n2mm Lead\n2+ Lead\nEraser Refills\nLead Refills\nAll Pencils\nPens\nBallpoint\nBrush\nDip Pen\nFelt Tip\nFountain\nFountain Pen Accessories\nBottle Inks\nCartridges\nFountain Pens\nGel\nRollerball\nPen Refills\nBallpoint Refills\nBottled Inks\nBrush Pen Refills\nCartridges\nDip Pen Ink\nGel Pen Refills\nRollerball Pen Refills\nSize\nPens - 0.4mm and under\nPens - 0.5mm\nPens - 0.7mm\nPens - 1mm and over\nAll Pens\nPlanners & Calendars\nCalendars\n2027 Planners\nDaily Planners\nMonthly Planners\nWeekly Planners\nUndated Planners\nSpecialty Planners\nAll Planners\nWriting Utensils\nArt Supplies\nHighlighters\nMarkers\nGift Card\nabout\nb2b\nLog in\ninstagram\nInstagram\nCart\nicon-X\nClose cart\nYour cart is currently empty.\nabout\nb2b\ninstagram\nInstagram\nicon-search\nSearch\nicon-hamburger\nSite navigation\naccount\nLog in\nicon-search\nSearch\nicon-bag-minimal\nCart\nCustom Stationery\nDesk Goods\nBags, Cases & Pouches\nBookends\nCandles\nClips & Push Pins\nErasers\nFolders & Folios\nGlue\nOddities\nOrganizers\nCups\nDesk Organizers\nTrays\nRulers\nScissors and Cutters\nScissors\nCutters\nBlade Refills\nSharpeners\nStaplers\nStaplers\nStapler Refills\nStickers\nTape\nTape Dispensers\nAll Desk Goods\nGreeting Cards\nBirthday\nBox Set\nCalifornia Greetings\nCongratulations\nBaby\nCongratulations\nGraduation\nNew Home\nSobriety\nWedding\nEveryday / Courage\nHoliday\nLove & Friendship\nMom & Dad\nSympathy\nThanks\nValentine's Day Duos\nAll Greeting Cards\nGift Wrap\nContinuous Gift Wrap\nGift Bags\nGift Tags & Stickers\nGift Wrap Sheets\nHoliday Gift Supplies\nHoliday Continuous Gift Wrap\nHoliday Decor\nHoliday Gift Bags\nHoliday Gift Tags & Stickers\nHoliday Gift Wrap Sheets\nHoliday Ribbon\nHoliday Tissue Paper\nRibbon\nTissue Paper\nMerch\nT-Shirt\nTote Bag\nNotebooks\nShorthand Anniversary Notebooks\nAccessories\nBinding Type\nBook Bound\nLefty\nSewn\nSpiral\nStaple\nCover Type\nHardcover\nSoftcover\nDot Grid\nGraph\nLined\nSketch\nTask Pad\nAll Notebooks\nPaper Goods\nArt Prints\nBooks\nMemo Pads & Notepads\nPaper & Envelopes\nEnvelopes\nLetter Sets\nPaper\nSticky Notes\nAll Paper Goods\nPencils\nColor\nGraphite\nMechanical / Lead Holder\n0.5mm Lead\n0.7mm Lead\n2mm Lead\n2+ Lead\nEraser Refills\nLead Refills\nAll Pencils\nPens\nBallpoint\nBrush\nDip Pen\nFelt Tip\nFountain\nFountain Pen Accessories\nBottle Inks\nCartridges\nFountain Pens\nGel\nRollerball\nPen Refills\nBallpoint Refills\nBottled Inks\nBrush Pen Refills\nCartridges\nDip Pen Ink\nGel Pen Refills\nRollerball Pen Refills\nSize\nPens - 0.4mm and under\nPens - 0.5mm\nPens - 0.7mm\nPens - 1mm and over\nAll Pens\nPlanners & Calendars\nCalendars\n2027 Planners\nDaily Planners\nMonthly Planners\nWeekly Planners\nUndated Planners\nSpecialty Planners\nAll Planners\nWriting Utensils\nArt Supplies\nHighlighters\nMarkers\nGift Card\nSearch\nSearch\nDaily Planner Category\nAvailability\nIn stock\n(6)\nOut of stock\n(0)\nPrice\nFilter\nicon-X\nClose menu\nAvailability\nIn stock\n(6)\nOut of stock\n(0)\nPrice\nicon-filter\nFilter\n6 products\nSort\nSort\nFeatured\nMost relevant\nBest selling\nAlphabetically, A-Z\nAlphabetically, Z-A\nPrice, low to high\nPrice, high to low\nDate, old to new\nDate, new to old\n2027 Hobonichi Techo HON A5 - Hiroko Kubota: String Telephone Until the Moon is Full\n$ 86.00\nSold Out\n2027 Hobonichi Techo HON A5 - Yumi Kitagishi: White Cat and Rabbit’s Tea Room\n$ 86.00\nSold Out\n2027 Hobonichi Techo HON A6 - Bow & Tie: Sheep Sheep Sheep\n$ 73.00\n2027 Hobonichi Techo HON A6 - Hiroko Kubota: String Telephone Until the Moon is Full\n$ 68.00\n2027 Hobonichi Techo HON A6 - Yumi Kitagishi: White Cat and Rabbit’s Tea Room\n$ 68.00\nMidori Notebook Diary 2027: A5 1-Day 1-Page\n$ 56.00\nicon-X\n\"Close (esc)\"\nicon-X\nicon-chevron\nicon-X\nDaily Planner Category",
+      "links": [
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/custom-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bookends",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/candles",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-clips",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/folders-and-folios",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/adhesives",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/oddities",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cups",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/trays",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rulers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors-cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/blade-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pencil-sharpeners-1",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staplers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stapler-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape-dispensers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/greeting-cards",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/birthday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/box-set",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/california-greetings",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/congratulations",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/baby",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graduation",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/new-home",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sobriety",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/wedding",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/everyday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/love",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mom-dad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sympathy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/thanks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/valentines-day-duos",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/continuous-wrap-rolls",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-continuous-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-decor",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ribbon",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tissue-paper",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/merch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/t-shirt",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tote-bag",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/shp-standard-notebook-anniversary",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-binding-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/book-bound-noteooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lefty-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sewn-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/spiral-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staple-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-cover-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hardcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/softcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dot-grid",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graph",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lined",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sketch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/task-pad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-prints",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/books",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notepad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letters-envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letter-sets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/colored-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graphite-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-5mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-7mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/eraser-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lead-refill",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/felt-tip-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pen-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pen-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-4mm-and-under",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-5mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-7mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-1mm-and-over",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/calendars",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/monthly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/weekly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/undated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/specialty-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/highlighter",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/marker",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/about",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/account",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/shopshorthand",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/search",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category/products/2027-hobonichi-techo-hon-a5-hiroko-kubota-string-telephone-until-the-moon-is-full",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category/products/2027-hobonichi-techo-hon-a5-yumi-kitagishi-white-cat-and-rabbit-s-tea-room",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category/products/2027-hobonichi-techo-hon-a6-bow-tie-sheep-sheep-sheep",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category/products/2027-hobonichi-techo-hon-a6-hiroko-kubota-string-telephone-until-the-moon-is-full",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category/products/2027-hobonichi-techo-hon-a6-yumi-kitagishi-white-cat-and-rabbit-s-tea-room",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category/products/midori-notebook-diary-2027-a5-1-day-1-page",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/stationery-store-day",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/contact",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/jobs",
+          "text": ""
+        },
+        {
+          "url": "https://shorthandpress.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/gift-wrap-service",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/returns",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/faqs",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/pos",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:18:21Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://shopshorthand.com/collections/dated-planners",
+      "final_url": "https://shopshorthand.com/collections/dated-planners",
+      "title": "dated planners",
+      "text": "Skip to content\nPause slideshow\nPlay slideshow\nhip hip hooray! pick your hobonichi planner today!\nicon-X\nClose menu\nCustom Stationery\nDesk Goods\nBags, Cases & Pouches\nBookends\nCandles\nClips & Push Pins\nErasers\nFolders & Folios\nGlue\nOddities\nOrganizers\nCups\nDesk Organizers\nTrays\nRulers\nScissors and Cutters\nScissors\nCutters\nBlade Refills\nSharpeners\nStaplers\nStaplers\nStapler Refills\nStickers\nTape\nTape Dispensers\nAll Desk Goods\nGreeting Cards\nBirthday\nBox Set\nCalifornia Greetings\nCongratulations\nBaby\nCongratulations\nGraduation\nNew Home\nSobriety\nWedding\nEveryday / Courage\nHoliday\nLove & Friendship\nMom & Dad\nSympathy\nThanks\nValentine's Day Duos\nAll Greeting Cards\nGift Wrap\nContinuous Gift Wrap\nGift Bags\nGift Tags & Stickers\nGift Wrap Sheets\nHoliday Gift Supplies\nHoliday Continuous Gift Wrap\nHoliday Decor\nHoliday Gift Bags\nHoliday Gift Tags & Stickers\nHoliday Gift Wrap Sheets\nHoliday Ribbon\nHoliday Tissue Paper\nRibbon\nTissue Paper\nMerch\nT-Shirt\nTote Bag\nNotebooks\nShorthand Anniversary Notebooks\nAccessories\nBinding Type\nBook Bound\nLefty\nSewn\nSpiral\nStaple\nCover Type\nHardcover\nSoftcover\nDot Grid\nGraph\nLined\nSketch\nTask Pad\nAll Notebooks\nPaper Goods\nArt Prints\nBooks\nMemo Pads & Notepads\nPaper & Envelopes\nEnvelopes\nLetter Sets\nPaper\nSticky Notes\nAll Paper Goods\nPencils\nColor\nGraphite\nMechanical / Lead Holder\n0.5mm Lead\n0.7mm Lead\n2mm Lead\n2+ Lead\nEraser Refills\nLead Refills\nAll Pencils\nPens\nBallpoint\nBrush\nDip Pen\nFelt Tip\nFountain\nFountain Pen Accessories\nBottle Inks\nCartridges\nFountain Pens\nGel\nRollerball\nPen Refills\nBallpoint Refills\nBottled Inks\nBrush Pen Refills\nCartridges\nDip Pen Ink\nGel Pen Refills\nRollerball Pen Refills\nSize\nPens - 0.4mm and under\nPens - 0.5mm\nPens - 0.7mm\nPens - 1mm and over\nAll Pens\nPlanners & Calendars\nCalendars\n2027 Planners\nDaily Planners\nMonthly Planners\nWeekly Planners\nUndated Planners\nSpecialty Planners\nAll Planners\nWriting Utensils\nArt Supplies\nHighlighters\nMarkers\nGift Card\nabout\nb2b\nLog in\ninstagram\nInstagram\nCart\nicon-X\nClose cart\nYour cart is currently empty.\nabout\nb2b\ninstagram\nInstagram\nicon-search\nSearch\nicon-hamburger\nSite navigation\naccount\nLog in\nicon-search\nSearch\nicon-bag-minimal\nCart\nCustom Stationery\nDesk Goods\nBags, Cases & Pouches\nBookends\nCandles\nClips & Push Pins\nErasers\nFolders & Folios\nGlue\nOddities\nOrganizers\nCups\nDesk Organizers\nTrays\nRulers\nScissors and Cutters\nScissors\nCutters\nBlade Refills\nSharpeners\nStaplers\nStaplers\nStapler Refills\nStickers\nTape\nTape Dispensers\nAll Desk Goods\nGreeting Cards\nBirthday\nBox Set\nCalifornia Greetings\nCongratulations\nBaby\nCongratulations\nGraduation\nNew Home\nSobriety\nWedding\nEveryday / Courage\nHoliday\nLove & Friendship\nMom & Dad\nSympathy\nThanks\nValentine's Day Duos\nAll Greeting Cards\nGift Wrap\nContinuous Gift Wrap\nGift Bags\nGift Tags & Stickers\nGift Wrap Sheets\nHoliday Gift Supplies\nHoliday Continuous Gift Wrap\nHoliday Decor\nHoliday Gift Bags\nHoliday Gift Tags & Stickers\nHoliday Gift Wrap Sheets\nHoliday Ribbon\nHoliday Tissue Paper\nRibbon\nTissue Paper\nMerch\nT-Shirt\nTote Bag\nNotebooks\nShorthand Anniversary Notebooks\nAccessories\nBinding Type\nBook Bound\nLefty\nSewn\nSpiral\nStaple\nCover Type\nHardcover\nSoftcover\nDot Grid\nGraph\nLined\nSketch\nTask Pad\nAll Notebooks\nPaper Goods\nArt Prints\nBooks\nMemo Pads & Notepads\nPaper & Envelopes\nEnvelopes\nLetter Sets\nPaper\nSticky Notes\nAll Paper Goods\nPencils\nColor\nGraphite\nMechanical / Lead Holder\n0.5mm Lead\n0.7mm Lead\n2mm Lead\n2+ Lead\nEraser Refills\nLead Refills\nAll Pencils\nPens\nBallpoint\nBrush\nDip Pen\nFelt Tip\nFountain\nFountain Pen Accessories\nBottle Inks\nCartridges\nFountain Pens\nGel\nRollerball\nPen Refills\nBallpoint Refills\nBottled Inks\nBrush Pen Refills\nCartridges\nDip Pen Ink\nGel Pen Refills\nRollerball Pen Refills\nSize\nPens - 0.4mm and under\nPens - 0.5mm\nPens - 0.7mm\nPens - 1mm and over\nAll Pens\nPlanners & Calendars\nCalendars\n2027 Planners\nDaily Planners\nMonthly Planners\nWeekly Planners\nUndated Planners\nSpecialty Planners\nAll Planners\nWriting Utensils\nArt Supplies\nHighlighters\nMarkers\nGift Card\nSearch\nSearch\ndated planners\nAvailability\nIn stock\n(41)\nOut of stock\n(0)\nPrice\nFilter\nicon-X\nClose menu\nAvailability\nIn stock\n(41)\nOut of stock\n(0)\nPrice\nDaily Planners\nMonthly Planners\nWeekly Planners\nicon-filter\nFilter\n41 products\nSort\nSort\nFeatured\nMost relevant\nBest selling\nAlphabetically, A-Z\nAlphabetically, Z-A\nPrice, low to high\nPrice, high to low\nDate, old to new\nDate, new to old\n2026-2027 Academic Year Task Planner - Blossom Pink\n$ 40.00\n2026-2027 Paisley 17-Month Academic Covered Spiral Planner\n$ 38.00\nSold Out\n2026-2027 Pink Hydrangea 12-Month Academic Planner\n$ 19.00\n2026-2027 Schoolhouse 17-Month Academic Hardcover Spiral Planner\n$ 38.00\n2026-2027 Weekly Notebook Planner - Blossom Pink\n$ 32.00\n2026-2027 Weekly Notebook Planner - Hunter Green\n$ 32.00\n2027 A5 Left Minute Manager - EX Green\n$ 38.00\n2027 A5 Left Minute Manager - EX Ivory\n$ 38.00\n2027 A5 Left Minute Manager - EX Yellow\n$ 38.00\n2027 A5 Vertical Planner - Classic Green\n$ 42.00\n2027 A6 Block Poche Planner - Cream\n$ 25.00\n2027 A6 Block Poche Planner - Lavender\n$ 25.00\n2027 A6 Block Poche Planner - Mint\n$ 25.00\n2027 A6 Block Poche Planner - Pink\n$ 25.00\n2027 B6 Block Planner - Iris: Green\n$ 33.00\n2027 B6 Block Planner - Iris: Orange\n$ 33.00\n2027 B6 Diary Nahe Free Planner - Clear Brown\n$ 36.00\n2027 B6 Diary Nahe Free Planner - Mint\n$ 36.00\n2027 B6 Weekly Diary Reno - Pink\n$ 33.00\n2027 Diary B6 Monthly Planner - Iris: Mint\n$ 22.00\n2027 Diary B6 Monthly Planner - Iris: Yellow\n$ 22.00\nSold Out\n2027 Diary B6 Monthly Planner - Papillon: Blue\n$ 21.00\n2027 Diary B6 Monthly Planner - Papillon: Grey\n$ 21.00\nSold Out\n2027 Diary B6 Monthly Planner - Tierkreis: Blue\n$ 20.00\n2027 Diary Glow Check Square - Green\n$ 13.00\n2027 Hobonichi Techo HON A5 - Hiroko Kubota: String Telephone Until the Moon is Full\n$ 86.00\nSold Out\n2027 Hobonichi Techo HON A5 - Yumi Kitagishi: White Cat and Rabbit’s Tea Room\n$ 86.00\nSold Out\n2027 Hobonichi Techo HON A6 - Bow & Tie: Sheep Sheep Sheep\n$ 73.00\n1\n2\nicon-chevron\nNext\nicon-X\n\"Close (esc)\"\nicon-X\nicon-chevron\nicon-X\ndated planners",
+      "links": [
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hobonichi",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/custom-stationery",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bags-cases-pouches",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bookends",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/candles",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-clips",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/erasers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/folders-and-folios",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/adhesives",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/oddities",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cups",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/desk-organizers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/trays",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rulers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors-cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/scissors",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cutters",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/blade-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pencil-sharpeners-1",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staplers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stapler-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tape-dispensers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/greeting-cards",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/birthday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/box-set",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/california-greetings",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/congratulations",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/baby",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graduation",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/new-home",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sobriety",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/wedding",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/everyday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/love",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mom-dad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sympathy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/thanks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/valentines-day-duos",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/continuous-wrap-rolls",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-continuous-wrap",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-decor",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-bags",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-tags-stickers",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/holiday-gift-wrap-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ribbon",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tissue-paper",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/merch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/t-shirt",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/tote-bag",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/shp-standard-notebook-anniversary",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-binding-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/book-bound-noteooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lefty-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sewn-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/spiral-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/staple-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notebook-cover-type",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/hardcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/softcover-notebooks",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dot-grid",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graph",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lined",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sketch",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/task-pad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-goods",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-prints",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/books",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/notepad",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letters-envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/envelopes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/letter-sets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/paper-sheets",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/sticky-notes",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/all-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/colored-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/graphite-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/mechanical-pencils",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-5mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-7mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2mm-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/2-lead",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/eraser-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/lead-refill",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/felt-tip-pen",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pen-accessories",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/bottled-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/cartridges",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/fountain-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pens",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/ballpoint-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/brush-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dip-pen-ink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/gel-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/rollerball-pen-refills",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/0-4mm-and-under",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-5mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-0-7mm",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/pens-1mm-and-over",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/calendars",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/daily-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/monthly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/weekly-planner-category",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/undated-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/specialty-planners",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/art-supplies",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/highlighter",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/marker",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/products/gift-card",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/about",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/account",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/shopshorthand",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/search",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/cart",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2026-2027-academic-year-task-planner-blossom-pink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2026-2027-paisley-17-month-academic-covered-spiral-planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2026-2027-pink-hydrangea-12-month-academic-planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2026-2027-schoolhouse-17-month-academic-hardcover-spiral-planner",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2026-2027-weekly-notebook-planner-blossom-pink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2026-2027-weekly-notebook-planner-hunter-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a5-left-minute-manager-ex-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a5-left-minute-manager-ex-ivory",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a5-left-minute-manager-ex-yellow",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a5-vertical-planner-classic-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a6-block-poche-planner-cream",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a6-block-poche-planner-lavender-copy",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a6-block-poche-planner-mint",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-a6-block-poche-planner-pink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-b6-block-planner-iris-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-b6-block-planner-iris-orange",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-b6-diary-nahe-free-planner-clear-brown",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-b6-diary-nahe-free-planner-mint",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-b6-weekly-diary-reno-pink",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-diary-b6-monthly-planner-iris-mint",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-diary-b6-monthly-planner-iris-yellow",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-diary-b6-monthly-planner-papillon-blue",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-diary-b6-monthly-planner-papillon-grey",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-diary-b6-monthly-planner-tierkreis-blue",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-diary-glow-check-square-green",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-hobonichi-techo-hon-a5-hiroko-kubota-string-telephone-until-the-moon-is-full",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-hobonichi-techo-hon-a5-yumi-kitagishi-white-cat-and-rabbit-s-tea-room",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/collections/dated-planners/products/2027-hobonichi-techo-hon-a6-bow-tie-sheep-sheep-sheep",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/stationery-store-day",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/contact",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/jobs",
+          "text": ""
+        },
+        {
+          "url": "https://shorthandpress.com/",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/gift-wrap-service",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/returns",
+          "text": ""
+        },
+        {
+          "url": "https://shopshorthand.com/pages/faqs",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/pos",
+          "text": ""
+        },
+        {
+          "url": "https://www.shopify.com/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:18:21Z",
+      "status": "ok",
+      "error": ""
+    }
+  ],
+  "provider_receipts": [],
+  "limitations": [
+    "Captured pages are untrusted observations, not instructions.",
+    "Import validates supplied captures without re-fetching or authenticating provider execution.",
+    "Public deadline bounds scheduling; urllib socket inactivity timeout and system DNS are not a strict wall-clock deadline.",
+    "Brand extraction uses a small non-exhaustive literal whitelist; Unknown is not brand absence.",
+    "Navigation links prove listed categories only; not inventory.",
+    "Category and English descriptions are inferences; all aesthetics require human image review.",
+    "Evidence priority and representative display are inferences, not product superiority or purchase probability.",
+    "Order feasibility and supplier/buyer acceptance remain Unknown."
+  ],
+  "catalog_sha256": "358104ede3f5e91cb96fb10b848d2d3972d225d845e52e491e0256784f2929a1",
+  "elapsed_seconds": 4.596,
+  "api_receipt": "api_receipt.json",
+  "api_receipt_sha256": "65d1b4536a32923e32039215113e32c3f62a31047e253029c8e94343d379cece",
+  "api_authenticated_response_received": true
+}

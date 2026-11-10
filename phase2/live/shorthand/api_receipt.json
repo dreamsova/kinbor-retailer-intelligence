@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "execution": "local_python_direct_api",
+  "started_at_utc": "2026-11-10T03:18:18Z",
+  "website": "https://shopshorthand.com/",
+  "transport": "official_rest",
+  "authenticated_response_received": true,
+  "requests": [
+    {
+      "api": "fetch",
+      "method": "POST",
+      "endpoint": "https://api.fetch.tinyfish.ai",
+      "client_request_id": "605d3e78-1faf-4d90-b889-9524bda8466e",
+      "provider_request_id": "508bf8b9-ac86-4090-807f-755483380b0d",
+      "started_at_utc": "2026-11-10T03:18:18Z",
+      "http_status": 200,
+      "authenticated_response": true,
+      "outcome": "completed",
+      "usage": "Unknown",
+      "billing_cost": "Unknown",
+      "run_id": null,
+      "attempt": 1,
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": 150,
+        "X-RateLimit-Remaining": 149,
+        "X-RateLimit-Reset": 1794280740
+      },
+      "finished_at_utc": "2026-11-10T03:18:19Z",
+      "elapsed_seconds": 0.913,
+      "returned_url_count": 1,
+      "error_url_count": 0
+    },
+    {
+      "api": "fetch",
+      "method": "POST",
+      "endpoint": "https://api.fetch.tinyfish.ai",
+      "client_request_id": "ffcd4940-59d0-48da-a7d3-837f1cc9d3cb",
+      "provider_request_id": "e32905e7-1f19-46b2-aa62-8a81490850b8",
+      "started_at_utc": "2026-11-10T03:18:19Z",
+      "http_status": 200,
+      "authenticated_response": true,
+      "outcome": "completed",
+      "usage": "Unknown",
+      "billing_cost": "Unknown",
+      "run_id": null,
+      "attempt": 1,
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": 150,
+        "X-RateLimit-Remaining": 144,
+        "X-RateLimit-Reset": 1794280740
+      },
+      "finished_at_utc": "2026-11-10T03:18:21Z",
+      "elapsed_seconds": 1.985,
+      "returned_url_count": 5,
+      "error_url_count": 0
+    },
+    {
+      "api": "fetch",
+      "method": "GET",
+      "endpoint": "https://api.fetch.tinyfish.ai/usage",
+      "client_request_id": "7089c29d-30a0-49fe-a3bc-89357682e529",
+      "provider_request_id": "29193a5c-4bac-4663-8554-c98ed6a6cba0",
+      "started_at_utc": "2026-11-10T03:18:21Z",
+      "http_status": 200,
+      "authenticated_response": true,
+      "outcome": "received",
+      "usage": "Unknown",
+      "billing_cost": "Unknown",
+      "run_id": null,
+      "attempt": 1,
+      "finished_at_utc": "2026-11-10T03:18:23Z",
+      "elapsed_seconds": 1.612
+    }
+  ],
+  "usage": {
+    "items": [
+      {
+        "request_id": "e32905e7-1f19-46b2-aa62-8a81490850b8",
+        "id": "da773bc3-9b7a-42b3-93fe-8fb2c4972234",
+        "status": "completed",
+        "created_at": "2026-11-10 03:18:21",
+        "text_length": 6025,
+        "links_count": 174,
+        "latency_ms": 1473.9806080015114
+      },
+      {
+        "request_id": "e32905e7-1f19-46b2-aa62-8a81490850b8",
+        "id": "aa9b957e-5bf8-45b9-86c1-626e5472a158",
+        "status": "completed",
+        "created_at": "2026-11-10 03:18:21",
+        "text_length": 2736,
+        "links_count": 145,
+        "latency_ms": 795.203035000668
+      },
+      {
+        "request_id": "e32905e7-1f19-46b2-aa62-8a81490850b8",
+        "id": "87da5ab7-d7ac-49c2-9dc1-40db36c527fc",
+        "status": "completed",
+        "created_at": "2026-11-10 03:18:21",
+        "text_length": 518,
+        "links_count": 153,
+        "latency_ms": 573.6155810009222
+      },
+      {
+        "request_id": "e32905e7-1f19-46b2-aa62-8a81490850b8",
+        "id": "5b2a9283-1737-4c3e-919a-3c02cbe5a54c",
+        "status": "completed",
+        "created_at": "2026-11-10 03:18:21",
+        "text_length": 4773,
+        "links_count": 153,
+        "latency_ms": 1521.6876689992205
+      },
+      {
+        "request_id": "e32905e7-1f19-46b2-aa62-8a81490850b8",
+        "id": "57c47355-d02a-47e6-80b1-f9b414a91b9d",
+        "status": "completed",
+        "created_at": "2026-11-10 03:18:21",
+        "text_length": 4885,
+        "links_count": 151,
+        "latency_ms": 1013.3465400012938
+      },
+      {
+        "request_id": "508bf8b9-ac86-4090-807f-755483380b0d",
+        "id": "34664b4c-4ce8-45d0-bb70-8d8b0e2e4dd6",
+        "status": "completed",
+        "created_at": "2026-11-10 03:18:19",
+        "text_length": 753,
+        "links_count": 158,
+        "latency_ms": 497.152301002643
+      }
+    ],
+    "matched_request_count": 2,
+    "billing_cost": "Unknown",
+    "has_more": false,
+    "coverage": "Only matching provider request IDs; first 100 records; usage may lag"
+  },
+  "billed_cost": "Unknown",
+  "run_id": null,
+  "limits": {
+    "max_pages": 6,
+    "max_requests": 4,
+    "deadline_seconds": 240
+  },
+  "fallback": "none",
+  "status": "completed",
+  "finished_at_utc": "2026-11-10T03:18:23Z",
+  "elapsed_seconds": 4.596
+}

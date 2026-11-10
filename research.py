@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded, read-only retailer research. No contact, checkout, secrets or LLM execution.
+"""Bounded, read-only retailer research. No contact, checkout or retailer writes.
 
 Public mode is an ordinary HTTP fallback, not a TinyFish run. Import mode consumes
 an actual saved TinyFish connector capture; validate mode is offline, not research.
@@ -11,6 +11,7 @@ import csv
 import hashlib
 import ipaddress
 import json
+import os
 import re
 import socket
 import sys
@@ -43,6 +44,7 @@ BRANDS = ('Midori', 'Hobonichi', 'Rhodia', 'Leuchtturm1917', 'Kaweco',
           'Lamy', 'Pilot', 'TWSBI', 'Traveler\'s Company', 'Shorthand Press')
 EVIDENCE_COLUMNS = ('evidence_id', 'field', 'value', 'source_url', 'retrieved_at_utc',
                     'confidence', 'verification_status', 'quote', 'acquisition', 'run_id')
+EVIDENCE_V2_COLUMNS = EVIDENCE_COLUMNS + ('epistemic_status',)
 RECOMMENDATION_COLUMNS = ('sku', 'name_zh', 'collection', 'product_category_inferred',
     'image_path', 'product_source_sheet', 'product_source_row', 'units_per_carton',
     'moq_cartons', 'moq_units', 'carton_qty_basis', 'retailer_evidence_ids',
@@ -341,7 +343,134 @@ def public_capture(website, *, max_pages=8, timeout=15, deadline=120):
             'elapsed_seconds': round(time.monotonic() - started, 3)}
 
 
-def extract_evidence(pages, acquisition='public_http', run_id=None):
+def tinyfish_capture(website, *, max_pages=6, deadline=240, max_requests=4,
+                     search=False, collect_usage=False):
+    """Local Python -> official REST API. Never imports a connector capture.
+
+    Fetch homepage, then one bounded batch of relevant official links. Search
+    is optional discovery only: snippets are never assortment evidence. No
+    catalog, images, supplier details or website text is sent as an agent goal.
+    """
+    from tinyfish_client import TinyFishClient, TinyFishError
+    website = normalize_url(website)
+    started = time.monotonic()
+    pages, errors, client = [], [], None
+    receipt = {'schema_version': 1, 'execution': 'local_python_direct_api',
+               'started_at_utc': now(), 'website': website, 'transport': 'official_rest',
+               'authenticated_response_received': False, 'requests': [], 'usage': UNKNOWN,
+               'billed_cost': UNKNOWN, 'run_id': None,
+               'limits': {'max_pages': max_pages, 'max_requests': max_requests,
+                          'deadline_seconds': deadline}, 'fallback': 'none'}
+    allowed_hosts = {urlsplit(website).hostname.removeprefix('www.')}
+    seen = set()
+    forbidden = re.compile(r'/account|/login|/cart|/checkout|/search|/customer_|/orders|/logout|/add(?:/|$)|/blogs/|/events(?:/|$)', re.I)
+    relevant = re.compile(r'contact|about|faq|submit|vendor|supplier|notebook|journal|planner|case|pouch|brand|stationery|shop', re.I)
+
+    def acceptable(url):
+        try:
+            url = normalize_url(url)
+        except (ValueError, TypeError):
+            return None
+        if urlsplit(url).hostname.removeprefix('www.') not in allowed_hosts or forbidden.search(urlsplit(url).path):
+            return None
+        return url
+
+    def acquire(urls):
+        response = client.fetch(urls, per_url_timeout_ms=45000)
+        stamp = now()  # response observation, not a claimed origin publication time
+        for row in response.get('results', []):
+            original = acceptable(row.get('url', ''))
+            final = acceptable(row.get('final_url') or row.get('url', ''))
+            if not original or not final or original not in urls:
+                errors.append('Rejected unexpected or unlinked API result URL')
+                continue
+            if not isinstance(row.get('text'), str) or not row['text'].strip():
+                errors.append('Empty text result: ' + original)
+                continue
+            labels = {url: plain(label) for label, url in re.findall(
+                r'\[([^\]\n]{1,100})\]\((https://[^)\s]+)\)', row['text'])}
+            links = []
+            for link in row.get('links') or []:
+                if isinstance(link, str):
+                    links.append({'url': link, 'text': labels.get(link, '')})
+                elif isinstance(link, dict):
+                    links.append({'url': link.get('url') or link.get('href', ''),
+                                  'text': link.get('text') or link.get('title', '')})
+            page = normalize_page({'url': original, 'final_url': final, 'title': row.get('title', ''),
+                'text': row['text'], 'links': links, 'retrieved_at_utc': stamp, 'status': 'ok'})
+            if final not in seen:
+                pages.append(page)
+                seen.add(final)
+        for row in response.get('errors', []):
+            target = acceptable(row.get('url', ''))
+            errors.append('Fetch URL failed: ' + (target or 'Unknown URL') + '; status ' + str(row.get('status', UNKNOWN)))
+        returned = {normalize_url(r['url']) for r in response.get('results', []) if acceptable(r.get('url', ''))}
+        failed = {r.get('url') for r in response.get('errors', [])}
+        for target in urls:
+            if target not in returned and target not in failed:
+                errors.append('Fetch omitted requested URL: ' + target)
+
+    try:
+        client = TinyFishClient(deadline=deadline, max_requests=max_requests)
+        acquire([website])
+        # An explicit shop link on the supplied official homepage may authorize
+        # reading its commerce domain, not unrelated third-party sites.
+        for p in pages:
+            for link in p['links']:
+                if link['url'].startswith('https://'):
+                    host = urlsplit(link['url']).hostname.removeprefix('www.')
+                    stem = urlsplit(website).hostname.removeprefix('www.').split('.')[0]
+                    commerce_cue = re.search(r'\bshop\b|\bstore\b', link['text'], re.I)
+                    branded_shop = len(stem) >= 5 and stem in host and 'shop' in host
+                    if commerce_cue or branded_shop:
+                        allowed_hosts.add(host)
+        targets = []
+        for p in pages:
+            for link in p['links']:
+                target = acceptable(link['url'])
+                if target and target not in seen and relevant.search(target + ' ' + link['text']):
+                    targets.append(target)
+        if search:
+            response = client.search('stationery notebooks product submissions contact',
+                                     include_domains=sorted(allowed_hosts))
+            for row in response.get('results', []):
+                target = acceptable(row.get('url', ''))
+                if target and target not in seen and relevant.search(target):
+                    targets.append(target)
+        targets = sorted(set(targets), key=lambda u: (
+            0 if re.search(r'faq|submit|vendor|supplier|contact', urlsplit(u).path, re.I) else
+            1 if re.search(r'notebook|journal|planner|pouch|case', urlsplit(u).path, re.I) else
+            2 if not same_site(u, website) and urlsplit(u).path == '/' else 3, u))
+        targets = targets[:max(0, max_pages - len(pages))]
+        if targets:
+            acquire(targets)
+        if collect_usage:
+            try:
+                receipt['usage'] = client.usage('fetch')
+            except TinyFishError as exc:
+                errors.append('Usage lookup unavailable: ' + exc.code)
+        receipt['status'] = 'completed' if pages and not errors else 'partial' if pages else 'failed'
+    except TinyFishError as exc:
+        errors.append('TinyFish API: ' + exc.code)
+        receipt['error_code'] = exc.code
+        receipt['status'] = 'blocked' if exc.code == 'missing_credential' else 'partial' if pages else 'failed'
+        if exc.code == 'missing_credential':
+            receipt['live_validation'] = 'LIVE API TEST BLOCKED — missing credential'
+    if client is not None:
+        receipt['requests'] = client.receipts
+        receipt['authenticated_response_received'] = any(
+            r.get('authenticated_response_received', r.get('authenticated', False)) or
+            (isinstance(r.get('http_status'), int) and 200 <= r['http_status'] < 300)
+            for r in client.receipts)
+    receipt['finished_at_utc'] = now()
+    receipt['elapsed_seconds'] = round(time.monotonic() - started, 3)
+    status = receipt['status'] if receipt['status'] in ('completed', 'partial', 'failed') else 'failed'
+    return {'provider': 'tinyfish_api', 'website': website, 'status': status,
+            'acquisition': 'tinyfish_api_fetch', 'run_id': None, 'pages': pages,
+            'errors': errors, 'elapsed_seconds': receipt['elapsed_seconds'], 'api_receipt': receipt}
+
+
+def extract_evidence(pages, acquisition='public_http', run_id=None, *, typed=False):
     """Literal bounded observations. These do not infer willingness to buy.
 
     Pages and their instructions are data. No prompts, commands, external tools or
@@ -365,6 +494,13 @@ def extract_evidence(pages, acquisition='public_http', run_id=None):
         if page['status'] != 'ok':
             continue
         text = page['title'] + '\n' + page['text']
+        if typed and 'submit' in urlsplit(page['final_url']).path.lower():
+            # Submission exclusions and procurement instructions are not stock
+            # observations. Only an explicit positive-interest section can
+            # support category hypotheses on a submission page.
+            positive = re.search(r'(?:interested in stocking|stocking interests)(.*?)(?:we are\s+NOT|not currently|$)',
+                                 page['text'], re.I | re.S)
+            text = positive.group(0) if positive else ''
         for category, pattern in CATEGORIES.items():
             for match in re.finditer(pattern, text, re.I):
                 quote = short_quote(text, match)
@@ -423,6 +559,17 @@ def extract_evidence(pages, acquisition='public_http', run_id=None):
                 line = line.strip()
                 if line:
                     add('vendor_policy', line[:500], page, line[:500], 'policy_excerpt', 'medium')
+        if typed and 'submit' in urlsplit(page['final_url']).path.lower():
+            # Keep restrictions even when they occur after the first 500 chars
+            # of a long paragraph. A short exact window is independently auditable.
+            for match in re.finditer(r'refrain.{0,80}follow.?up|(?:cannot|unable to).{0,50}return.{0,30}samples|AI.assisted artworks|Fan art',
+                                     page['text'], re.I):
+                quote = short_quote(page['text'], match, words=20)
+                add('vendor_policy', 'Restriction requiring human review: ' + match.group(0),
+                    page, quote, 'policy_constraint', 'medium')
+    if typed:
+        for row in evidence:
+            row['epistemic_status'] = 'fact_observation'
     return evidence
 
 
@@ -446,17 +593,50 @@ def load_catalog(path=ROOT / 'products.csv'):
     return products
 
 
-def recommend(products, evidence, limit=4):
+def recommend(products, evidence, limit=4, *, strategy='evidence_review_v2'):
     if not 3 <= limit <= 5:
         raise ValueError('Recommendation limit must be 3 to 5')
+    if strategy not in ('evidence_review_v2', 'legacy_source_order_v1'):
+        raise ValueError('Unknown matching strategy')
     audit, candidates = [], []
     category_evidence = {}
     for e in evidence:
         if e['field'] == 'category' and e['verification_status'] in ('direct_text', 'navigation_link'):
             category_evidence.setdefault(e['value'], []).append(e)
+
+    def evidence_priority(e):
+        # This orders observations for review, not product appeal or buying intent.
+        # A category-specific page is more precise than a homepage menu label.
+        path = unquote(urlsplit(e['source_url']).path).replace('-', ' ').replace('_', ' ')
+        dedicated = bool(re.search(CATEGORIES.get(e['value'], r'(?!)'), path, re.I))
+        return 3 if dedicated and e['verification_status'] == 'direct_text' else 2 if e['verification_status'] == 'direct_text' else 1
+
+    def shared_attributes(p, support):
+        # Only literal, named attributes in the category observation and source
+        # catalog name may refine the hypothesis. No style/brand affinity is inferred.
+        corpus = '\n'.join(e['quote'] for e in support if e['verification_status'] == 'direct_text')
+        attrs = []
+        for size in ('A5', 'A6', 'B5', 'B6', 'M5'):
+            pattern = r'(?<![A-Za-z0-9])' + size + r'(?![A-Za-z0-9])'
+            if re.search(pattern, corpus, re.I) and re.search(pattern, p['name_zh'], re.I):
+                attrs.append(size)
+        for label, source_pattern, product_pattern in (
+            ('blank', r'\bblank\b', r'空白'),
+            ('lined', r'\b(?:lined|ruled)\b', r'横线'),
+            ('grid', r'\b(?:squared|(?<!dot )(?<!dot-)grid)\b', r'方格'),
+            ('dotted', r'\b(?:dotted|dot grid)\b', r'点阵|点格'),
+            ('weekly', r'\bweekly\b', r'周计划'),
+        ):
+            if re.search(source_pattern, corpus, re.I) and re.search(product_pattern, p['name_zh']):
+                attrs.append(label)
+        return attrs
+
+    details = {}
     for index, p in enumerate(products):
         category = p['category']
         support = category_evidence.get(category, [])
+        if strategy == 'evidence_review_v2':
+            support = sorted(support, key=lambda e: (-evidence_priority(e), e['source_url'], e['evidence_id']))
         # Keep Phase 1 immutable, but avoid treating answer/fortune books as
         # ordinary writing notebooks, and keychains as stationery stickers.
         ambiguous = bool(re.search(r'答案之书|钥匙扣|卡套|耳机|化妆|编织袋', p['name_zh']))
@@ -464,17 +644,50 @@ def recommend(products, evidence, limit=4):
         reason = ('Phase 1 heuristic category needs manual review for this product subtype' if ambiguous
                   else 'Official category overlap; product category is a Phase 1 name inference' if support
                   else 'No observed official category evidence for this catalog category')
+        attrs = shared_attributes(p, support) if eligible and strategy == 'evidence_review_v2' else []
+        if eligible and strategy == 'evidence_review_v2':
+            strength = evidence_priority(support[0])
+            scope = {1: 'navigation only', 2: 'page text', 3: 'category-specific page text'}[strength]
+            reason += '; support: ' + scope + '; literal shared attributes: ' + (', '.join(attrs) or 'none established')
+            reason += '; tied review candidate, not a product-quality or purchase score'
+            details[p['sku']] = (strength, attrs, scope)
         audit.append({'sku': p['sku'], 'product_category_inferred': category,
                       'eligible': str(eligible).lower(), 'reason': reason,
                       'retailer_evidence_ids': '|'.join(e['evidence_id'] for e in support),
-                      'selected': 'false', 'tie_group': category if eligible else '',
+                      'selected': 'false', 'tie_group': (category + '|' + (','.join(attrs) or 'category_only') + '|needs_human_review') if eligible and strategy == 'evidence_review_v2' else category if eligible else '',
                       'catalog_display_order': str(index + 1), 'aesthetic_fit': 'Needs human image review',
                       'order_feasibility': UNKNOWN})
         if eligible:
             candidates.append((index, p, support))
-    # All supported candidates have unresolved aesthetic/commercial fit. Source
-    # order is an administrative preview, never a superiority/buying score.
-    selected = candidates[:limit]
+    if strategy == 'legacy_source_order_v1':
+        # Preserve historical snapshots without silently rewriting past receipts.
+        selected = candidates[:limit]
+    else:
+        # Show one representative per observed category before repeats. Within
+        # each category, prefer explicit attribute overlap, then rotate collections
+        # among equally supported products. SKU spelling only stabilizes the
+        # display order; neither supplier row order nor aesthetics ranks products.
+        pools = {}
+        for candidate in candidates:
+            pools.setdefault(candidate[1]['category'], []).append(candidate)
+        for category, pool in list(pools.items()):
+            ordered = []
+            for count in sorted({len(details[c[1]['sku']][1]) for c in pool}, reverse=True):
+                collections = {}
+                for c in sorted(pool, key=lambda c: c[1]['sku']):
+                    if len(details[c[1]['sku']][1]) == count:
+                        collections.setdefault(c[1]['collection'], []).append(c)
+                while any(collections.values()):
+                    for collection in sorted(collections):
+                        if collections[collection]:
+                            ordered.append(collections[collection].pop(0))
+            pools[category] = ordered
+        categories = sorted(pools, key=lambda category: (-details[pools[category][0][1]['sku']][0], category))
+        selected = []
+        while len(selected) < limit and any(pools.values()):
+            for category in categories:
+                if pools[category] and len(selected) < limit:
+                    selected.append(pools[category].pop(0))
     recommendations = []
     for display, (index, p, support) in enumerate(selected, 1):
         e = support[0]
@@ -487,9 +700,17 @@ def recommend(products, evidence, limit=4):
                    match_reason='Observed ' + p['category'] + ' category. Catalog name/category implies product-family overlap only; source-order preview among tied eligible candidates.',
                    aesthetic_fit='Needs human image review', order_feasibility=UNKNOWN,
                    commercial_status='research_candidate_only', display_order=str(display), tie_group='all_eligible_need_review')
+        if strategy == 'evidence_review_v2':
+            strength, attrs, scope = details[p['sku']]
+            tie = p['category'] + '|' + (','.join(attrs) or 'category_only') + '|needs_human_review'
+            row.update(match_basis='category_and_literal_attributes_inference' if attrs else 'category_overlap_inference',
+                       match_reason='Observed ' + p['category'] + ' through ' + scope + '. '
+                       + ('Literal shared attributes: ' + ', '.join(attrs) + '. ' if attrs else 'No product-specific preference established. ')
+                       + 'Review preview rotates observed categories and equally supported collections. SKU alphabetical order breaks display ties only; all candidates require human image and commercial review.',
+                       tie_group=tie)
         recommendations.append(row)
         audit[index]['selected'] = 'true'
-        audit[index]['tie_group'] = 'all_eligible_need_review'
+        audit[index]['tie_group'] = row['tie_group']
     return audit, recommendations
 
 
@@ -539,14 +760,15 @@ def write_results(capture, output_dir, *, mode, catalog_path=ROOT / 'products.cs
     products = load_catalog(catalog_path)
     acquisition = capture['acquisition']
     pages = [normalize_page(p) for p in capture['pages']]
-    evidence = extract_evidence(pages, acquisition, capture.get('run_id'))
+    evidence = extract_evidence(pages, acquisition, capture.get('run_id'), typed=True)
     if not all(evidence_supported(e, pages) for e in evidence):
         raise ValueError('Evidence quote does not exactly match captured page')
     audit, recs = recommend(products, evidence, limit)
     fields, summary = derived_fields(evidence, pages, audit, recs, len(products))
     errors = capture.get('errors', []) + [p['error'] for p in pages if p['error']]
-    result = {'schema_version': 1, 'website': capture['website'], 'generated_at_utc': now(),
+    result = {'schema_version': 2, 'website': capture['website'], 'generated_at_utc': now(),
               'mode': mode, 'status': capture['status'], 'acquisition': acquisition,
+              'matching_strategy': 'evidence_review_v2', 'requested_limit': limit,
               'run_id': capture.get('run_id'),
               'related_browser_run_id': capture.get('related_browser_run_id'),
               'source_capture': capture.get('source_capture') if isinstance(capture.get('source_capture'), str) and re.fullmatch(r'[A-Za-z0-9_./-]+\.json', capture['source_capture']) and '..' not in Path(capture['source_capture']).parts and not capture['source_capture'].startswith('/') else None,
@@ -559,21 +781,38 @@ def write_results(capture, output_dir, *, mode, catalog_path=ROOT / 'products.cs
                              'Brand extraction uses a small non-exhaustive literal whitelist; Unknown is not brand absence.',
                              'Navigation links prove listed categories only; not inventory.',
                              'Category and English descriptions are inferences; all aesthetics require human image review.',
-                             'Selected preview uses source order among tied candidates; no purchase probability.',
+                             'Evidence priority and representative display are inferences, not product superiority or purchase probability.',
                              'Order feasibility and supplier/buyer acceptance remain Unknown.'],
               'catalog_sha256': hashlib.sha256(Path(catalog_path).read_bytes()).hexdigest()}
     if 'elapsed_seconds' in capture:
         result['elapsed_seconds'] = capture['elapsed_seconds']
+    if 'api_receipt' in capture:
+        receipt = capture['api_receipt']
+        # Exact key redaction also protects against a provider echoing a token.
+        secret = os.environ.get('TINYFISH_API_KEY', '').strip()
+        receipt_text = json.dumps(receipt, indent=2, ensure_ascii=False)
+        if secret:
+            receipt_text = receipt_text.replace(secret, '[REDACTED]')
+        (output / 'api_receipt.json').write_text(receipt_text + '\n', encoding='utf-8')
+        result['api_receipt'] = 'api_receipt.json'
+        result['api_receipt_sha256'] = hashlib.sha256((output / 'api_receipt.json').read_bytes()).hexdigest()
+        result['api_authenticated_response_received'] = receipt['authenticated_response_received']
     (output / 'research.json').write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    write_csv(output / 'evidence.csv', evidence, EVIDENCE_COLUMNS)
+    write_csv(output / 'evidence.csv', evidence, EVIDENCE_V2_COLUMNS)
     write_csv(output / 'candidate_audit.csv', audit, tuple(audit[0]))
     write_csv(output / 'recommendations.csv', recs, RECOMMENDATION_COLUMNS)
     md = ['# Retailer research brief', '', f"Website: {capture['website']}",
           f"Acquisition: `{acquisition}`. Status: **{capture['status']}**. Actual run ID: {capture.get('run_id') or 'None (page fetch has no browser-run ID)' }.",
           '', 'This is a research preview. No outreach, forms or purchases occurred.',
-          f"All **{len(products)}** catalog SKUs were evaluated; **{summary['eligible_count']}** have observed category overlap. The following source-order preview contains tied candidates; it is not a best-seller or buyer-intent ranking.", '',
+          f"All **{len(products)}** catalog SKUs were evaluated; **{summary['eligible_count']}** have observed category overlap. The following evidence-based representative preview needs human image review. Display order is not a buyer-intent or aesthetic ranking.", '',
           '| Dimension | Observation |', '|---|---|']
     md += [f'| {k.replace("_", " ").title()} | {summary[k]} |' for k in ('product_fit', 'evidence_strength', 'buyer_access', 'order_feasibility')]
+    if 'api_receipt' in capture:
+        md += ['', 'Direct API receipt: [api_receipt.json](api_receipt.json). '
+               f"Authenticated response received: **{capture['api_receipt']['authenticated_response_received']}**. "
+               'Fetch is synchronous; there is no browser run ID. Provider request IDs, bounded request counts and available usage are in the receipt; unreported billed cost is Unknown.']
+        if capture['api_receipt'].get('live_validation'):
+            md += ['', '**' + capture['api_receipt']['live_validation'] + '**']
     if capture.get('related_browser_run_id'):
         md += ['', 'Related real TinyFish browser run: `' + capture['related_browser_run_id'] + '`. This separate receipt supports the review; imported field quotes below were fetched with `fetch_content`, which has no browser-run ID.']
     md += ['', '| SKU | Inferred category | Minimum per SKU | Evidence |', '|---|---|---|---|']
@@ -616,24 +855,46 @@ def validate_output(output_dir, catalog_path=ROOT / 'products.csv'):
         if not evidence_supported(e, pages):
             raise ValueError('Unsupported / inaccurate evidence quote')
     # Recompute deterministic inferences, do not trust a CSV claiming support.
-    expected_evidence = extract_evidence(pages, result['acquisition'], result.get('run_id'))
+    version = result.get('schema_version', 1)
+    expected_evidence = extract_evidence(pages, result['acquisition'], result.get('run_id'), typed=version >= 2)
     if evidence != expected_evidence:
         raise ValueError('Evidence differs from deterministic page extraction')
-    limit = len(recs) if len(recs) >= 3 else 4
-    expected_audit, expected_recs = recommend(products, evidence, limit)
+    limit = result.get('requested_limit', len(recs) if len(recs) >= 3 else 4)
+    strategy = result.get('matching_strategy', 'legacy_source_order_v1')
+    expected_audit, expected_recs = recommend(products, evidence, limit, strategy=strategy)
     if audit != expected_audit or recs != expected_recs:
         raise ValueError('Recommendation / audit data drift, invented SKU or MOQ')
     fields, summary = derived_fields(evidence, pages, audit, recs, len(products))
     if result['fields'] != fields or result['summary'] != summary:
         raise ValueError('Derived field / dimension drift from observed evidence')
-    if result['status'] not in ('completed', 'partial', 'failed') or result['mode'] not in ('public', 'import'):
+    if result['status'] not in ('completed', 'partial', 'failed') or result['mode'] not in ('public', 'public_http', 'import', 'tinyfish'):
         raise ValueError('Invalid research mode/status')
-    if result['acquisition'] not in ('public_http', 'fetch_content', 'run_web_automation'):
+    if result['acquisition'] not in ('public_http', 'fetch_content', 'run_web_automation', 'tinyfish_api_fetch'):
         raise ValueError('Invalid acquisition provenance')
     if result['acquisition'] == 'public_http' and result['run_id'] is not None:
         raise ValueError('Ordinary HTTP is not a TinyFish run')
     if result['acquisition'] == 'run_web_automation' and not result['run_id']:
         raise ValueError('Browser run receipt requires its real run ID')
+    if result['mode'] == 'tinyfish' or result['acquisition'] == 'tinyfish_api_fetch':
+        if result['mode'] != 'tinyfish' or result['acquisition'] != 'tinyfish_api_fetch':
+            raise ValueError('Direct API provenance mismatch')
+        path = output / 'api_receipt.json'
+        if hashlib.sha256(path.read_bytes()).hexdigest() != result.get('api_receipt_sha256'):
+            raise ValueError('Direct API receipt drift')
+        receipt = json.loads(path.read_text(encoding='utf-8'))
+        if receipt.get('execution') != 'local_python_direct_api' or receipt.get('fallback') != 'none':
+            raise ValueError('Invalid direct API receipt')
+        if pages and not receipt.get('authenticated_response_received'):
+            raise ValueError('API evidence requires an authenticated response')
+        if result['api_authenticated_response_received'] != receipt.get('authenticated_response_received'):
+            raise ValueError('API authentication receipt drift')
+        expected_status = 'failed' if receipt.get('status') == 'blocked' else receipt.get('status')
+        if result['status'] != expected_status:
+            raise ValueError('API status receipt drift')
+        if result['status'] == 'completed' and (not pages or result['errors'] or not any(
+                r.get('api') == 'fetch' and r.get('method') == 'POST' and r.get('http_status') == 200
+                for r in receipt.get('requests', []))):
+            raise ValueError('Completed API research requires successful Fetch evidence without errors')
     return {'status': 'passed', 'catalog_count': len(products), 'evidence_count': len(evidence),
             'recommendation_count': len(recs), 'validation_mode': 'offline; no research or API call'}
 
@@ -645,16 +906,19 @@ def validate_outputs(output_dir, repo_root=ROOT):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--mode', choices=('public', 'import', 'validate'), default='public',
-                        help='public: bounded HTTP fallback; import: saved real connector capture; validate: offline only')
+    parser.add_argument('--mode', choices=('tinyfish', 'public_http', 'public', 'import', 'validate'), default='tinyfish',
+                        help='tinyfish: direct official API (default); public_http/public: explicit HTTP fallback; import: saved connector capture; validate: offline only')
     parser.add_argument('--url', help='Official retailer HTTPS URL; required for public/import')
     parser.add_argument('--input', type=Path, help='Version 1 normalized real TinyFish connector capture JSON (import only)')
     parser.add_argument('--output-dir', type=Path, default=ROOT / 'work' / 'research', help='Output folder or existing folder to validate')
     parser.add_argument('--catalog', type=Path, default=ROOT / 'products.csv')
-    parser.add_argument('--limit', type=int, choices=(3, 4, 5), default=4, help='Source-order preview size among tied eligible candidates')
-    parser.add_argument('--max-pages', type=int, default=8, help='Public HTTP page cap, 1–12')
+    parser.add_argument('--limit', type=int, choices=(3, 4, 5), default=4, help='Maximum human-review candidate preview size')
+    parser.add_argument('--max-pages', type=int, default=6, help='Page cap: API 1–10; public HTTP 1–12')
     parser.add_argument('--timeout', type=float, default=15, help='Per-request seconds, 1–30')
-    parser.add_argument('--deadline', type=float, default=120, help='Public crawl scheduling budget, 10–180 seconds; an in-flight request/DNS lookup may overrun')
+    parser.add_argument('--deadline', type=float, default=None, help='Scheduling budget seconds: API default 240, public default 120; DNS/socket timeout may overrun')
+    parser.add_argument('--max-api-requests', type=int, default=4, help='Total API attempt cap including retries/optional search/usage, 1–8')
+    parser.add_argument('--tinyfish-search', action='store_true', help='Add a domain-restricted Search API discovery call; snippets never become facts')
+    parser.add_argument('--collect-usage', action='store_true', help='Query official Fetch usage endpoint; no automatic wallet changes')
     args = parser.parse_args(argv)
     try:
         if args.mode == 'validate':
@@ -669,12 +933,22 @@ def main(argv=None):
             if not args.input:
                 parser.error('--input is required for connector import')
             capture = validate_capture(json.loads(args.input.read_text(encoding='utf-8')), website)
+        elif args.mode == 'tinyfish':
+            if args.input:
+                parser.error('Direct API mode does not accept captures')
+            deadline = 240 if args.deadline is None else args.deadline
+            if not 1 <= args.max_pages <= 10 or not 10 <= deadline <= 600 or not 1 <= args.max_api_requests <= 8:
+                parser.error('API limits out of bounds')
+            capture = tinyfish_capture(website, max_pages=args.max_pages, deadline=deadline,
+                                      max_requests=args.max_api_requests, search=args.tinyfish_search,
+                                      collect_usage=args.collect_usage)
         else:
             if args.input:
                 parser.error('--input is only supported in import mode')
-            if not 1 <= args.max_pages <= 12 or not 1 <= args.timeout <= 30 or not 10 <= args.deadline <= 180:
+            deadline = 120 if args.deadline is None else args.deadline
+            if not 1 <= args.max_pages <= 12 or not 1 <= args.timeout <= 30 or not 10 <= deadline <= 180:
                 parser.error('Public limits out of bounds')
-            capture = public_capture(website, max_pages=args.max_pages, timeout=args.timeout, deadline=args.deadline)
+            capture = public_capture(website, max_pages=args.max_pages, timeout=args.timeout, deadline=deadline)
         result = write_results(capture, args.output_dir, mode=args.mode, catalog_path=args.catalog, limit=args.limit)
         print(json.dumps({k: result[k] for k in ('status', 'acquisition', 'run_id', 'summary', 'errors')}, indent=2))
         return 0 if result['status'] == 'completed' else 2

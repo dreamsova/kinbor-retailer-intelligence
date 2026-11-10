@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "execution": "local_python_direct_api",
+  "started_at_utc": "2026-11-10T03:19:51Z",
+  "website": "https://www.wonderfair.com/",
+  "transport": "official_rest",
+  "authenticated_response_received": true,
+  "requests": [
+    {
+      "api": "fetch",
+      "method": "POST",
+      "endpoint": "https://api.fetch.tinyfish.ai",
+      "client_request_id": "d1298202-f5ff-41a8-9dd2-aad4a959ea15",
+      "provider_request_id": "de04e5ac-8e37-456f-b0af-3ac196ff142d",
+      "started_at_utc": "2026-11-10T03:19:51Z",
+      "http_status": 200,
+      "authenticated_response": true,
+      "outcome": "completed",
+      "usage": "Unknown",
+      "billing_cost": "Unknown",
+      "run_id": null,
+      "attempt": 1,
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": 150,
+        "X-RateLimit-Remaining": 143,
+        "X-RateLimit-Reset": 1794280800
+      },
+      "finished_at_utc": "2026-11-10T03:19:52Z",
+      "elapsed_seconds": 0.639,
+      "returned_url_count": 1,
+      "error_url_count": 0
+    },
+    {
+      "api": "fetch",
+      "method": "POST",
+      "endpoint": "https://api.fetch.tinyfish.ai",
+      "client_request_id": "2cc58bef-5826-4637-a2e3-6ee0c9d348cd",
+      "provider_request_id": "ac2c682f-c4ce-4415-bb71-c50ba8995a69",
+      "started_at_utc": "2026-11-10T03:19:52Z",
+      "http_status": 200,
+      "authenticated_response": true,
+      "outcome": "completed",
+      "usage": "Unknown",
+      "billing_cost": "Unknown",
+      "run_id": null,
+      "attempt": 1,
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": 150,
+        "X-RateLimit-Remaining": 140,
+        "X-RateLimit-Reset": 1794280800
+      },
+      "finished_at_utc": "2026-11-10T03:19:58Z",
+      "elapsed_seconds": 6.154,
+      "returned_url_count": 3,
+      "error_url_count": 0
+    },
+    {
+      "api": "fetch",
+      "method": "GET",
+      "endpoint": "https://api.fetch.tinyfish.ai/usage",
+      "client_request_id": "b36a95cc-5029-46ed-9063-616a9fbad46c",
+      "provider_request_id": "d094b96f-276b-492e-8e54-1190476e3369",
+      "started_at_utc": "2026-11-10T03:19:58Z",
+      "http_status": 200,
+      "authenticated_response": true,
+      "outcome": "received",
+      "usage": "Unknown",
+      "billing_cost": "Unknown",
+      "run_id": null,
+      "attempt": 1,
+      "finished_at_utc": "2026-11-10T03:19:58Z",
+      "elapsed_seconds": 0.161
+    }
+  ],
+  "usage": {
+    "items": [
+      {
+        "request_id": "ac2c682f-c4ce-4415-bb71-c50ba8995a69",
+        "id": "f8e7dafa-5612-4ed5-a35e-7add8968d7cd",
+        "status": "completed",
+        "created_at": "2026-11-10 03:19:58",
+        "text_length": 1333,
+        "links_count": 18,
+        "latency_ms": 204.3478669947945
+      },
+      {
+        "request_id": "ac2c682f-c4ce-4415-bb71-c50ba8995a69",
+        "id": "e28a4457-bcb4-449b-982f-c33aed48b42c",
+        "status": "completed",
+        "created_at": "2026-11-10 03:19:58",
+        "text_length": 2933,
+        "links_count": 17,
+        "latency_ms": 357.0041789789684
+      },
+      {
+        "request_id": "ac2c682f-c4ce-4415-bb71-c50ba8995a69",
+        "id": "a47f7535-89de-43c3-b513-ebb05bebc5df",
+        "status": "completed",
+        "created_at": "2026-11-10 03:19:58",
+        "text_length": 260,
+        "links_count": 182,
+        "latency_ms": 5765.116539027076
+      },
+      {
+        "request_id": "de04e5ac-8e37-456f-b0af-3ac196ff142d",
+        "id": "1de71a16-9e61-4900-a61e-a5bc9cf2642f",
+        "status": "completed",
+        "created_at": "2026-11-10 03:19:51",
+        "text_length": 359,
+        "links_count": 19,
+        "latency_ms": 329.5868179993704
+      }
+    ],
+    "matched_request_count": 2,
+    "billing_cost": "Unknown",
+    "has_more": false,
+    "coverage": "Only matching provider request IDs; first 100 records; usage may lag"
+  },
+  "billed_cost": "Unknown",
+  "run_id": null,
+  "limits": {
+    "max_pages": 6,
+    "max_requests": 4,
+    "deadline_seconds": 240
+  },
+  "fallback": "none",
+  "status": "completed",
+  "finished_at_utc": "2026-11-10T03:19:58Z",
+  "elapsed_seconds": 6.995
+}

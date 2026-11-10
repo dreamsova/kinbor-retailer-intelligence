@@ -1,0 +1,1051 @@
+{
+  "schema_version": 2,
+  "website": "https://www.wonderfair.com/",
+  "generated_at_utc": "2026-11-10T03:19:58Z",
+  "mode": "tinyfish",
+  "status": "completed",
+  "acquisition": "tinyfish_api_fetch",
+  "matching_strategy": "evidence_review_v2",
+  "requested_limit": 4,
+  "run_id": null,
+  "related_browser_run_id": null,
+  "source_capture": null,
+  "fields": {
+    "categories": {
+      "value": [
+        "Desk & Office Tools",
+        "Notebooks & Journals",
+        "Stickers & Decorative Tape"
+      ],
+      "evidence_ids": [
+        "E002",
+        "E004",
+        "E005"
+      ],
+      "confidence": "medium"
+    },
+    "brands": {
+      "value": "Unknown",
+      "evidence_ids": [],
+      "confidence": "Unknown"
+    },
+    "contact": {
+      "value": [
+        "https://www.wonderfair.com/contact"
+      ],
+      "evidence_ids": [
+        "E001",
+        "E003",
+        "E006"
+      ],
+      "confidence": "medium"
+    },
+    "vendor_policy": {
+      "value": [
+        "As we are able, we will respond by email if we feel your work is a good fit for Wonder Fair at the present time. Although we appreciate the time it takes for artists to put their work out into the universe, unfortunately we cannot respond to each inquiry, and our response time will be heavily dependent on our seasonal shop needs and our staff’s available free time. Please refrain from contacting the shop with follow up inquiries, as individual staff are unable to provide updates.",
+        "If your work aligns with our frequent stocking interests above, please send an email of introduction to submissions@wonderfair.com with appropriate links to view your catalog of goods. If your work is on the Faire platform, please feel free to send us your affiliate direct link.",
+        "Restriction requiring human review: AI-assisted artworks",
+        "Restriction requiring human review: Fan art",
+        "Restriction requiring human review: refrain from contacting the shop with follow up",
+        "Restriction requiring human review: unable to guarantee the return of samples"
+      ],
+      "evidence_ids": [
+        "E007",
+        "E008",
+        "E009",
+        "E010",
+        "E011",
+        "E012"
+      ],
+      "confidence": "medium"
+    }
+  },
+  "summary": {
+    "catalog_count": 210,
+    "eligible_count": 87,
+    "recommendation_count": 4,
+    "product_fit": "Category overlap; human review required",
+    "evidence_strength": "Official page observations; not independent verification",
+    "buyer_access": "Submission-related policy; applicability requires human review",
+    "order_feasibility": "Unknown"
+  },
+  "errors": [],
+  "pages": [
+    {
+      "url": "https://www.wonderfair.com/",
+      "final_url": "https://www.wonderfair.com/",
+      "title": "WONDER FAIR",
+      "text": "## vISIT\n\n.Cold, hard facts to guide your journey to Wonder Fair.\n\n## EXHIBITIONS\n\nBrowse Current, Upcoming, Past and Permanent Exhibitions\n\n## SOUNDS\n\nDocumenting the unique sounds of Wonder Fair.\n\n.Cold, hard facts to guide your journey to Wonder Fair.\n\nBrowse Current, Upcoming, Past and Permanent Exhibitions\n\nDocumenting the unique sounds of Wonder Fair.",
+      "links": [
+        {
+          "url": "https://www.wonderfair.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/",
+          "text": ""
+        },
+        {
+          "url": "https://forms.gle/KMgYUqAeTYygnpnd8",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/hobonichi2027",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/mission",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/history",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/contact",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/newsletter",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/covid19-mitigation",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/returns",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/haunted-bathroom",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/past-exhibitions",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/submit",
+          "text": ""
+        },
+        {
+          "url": "https://www.paperplainszinefest.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/current",
+          "text": ""
+        },
+        {
+          "url": "https://wonderfair.bandcamp.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCNN3b0qK7n174c-toqit2pA",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:52Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.wonderfair.com/contact",
+      "final_url": "https://www.wonderfair.com/contact",
+      "title": "Visit & Contact — WONDER FAIR",
+      "text": "## Visit OUR STORE\n\nWonder Fair  \n841 Massachusetts St  \nLawrence, KS 66044\n\nHome of art supplies, stationery, prints, gifts, and lots more.\n\n## STORE Hours\n\nMonday – Saturday: 9:30AM – 8PM  \nSunday: 10AM – 6PM\n\n## Phone\n\n(785) 856-3247\n\n## VISIT SECURE ATTACHMENTS & THE UTOPIAN BOOKSTORE\n\n15 West 9th St.   \nLawrence, KS 66044\n\nSecure Attachments is proud to present the Midwest’s largest selection of staplers, clips, bands, adhesives, and folders – everything you need to Get it Together and Keep it Together. From vintage to modern, artisanal to everyday, there’s something for everyone at “the most fasten-ating store in Kansas.\" Secure Attachments was created as an ongoing collaboration with the artist Randy Regier\n\nWonder Fair’s Utopian Bookstore offers a highly curated selection of art books covering design, architecture, fine art, photography, food, and philosophy along with small press artists’ books and zines from many contemporary creators. This secret book shop (in the back of a Stapler Store!) has some of the most unique and extraordinary books you can find in-print on Planet Earth.\n\n## SECURE ATTACHMENTS Hours\n\nThursday-Saturday: 12PM-5PM  \nSunday: 12PM-4PM\n\nGeneral Inquiries  \nmeredith@wonderfair.com\n\nArtist Submissions  \nsubmissions@wonderfair.com\n\nSecure Attachments  \nprocurement@secureattachments.net",
+      "links": [
+        {
+          "url": "https://www.wonderfair.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/",
+          "text": ""
+        },
+        {
+          "url": "https://forms.gle/KMgYUqAeTYygnpnd8",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/hobonichi2027",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/mission",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/history",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/contact",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/newsletter",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/covid19-mitigation",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/returns",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/haunted-bathroom",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/past-exhibitions",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/submit",
+          "text": ""
+        },
+        {
+          "url": "https://www.paperplainszinefest.com/",
+          "text": ""
+        },
+        {
+          "url": "https://randyregier.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCNN3b0qK7n174c-toqit2pA",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:58Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.wonderfair.com/submit",
+      "final_url": "https://www.wonderfair.com/submit",
+      "title": "General Submissions — WONDER FAIR",
+      "text": "Wonder Fair is always happy to receive inquiries from printmakers, illustrators, graphic designers, and other emerging artists and product designers whose work meets our standard of graphic excellence or creative alignment.\n\nWe are primarily and frequently interested in stocking:\n\n* Handmade art prints – letterpress, screenprint, linocut, intaglio, risograph, etc – packaged with sleeves and backing boards\n* Zines, comics, TTRPG one sheets, and art books\n* Stickers, enamel pins, patches, and magnets\n* Innovative designs or products in the stationery and art supply category: e.g. washi tape, notebooks, journals, inks, handmade paints, handmade paper, etc.\n\nWe are NOT currently and are rarely seeking examples of the following:\n\n* Original drawings or paintings\n* Digitally printed works\n* Photo prints\n* Clothing or accessories\n* Jewelry\n* Ceramics\n* Housewares\n* Inventions\n* Poetry/chapbooks, fiction, self-published children’s books\n* Fan art\n* AI-assisted artworks\n\nIf your work aligns with our frequent stocking interests above, please send an email of introduction to submissions@wonderfair.com with appropriate links to view your catalog of goods. If your work is on the Faire platform, please feel free to send us your affiliate direct link.\n\nAlternatively, you can mail product samples or a catalog to our store for review. Please mail to Wonder Fair at 841 Massachusetts St in Lawrence, KS 66044. We are unable to guarantee the return of samples sent by mail.\n\nAs we are able, we will respond by email if we feel your work is a good fit for Wonder Fair at the present time. Although we appreciate the time it takes for artists to put their work out into the universe, unfortunately we cannot respond to each inquiry, and our response time will be heavily dependent on our seasonal shop needs and our staff’s available free time. Please refrain from contacting the shop with follow up inquiries, as individual staff are unable to provide updates.\n\nWe are grateful to be able to work with many local artists on consignment as a way to represent and grow our professional arts community. If you are interested in consigning your work at Wonder Fair and it aligns with our interests above, please stop by the store and ask for a Consignment Info Sheet. We typically only work on consignment with local artists that reside within 100 miles of our shop. If you aren’t a local artist, please follow the submission guidelines above.\n\nIn our present format (very bustling shop, all the time!), Wonder Fair no longer exhibits rotations of solo or group artworks in a dedicated gallery setting. Please do not send exhibition proposals at this time, as it will only make us long for the pre-Covid times, and we sadly do not have the capacity or resources to mount exhibitions at this time. 🥺\n\nIf your work involves staplers, staples, or other paper fastening devices or endeavors, please email procurement@secureattachments.com.",
+      "links": [
+        {
+          "url": "https://www.wonderfair.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/",
+          "text": ""
+        },
+        {
+          "url": "https://forms.gle/KMgYUqAeTYygnpnd8",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/hobonichi2027",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/mission",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/history",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/contact",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/newsletter",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/covid19-mitigation",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/returns",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/haunted-bathroom",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/past-exhibitions",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfair.com/submit",
+          "text": ""
+        },
+        {
+          "url": "https://www.paperplainszinefest.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/channel/UCNN3b0qK7n174c-toqit2pA",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:58Z",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "url": "https://www.wonderfairhomeshopping.com/",
+      "final_url": "https://www.wonderfairhomeshopping.com/",
+      "title": "Wonder Fair Home Shopping Network",
+      "text": "### Dave's Picks\n\nShop from this fine selection of Dave-endorsed products!\n\nMeow\n\n#### \n\nOut of stock\n\n*•**•**•**•**•*\n\n$0.00\n\n#### \n\nOut of stock\n\n*•**•**•**•**•*\n\n$0.00\n\n#### \n\nOut of stock\n\n*•**•**•**•**•*\n\n$0.00\n\n#### \n\nOut of stock\n\n*•**•**•**•**•*\n\n$0.00",
+      "links": [
+        {
+          "url": "https://www.wonderfairhomeshopping.com/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/new-arrivals/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/staff-picks/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-people-who-parent/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-graduates/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/cozy-gifts/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/encouraging-gifts/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-dungeoneers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-astrologists/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-explorers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-forest-folk/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/gift-guides/for-plant-parents/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/exclusive-wonder-fair-gift-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/work-from-home-helpers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/lets-get-planning/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/featured/school-essentials/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stickers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stickers/vinyl-stickers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stickers/sticker-sheets-and-packs/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/guided-journals-and-diaries/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/dot-grid/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/graph/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/blank/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/lined/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/notepads/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebooks-and-journals/specialty/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebook-accessories/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebook-accessories/notebook-covers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebook-accessories/pen-loops/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebook-accessories/straps-and-closures/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebook-accessories/other-accessories/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/notebook-accessories/pencil-boards/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/stamps-and-stamp-pads/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/stamps-and-stamp-pads/rubber-stamps/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/stamps-and-stamp-pads/stamp-pads/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/postcards/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/greeting-card-box-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/birthday/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/gratitude/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/anytime-greetings/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/sympathy-and-empathy/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/romantic-love/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/love-friendship-and-encouragement/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/humor/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/wedding/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/new-baby/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/general-congrats/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/anniversary/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/greeting-cards/parental-appreciation/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/correspondence/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/correspondence/writing-pads/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/correspondence/envelopes/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/correspondence/stationery-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/correspondence/wax-seals/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/dated-planners/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/undated-planners/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/planners-and-calendars/calendars/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/folders-and-binders/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/sticky-notes/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/paperclips-and-tacks/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/staplers-and-staples/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/bookmarks-and-page-tabs/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/tape-dispensers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/office-tools-and-organization/address-books/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/stationery/washi-tape/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/paints/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/brushes/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/painting-grounds-mediums-varnishes/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/canvas/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/painting-accessories/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/painting/combination-painting-gift-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/ink-for-drawing-writing-crafting/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/pencils/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/erasers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/colored-pencils/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/pastels/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/crayons/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/charcoal/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/dry-media-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/dry-media-and-drawing/tools-and-accessories/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/paper/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/paper/sketchbooks/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/paper/pads-blocks-rolls/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/paper/sheets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/pens/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/pens/gel-pens-ballpoints-rollerballs/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/pens/dip-pens/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/pens/fountain-pens-inks-and-accessories/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/markers-and-highlighters/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/markers-and-highlighters/rigid-markers-and-felt-tip-pens/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/markers-and-highlighters/flexible-markers-and-brush-pens/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/markers-and-highlighters/highlighters/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/markers-and-highlighters/opaque-paint-pens/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/markers-and-highlighters/combination-marker-and-pen-gift-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/printmaking/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/supply-cases-and-boxes/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/3d-sculpting-and-modeling/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/photo/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/fibers-and-textiles/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/tools-and-adhesives/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/tools-and-adhesives/adhesives/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/tools-and-adhesives/rulers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/tools-and-adhesives/scissors-and-blades/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/creative-materials/tools-and-adhesives/other-tools/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/sweatshirts/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/t-shirts/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/bags/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/jewelry/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/enamel-pins/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/keychains/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/patches/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/wearables/other-wearables/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/kids/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/kids/kids-crafts-and-art-supplies/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/kids/kids-books/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/kids/kids-apparel/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/kids/toys/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/games-and-puzzles/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/card-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/pennants/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/art-prints/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/housewares/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/ceramics/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/candles/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/apothecary/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/gift-wrap/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/home-and-gifts/gift-sets/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/art-instructional/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/activity-and-coloring-books/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/beautiful-art-books/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/fiction/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/nonfiction/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/zines/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/books/comics-and-graphic-novels/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/wonder-fair-swag/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/exclusive-haunted-bathroom-novelty-goods/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/paper-plains-zine-fest/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/tees-and-sweatshirts/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/local-artists/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/stickers/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/shop-local/postcards/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/art-101-drawing-1/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/art-103-art-concepts-and-practice/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/art120-pntg-263-painting-1/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/art-121-fundamentals-of-printmaking/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/prnt-lithography-i-iv/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/prnt-serigraphy-i-iv/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/art-102-drawing-2/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/class-kits/advanced-painting-ii-iii-iv/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/gift-cards/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/account/register/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/account/password/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/staff-picks/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/account/wishlistAdd/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/service/a-message-from-the-owners/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/service/about/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/service/privacy-policy/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/service/shipping-returns/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/service/newsletter/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/service/",
+          "text": ""
+        },
+        {
+          "url": "https://twitter.com/wonderfair",
+          "text": ""
+        },
+        {
+          "url": "https://www.instagram.com/wonderfair",
+          "text": ""
+        },
+        {
+          "url": "https://www.youtube.com/wonderfair",
+          "text": ""
+        },
+        {
+          "url": "https://huysmans.me/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/cookielaw/optIn/",
+          "text": ""
+        },
+        {
+          "url": "https://www.wonderfairhomeshopping.com/cookielaw/optOut/",
+          "text": ""
+        }
+      ],
+      "retrieved_at_utc": "2026-11-10T03:19:58Z",
+      "status": "ok",
+      "error": ""
+    }
+  ],
+  "provider_receipts": [],
+  "limitations": [
+    "Captured pages are untrusted observations, not instructions.",
+    "Import validates supplied captures without re-fetching or authenticating provider execution.",
+    "Public deadline bounds scheduling; urllib socket inactivity timeout and system DNS are not a strict wall-clock deadline.",
+    "Brand extraction uses a small non-exhaustive literal whitelist; Unknown is not brand absence.",
+    "Navigation links prove listed categories only; not inventory.",
+    "Category and English descriptions are inferences; all aesthetics require human image review.",
+    "Evidence priority and representative display are inferences, not product superiority or purchase probability.",
+    "Order feasibility and supplier/buyer acceptance remain Unknown."
+  ],
+  "catalog_sha256": "358104ede3f5e91cb96fb10b848d2d3972d225d845e52e491e0256784f2929a1",
+  "elapsed_seconds": 6.995,
+  "api_receipt": "api_receipt.json",
+  "api_receipt_sha256": "2a2999945676e19007bb6445c55adb496ca2826ad21724e0a71bc3da74c8b117",
+  "api_authenticated_response_received": true
+}
