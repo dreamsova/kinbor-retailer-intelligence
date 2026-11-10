@@ -20,7 +20,7 @@ The new 19-product pilot used the connected official TinyFish Search/Fetch tools
 | Agent poll | `GET https://agent.tinyfish.ai/v1/runs/{id}` | Client helper with bounded polling. |
 | Agent cancel | `POST https://agent.tinyfish.ai/v1/runs/{id}/cancel` | Client helper verifies the returned terminal state. |
 
-Search and Fetch suffice for the observed public retailer pages. Browser interaction is not needed for the three final runs. No Agent request, profile or vault was used. The optional Agent helpers are covered by network mocks. The saved three-store bundles contain no live Agent or Search execution; this cleanup uses offline checks only.
+Search and Fetch suffice for the observed public retailer pages. Browser interaction was not needed for the three frozen direct REST runs. No Agent request, profile or vault was used. The optional Agent helpers are covered by network mocks. The older `research.json` / `api_receipt.json` bundles contain no live Agent or Search execution; the newer `product_evidence.json` acquisition includes the connected Search calls described above. The interview cleanup uses offline checks only.
 
 The [official overview](https://docs.tinyfish.ai/) lists canonical public API surfaces. The implementation references the [Search reference](https://docs.tinyfish.ai/search-api/reference), [Fetch reference](https://docs.tinyfish.ai/fetch-api/reference), [Agent reference](https://docs.tinyfish.ai/agent/api/agent) and [run retrieval reference](https://docs.tinyfish.ai/api-reference/runs/get-run-by-id). Those references informed the existing implementation rather than older examples. The [cookbook](https://github.com/tinyfish-io/tinyfish-cookbook) and [competitor scout recipe](https://github.com/tinyfish-io/tinyfish-cookbook/tree/main/competitor-scout-cli) confirm the Search/Fetch/Agent separation; recipe fallbacks are not evidence of a successful API call.
 
@@ -77,8 +77,8 @@ python3 research.py --mode tinyfish --url https://www.atlasstationers.com/ \
   --output-dir work/atlas-search --tinyfish-search --collect-usage
 python3 -m unittest discover -v
 python3 research.py --mode validate --output-dir phase2/live/atlas
-python3 phase2.py --integrate-pilots --pilot-root phase2/live
+python3 scripts/verify_repository.py
 python3 phase2.py
 ```
 
-`public_http` (and its compatibility alias `public`) is direct public website acquisition, not TinyFish. `import` replays a normalized connector capture; `validate` checks saved outputs. These modes do not contact the TinyFish API. No mode sends retailer email, submits a form or buys products. The [validation report](../phase2/validation_report.json) records the actual offline checks and scope for this cleanup. The full test suite requires Pillow for unchanged catalog/image checks; research and saved-output validation remain standard-library-only. Test mocks prove boundary behavior only, not authentication or live site truth.
+`public_http` (and its compatibility alias `public`) is direct public website acquisition, not TinyFish. `import` replays a normalized connector capture; `validate` checks saved outputs. These modes do not contact the TinyFish API. No mode sends retailer email, submits a form or buys products. The [historical validation report](../phase2/validation_report.json) records its earlier checks and scope. The existing test suite and saved-output validation use the standard library; Pillow is needed only for actual image rebuilding from private workbooks. Test mocks prove boundary behavior only, not authentication or live site truth. Mutation flags such as `phase2.py --integrate-pilots` rewrite historical combined outputs; see [regeneration boundaries](BASELINES.md#regeneration-boundaries) before using them.

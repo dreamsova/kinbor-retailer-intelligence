@@ -4,8 +4,8 @@ import unittest
 from unittest.mock import patch
 
 import research
-from test_direct_research import SyntheticResponse, SyntheticTransport, fetch_result, page, URL, KEY
-from test_research import PUBLIC_DNS
+from tests.test_direct_research import SyntheticResponse, SyntheticTransport, fetch_result, page, URL, KEY
+from tests.test_research import PUBLIC_DNS
 import tinyfish_client
 
 

@@ -17,7 +17,7 @@ from urllib.error import HTTPError
 import research
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = research.ROOT
 WEBSITE = "https://retailer-fixture.org/"
 TIMESTAMP = "2026-11-10T02:00:00Z"
 

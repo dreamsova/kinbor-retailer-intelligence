@@ -1,5 +1,7 @@
 # Direct API retailer research: saved evidence and repository cleanup
 
+> **Historical record — frozen category baseline.** The narrative and four-pick previews below describe the earlier direct REST cleanup, before the current style matcher. References to “current” and “this cleanup” belong to that earlier run; its deletion and test statements do not describe the interview cleanup. Start with the [current project README](../README.md), [style output map](../phase2/README.md) and [baseline guide](BASELINES.md). Original historical content follows unchanged.
+
 ## Workflow
 
 The CLI combines a real 210-SKU Kinbor catalog with observations from official retailer websites. `research.py --mode tinyfish` reads `TINYFISH_API_KEY`, uses the direct TinyFish Fetch REST API, follows a bounded set of official links, records evidence and request receipts, and produces a full-catalog candidate audit and illustrated buyer brief. Optional Search discovery and Agent client helpers remain separate capabilities.

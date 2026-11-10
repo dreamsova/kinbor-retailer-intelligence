@@ -6,6 +6,7 @@
 __pycache__/
 *.pyc
 .DS_Store
+.venv/
 
 # Local research scratch results; reviewed captures are committed explicitly
 /work/

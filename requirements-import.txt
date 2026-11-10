@@ -1,0 +1,3 @@
+# Optional: only for rebuilding product images from authorized private workbooks.
+# Offline validation and the existing test suite use Python's standard library.
+Pillow

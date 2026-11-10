@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 import research
 
-spec = importlib.util.spec_from_file_location('matching_eval', Path(__file__).with_name('eval.py'))
+spec = importlib.util.spec_from_file_location('matching_eval', research.ROOT / 'eval.py')
 evaluation = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(evaluation)
 
