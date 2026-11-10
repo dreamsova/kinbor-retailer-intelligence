@@ -1,0 +1,8 @@
+# Private supplier spreadsheets and local credentials must stay out of public GitHub
+*.xlsx
+*.xls
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
